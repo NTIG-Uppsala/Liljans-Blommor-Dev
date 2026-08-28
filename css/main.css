@@ -7,19 +7,19 @@
 
 @font-face {
     font-family: niconne;
-    src: url(Niconne-Regular.ttf);
+    src: url(../assets/fonts/Niconne-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto;
-    src: url(Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 img{
     border-radius: 100%;
 }
 
-html, body{
+html, body{ 
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
