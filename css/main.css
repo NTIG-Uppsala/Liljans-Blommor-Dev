@@ -8,19 +8,15 @@
 
 @font-face {
     font-family: niconne;
-    src: url(../assets/fonts/Niconne-Regular.ttf);
+    src: url(Niconne-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto;
-    src: url(../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(Roboto-VariableFont_wdth\,wght.ttf);
 }
 
-img{
-    border-radius: 100%;
-}
-
-html, body{ 
+html, body{
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
@@ -45,12 +41,7 @@ header{
 
 header > h1{
     margin-left: 10vw;
-
 }
-
-/* .Tel{
-    margin-right: 10vw;
-} */
 
 .sub-header{
     height: 7.5vw;
@@ -113,7 +104,6 @@ h3{
     font-size: 1rem;
     padding: 0.5em;
     text-align: center;
-    /* font-family: Arial, Helvetica, sans-serif; */
     justify-content: center;
 
     border-radius: 20px;
@@ -168,6 +158,8 @@ button:hover{
     background-color: rgb(243, 243, 243);
 }
 
+
+
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -189,10 +181,7 @@ div.gallery-item {
   margin: 1%;
 }
 
-/* fix text size here
-.desc {
 
-} */
 
 h4{
     font-size: 1.17em;
