@@ -29,6 +29,7 @@ html, body{
     min-height: 100vh;
     background: linear-gradient(to bottom right, rgba(34, 168, 85, 0.1), white, rgba(181, 111, 220, 0.1));
     font-family: roboto;
+    font-weight: 300;
 }
 
 header{
@@ -111,7 +112,7 @@ h3{
     font-size: 1rem;
     padding: 0.5em;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     justify-content: center;
 
     border-radius: 20px;
@@ -172,6 +173,8 @@ button:hover{
     flex-wrap: wrap;
     justify-content: center; 
     max-width: 100%;
+    font-family: roboto;
+    font-weight: 300;
 }
 
 .gallery-item{
