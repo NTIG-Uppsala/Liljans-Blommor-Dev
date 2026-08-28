@@ -1,0 +1,258 @@
+:root{
+    --color1: #e9F1F7;
+    --color2: #B56FDC;
+    --color3: #224AA8;
+    --color4: #C4C1DC;
+}
+
+@font-face {
+    font-family: niconne;
+    src: url(Niconne-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+img{
+    border-radius: 100%;
+}
+
+html, body{
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgba(34, 168, 85, 0.1), white, rgba(181, 111, 220, 0.1));
+    font-family: roboto;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    font-family: niconne;
+    margin: 1vw;
+    margin: 0;
+}
+
+header > h1{
+    margin-left: 10vw;
+
+}
+
+/* .Tel{
+    margin-right: 10vw;
+} */
+
+.header-gradient{
+    height: 7.5vw;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(34, 74, 168, 0.8), rgba(181, 111, 220, 0.8));
+    align-content: center;
+}
+
+.header-gradient > nav{
+    display: flex;
+    background-color: white;
+    height: 75%;
+    margin: auto 10vw;
+    border-radius: 100rem;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.35rem;
+}
+
+.header-gradient > nav > a{
+    text-decoration: none;
+    transition: 0.17s;
+    color: var(--color3);
+    background: none;
+    padding: 0.7% 2%;
+    border-radius: 100rem;
+}
+
+.header-gradient > nav > a:hover{
+    color: var(--color2);
+    background-color: rgb(243, 243, 243);
+}
+
+h1{
+    font-family: niconne;
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: niconne;
+    font-size: 5rem;
+    text-align: center;
+}
+
+h3{
+    font-family: roboto;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: -4%;
+}
+
+
+.OpeningTimes{
+    text-align: right;
+}
+
+.text{
+    background-color: var(--color1);
+    margin: 2.5vw 10vw;
+    line-height: 1rem;
+    font-size: 1rem;
+    padding: 0.5em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+
+    border-radius: 20px;
+}
+
+.tel{ 
+    font-family: roboto;
+    font-size: 1.5rem;
+    float:right; 
+    margin-right:10vw;
+    padding: 0.595rem;
+}
+
+button{
+    background-color: rgba(181, 111, 220, 0.6);
+    border-radius: 20rem;
+    padding: 0.5rem 1rem;
+    opacity: 65%;
+    border-style: none;
+
+    text-decoration: none;
+    transition: 0.17s;
+    color: var(--color3);
+    border-radius: 100rem;
+
+    float: right;
+}
+
+button:hover{
+    opacity: 80%;
+    transform: translateY(-2px);
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
+}
+
+.products-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh; 
+    margin-bottom: 2vh;
+}
+
+.products-button > a{
+    background-color: white;
+    padding: 0.5vw;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.products-button > a:hover{
+    color: var(--color2);
+    background-color: rgb(243, 243, 243);
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    max-width: 100%;
+}
+
+.gallery-item{
+    width:25%;
+    float: left; 
+    margin-bottom: 100%;
+    margin-right: 5%;
+    height:auto;    
+}
+
+div.gallery-item {
+  margin: 1%;
+}
+
+/* fix text size here
+.desc {
+
+} */
+
+h4{
+    font-size: 1.17em;
+}
+
+main{
+    flex: 1;
+}
+
+footer{
+    position: relative;
+    padding-left: 1vw;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--color4);
+    color: white;
+}
+
+footer > h2{
+    text-align: left;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+    h2{
+        font-size: 200%;
+    }
+    .gallery-item{
+        width: 50%;
+        
+    }
+    div.gallery-item {
+        margin: 10px -10px;
+    }
+    .header-gradient > nav{
+        display: grid;         
+        grid-template-columns: 1fr 1fr;         
+        grid-template-rows: auto auto;         
+        max-height: 17vw;         
+    }
+    .text{
+        margin: 2.5vw 5vw;
+    }
+    .header-gradient{
+    height: 18vw;
+    }
+    .navText{
+        text-align: center;
+    }
+    .navBarText{
+        text-align: center;
+    }
+
+    .tel{
+        text-align: left;
+        float: none;
+        margin-right: 0;
+        padding-bottom: 0;
+    }
+
+    h1{
+        line-height: normal;
+    }
+
+}
