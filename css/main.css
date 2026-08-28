@@ -1,4 +1,6 @@
-:root{
+/* || Utils */
+
+:root {
     --color1: #e9F1F7;
     --color2: #B56FDC;
     --color3: rgba(171, 79, 171, 0.546);
@@ -8,15 +10,21 @@
 
 @font-face {
     font-family: niconne;
-    src: url(Niconne-Regular.ttf);
+    src: url(../assets/fonts/Niconne-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto;
-    src: url(Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
-html, body{
+/* … */
+
+
+/* || General styles */
+
+html,
+body {
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
@@ -29,58 +37,20 @@ html, body{
     font-weight: 300;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
+img {
+    border-radius: 50%;
+}
+
+h1,
+h2 {
     font-family: niconne;
-    background-color: var(--color3);
-    color: white;
-    margin: 1vw;
-    margin: 0;
-}
-
-header > h1{
-    margin-left: 10vw;
-}
-
-.sub-header{
-    height: 7.5vw;
-    width: 100%;
-    align-content: center;
-}
-
-.sub-header > nav{
-    display: flex;
-    height: 75%;
-    margin: auto 10vw;
-    border-radius: 100rem;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.35rem;
-}
-
-.sub-header > nav > a{
-    text-decoration: none;
-    transition: 0.17s;
-    color: white;
-    background: none;
-    padding: 0.7% 2%;
-    border-radius: 100rem;
-}
-
-.sub-header > nav > a:hover{
-    color: var(--color2);
-    background-color: rgb(243, 243, 243);
 }
 
 h1{
-    font-family: niconne;
     font-size: 2.5rem;
 }
 
 h2{
-    font-family: niconne;
     font-size: 5rem;
     text-align: center;
 }
@@ -92,9 +62,75 @@ h3{
     margin-top: -4%;
 }
 
+h4{
+    font-size: 1.17em;
+}
 
-.OpeningTimes{
-    text-align: right;
+/* … */
+
+
+/* || Header section styles */
+
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: niconne;
+    background-color: var(--color3);
+    color: white;
+    margin: 1vw;
+    margin: 0;
+}
+
+header > h1 {
+    margin-left: 10vw;
+}
+
+.tel{ 
+    font-family: roboto;
+    font-size: 1.5rem;
+    float:right; 
+    margin-right:10vw;
+    padding: 0.595rem;
+}
+
+.sub-header {
+    height: 7.5vw;
+    width: 100%;
+    align-content: center;
+}
+
+.sub-header > nav {
+    display: flex;
+    height: 75%;
+    margin: auto 10vw;
+    border-radius: 100rem;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.35rem;
+}
+
+.sub-header > nav > a {
+    text-decoration: none;
+    transition: 0.17s;
+    color: white;
+    background: none;
+    padding: 0.7% 2%;
+    border-radius: 100rem;
+    font-family: roboto;
+}
+
+.sub-header > nav > a:hover {
+    color: var(--color2);
+    background-color: rgb(243, 243, 243);
+}
+
+/* … */
+
+
+/* || Main section styles */
+
+main{
+    flex: 1;
 }
 
 .sub-main{
@@ -109,15 +145,7 @@ h3{
     border-radius: 20px;
 }
 
-.tel{ 
-    font-family: roboto;
-    font-size: 1.5rem;
-    float:right; 
-    margin-right:10vw;
-    padding: 0.595rem;
-}
-
-button{
+#tax-btn{
     background-color: rgba(58, 51, 62);
     border-radius: 20rem;
     padding: 0.5rem 1rem;
@@ -131,34 +159,13 @@ button{
     float: right;
 }
 
-button:hover{
+#tax-btn:hover{
     opacity: 80%;
     transform: translateY(-2px);
     box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
     -webkit-box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
     -moz-box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
 }
-
-.products-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh; 
-    margin-bottom: 2vh;
-}
-
-.products-button > a{
-    color: black;
-    padding: 0.5vw;
-    border-radius: 10rem;
-    text-decoration: none;
-}
-
-.products-button > a:hover{
-    color: var(--color2);
-    background-color: rgb(243, 243, 243);
-}
-
-
 
 .gallery{
     display: flex;
@@ -181,15 +188,33 @@ div.gallery-item {
   margin: 1%;
 }
 
-
-
-h4{
-    font-size: 1.17em;
+.gallery-item > a > img {
+    width: 75%;
 }
 
-main{
-    flex: 1;
+.products-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh; 
+    margin-bottom: 2vh;
 }
+
+.products-button > a{
+    color: black;
+    padding: 0.5vw;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.products-button > a:hover{
+    color: var(--color2);
+    background-color: rgb(243, 243, 243);
+}
+
+/* … */
+
+
+/* || Footer section styles */
 
 footer{
     position: relative;
@@ -205,6 +230,11 @@ footer > h2{
     text-align: left;
     font-size: 2rem;
 }
+
+/* … */
+
+
+/* || Phone Media */
 
 @media screen and (max-width: 480px) {
     h2{
@@ -246,5 +276,6 @@ footer > h2{
     h1{
         line-height: normal;
     }
-
 }
+
+/* … */
