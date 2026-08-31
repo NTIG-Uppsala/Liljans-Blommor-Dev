@@ -1,4 +1,4 @@
-/* || UTILITIES */
+/* || Utility */
 
 :root {
     --color1: rgb(239, 239, 239);
@@ -23,7 +23,7 @@
 /* … */
 
 
-/* || GENERAL STYLES */
+/* || General styles */
 
 html,
 body {
@@ -71,7 +71,7 @@ h4{
 /* … */
 
 
-/* || HEADER SECTION STYLES */
+/* || Header section styles */
 
 header {
     display: flex;
@@ -139,7 +139,7 @@ header > h1{
 /* … */
 
 
-/* || MAIN SECTION STYLES */
+/* || Main section styles */
 
 main{
     flex: 1;
@@ -157,31 +157,64 @@ main{
     text-decoration: none;
 }
 
+.sub-main 
+
 .sub-main a{
     text-decoration: none;
     color: black;
 }
 
-#tax-btn{
-    background-color: var(--color5);
-    border-radius: 20rem;
-    padding: 0.5rem 1rem;
-    opacity: 65%;
-    border-style: none;
-
-    text-decoration: none;
-    transition: 0.17s;
-    color: white;
-    border-radius: 100rem;
-    float: right;
+.toggle {
+  position: relative;
+  width: 18vw;
+  height: 2rem;
+  padding: 5px;
+  background: var(--color3);
+  border-radius: 999px;
+  display: flex;
+  cursor: pointer;
+  
 }
 
-#tax-btn:hover{
-    opacity: 80%;
-    transform: translateY(-2px);
-    box-shadow: 1px 2px 3px 0px var(--color6);
-    -webkit-box-shadow: 1px 2px 3px 0px var(--color6);
-    -moz-box-shadow: 1px 2px 3px 0px var(--color6);
+.toggle input {
+  display: none;
+}
+
+.option {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color3);
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 2;
+  transition: color 0.25s ease;
+}
+
+.slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: calc(50% - 5px);
+  height: calc(100% - 10px);
+  background: var(--color7);
+  border-radius: 999px;
+  transition: transform 0.25s ease;
+  z-index: 1;
+}
+
+#toggle:checked ~ .slider {
+  transform: translateX(100%);
+}
+
+#toggle:not(:checked) ~ .excl {
+  color: #111;
+}
+
+#toggle:checked ~ .inkl {
+  color: #111;
 }
 
 .gallery{
@@ -198,7 +231,8 @@ main{
     float: left;
     margin-bottom: 100%;
     margin-right: 5%;
-    height: auto;    
+    height:auto;    
+    
 }
  
 div.gallery-item {
@@ -266,14 +300,10 @@ th {
     background-color: var(--color1);
 }
 
-h3{
-    margin-top: 1vw;
-}
-
 /* … */
 
 
-/* || FOOTER SECTION STYLES */
+/* || Footer section styles */
 
 footer{
     position: relative;
@@ -298,41 +328,34 @@ footer a{
 /* … */
 
 
-/* || PHONE MEDIA */
+/* || Phone Media */
 
 @media screen and (max-width: 480px) {
     h2{
         font-size: 200%;
     }
-
     .gallery-item{
         width: 50%;
         
     }
-
     div.gallery-item {
         margin: 10px -10px;
     }
-
     .header-gradient > nav{
         display: grid;         
         grid-template-columns: 1fr 1fr;         
         grid-template-rows: auto auto;         
         max-height: 17vw;         
     }
-
     .text{
         margin: 2.5vw 5vw;
     }
-
     .header-gradient{
     height: 18vw;
     }
-
     .navText{
         text-align: center;
     }
-    
     .navBarText{
         text-align: center;
     }
