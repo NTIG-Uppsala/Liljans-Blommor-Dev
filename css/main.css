@@ -97,12 +97,18 @@ header > h1{
     margin-left: 10vw;
 }
 
-.tel{ 
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4vw;
+    align-items: center;
+}
+
+#tel {
     font-family: roboto;
-    font-size: 1.5rem;
-    float: right; 
-    margin-right: 10vw;
-    padding: 0.595rem;
+    font-size: 1.8rem;
+    padding-top: 1rem;
 }
 
 .sub-header {
@@ -333,7 +339,7 @@ footer a{
         margin: 10px -10px;
     }
 
-    .header-gradient > nav{
+    .sub-header > nav{
         display: grid;         
         grid-template-columns: 1fr 1fr;         
         grid-template-rows: auto auto;         
@@ -344,7 +350,19 @@ footer a{
         margin: 2.5vw 5vw;
     }
 
-    .header-gradient{
+    .top-header {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 4vw;
+        align-items: start;
+    }
+
+    #tel {
+        margin-top: 0;
+        font-size: 1.4rem;
+    }
+
+    .sub-header{
     height: 18vw;
     }
 
@@ -354,13 +372,6 @@ footer a{
     
     .navBarText{
         text-align: center;
-    }
-
-    .tel{
-        text-align: left;
-        float: none;
-        margin-right: 0;
-        padding-bottom: 0;
     }
 
     h1{
