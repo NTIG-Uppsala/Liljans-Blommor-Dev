@@ -1,4 +1,4 @@
-/* || Utility */
+/* || UTILITIES */
 
 :root {
     --color1: rgb(239, 239, 239);
@@ -7,6 +7,7 @@
     --color4: rgba(214, 152, 204, 0.251);
     --color5: rgba(58, 51, 62);
     --color6: rgba(0,0,0,0.6);
+    --color7: #04AA6D;
 }
 
 @font-face {
@@ -22,7 +23,7 @@
 /* … */
 
 
-/* || General styles */
+/* || GENERAL STYLES */
 
 html,
 body {
@@ -70,7 +71,7 @@ h4{
 /* … */
 
 
-/* || Header section styles */
+/* || HEADER SECTION STYLES */
 
 header {
     display: flex;
@@ -99,8 +100,8 @@ header > h1{
 .tel{ 
     font-family: roboto;
     font-size: 1.5rem;
-    float:right; 
-    margin-right:10vw;
+    float: right; 
+    margin-right: 10vw;
     padding: 0.595rem;
 }
 
@@ -138,7 +139,7 @@ header > h1{
 /* … */
 
 
-/* || Main section styles */
+/* || MAIN SECTION STYLES */
 
 main{
     flex: 1;
@@ -197,8 +198,7 @@ main{
     float: left;
     margin-bottom: 100%;
     margin-right: 5%;
-    height:auto;    
-    
+    height: auto;    
 }
  
 div.gallery-item {
@@ -210,7 +210,7 @@ div.gallery-item {
     border-radius: 100%;
 }
 
-.gallery > .gallery-item > .img-desc >  .prices{
+.prices{
     text-decoration: none;
 } 
 
@@ -218,8 +218,33 @@ h4{
     font-size: 1.17em;
 }
 
-main{
-    flex: 1;
+table {
+  font-family: roboto;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 0.3vh;
+  border-color: rgba(109, 80, 107, 0.269);
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  border-radius: black;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: var(--color3);}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--color3);
+  color: white;
 }
 
 .products-button {
@@ -244,7 +269,7 @@ main{
 /* … */
 
 
-/* || Footer section styles */
+/* || FOOTER SECTION STYLES */
 
 footer{
     position: relative;
@@ -254,32 +279,58 @@ footer{
     height: fit-content;
     background-color: var(--color3);
     color: white;
+    margin: 0;
 }
 
 footer h2{
     text-align: left;
     font-size: 2rem;
+    margin: 1vh 0;
+}
+
+.sub-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sub-footer > div {
+    border-left: 0.01rem solid white;
+    padding-left: 0.5rem;
+    margin-bottom: 2vh;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5vh 0 0 0;
 }
 
 footer a{
     color: white;
     text-decoration: none;
-    
 }
 
 /* … */
 
+@media screen and (max-width: 1035px){
+    h1{
+        margin-top: 5vw;
+    }
+}
 
-/* || Phone Media */
+
+/* || PHONE MEDIA */
 
 @media screen and (max-width: 480px) {
     h2{
         font-size: 200%;
     }
+
     .gallery-item{
         width: 50%;
         
     }
+
     div.gallery-item {
         margin: 1px -1px;
     }
@@ -289,15 +340,18 @@ footer a{
         grid-template-rows: auto auto;         
         max-height: 17vw;         
     }
+
     .text{
         margin: 2.5vw 5vw;
     }
     .sub-header{
-    height: 18vw;
+        height: 18vw;
     }
+
     .navText{
         text-align: center;
     }
+    
     .navBarText{
         text-align: center;
     }
@@ -311,15 +365,21 @@ footer a{
 
     h1{
         line-height: normal;
-        margin-top: 10vw;
+        margin-top: 13vw;
+    }
+
+    .sub-footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    footer ul {
+    padding: 0.5vh 0 1.5vh 0;
     }
 
 }
+/* 
 
-@media screen and (max-width: 1035px){
-    h1{
-        margin-top: 5vw;
-    }
-}
+} */
 
 /* … */
