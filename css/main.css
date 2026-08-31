@@ -1,4 +1,4 @@
-/* || Utility */
+/* || UTILITIES */
 
 :root {
     --color1: rgb(239, 239, 239);
@@ -23,7 +23,7 @@
 /* … */
 
 
-/* || General styles */
+/* || GENERAL STYLES */
 
 html,
 body {
@@ -71,7 +71,7 @@ h4{
 /* … */
 
 
-/* || Header section styles */
+/* || HEADER SECTION STYLES */
 
 header {
     display: flex;
@@ -100,8 +100,8 @@ header > h1{
 .tel{ 
     font-family: roboto;
     font-size: 1.5rem;
-    float:right; 
-    margin-right:10vw;
+    float: right; 
+    margin-right: 10vw;
     padding: 0.595rem;
 }
 
@@ -139,7 +139,7 @@ header > h1{
 /* … */
 
 
-/* || Main section styles */
+/* || MAIN SECTION STYLES */
 
 main{
     flex: 1;
@@ -198,8 +198,7 @@ main{
     float: left;
     margin-bottom: 100%;
     margin-right: 5%;
-    height:auto;    
-    
+    height: auto;    
 }
  
 div.gallery-item {
@@ -267,10 +266,14 @@ th {
     background-color: var(--color1);
 }
 
+h3{
+    margin-top: 1vw;
+}
+
 /* … */
 
 
-/* || Footer section styles */
+/* || FOOTER SECTION STYLES */
 
 footer{
     position: relative;
@@ -295,34 +298,41 @@ footer a{
 /* … */
 
 
-/* || Phone Media */
+/* || PHONE MEDIA */
 
 @media screen and (max-width: 480px) {
     h2{
         font-size: 200%;
     }
+
     .gallery-item{
         width: 50%;
         
     }
+
     div.gallery-item {
         margin: 10px -10px;
     }
+
     .header-gradient > nav{
         display: grid;         
         grid-template-columns: 1fr 1fr;         
         grid-template-rows: auto auto;         
         max-height: 17vw;         
     }
+
     .text{
         margin: 2.5vw 5vw;
     }
+
     .header-gradient{
     height: 18vw;
     }
+
     .navText{
         text-align: center;
     }
+    
     .navBarText{
         text-align: center;
     }
