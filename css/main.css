@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: niconne;
-    src: url(Niconne-Regular.ttf);
+    src: url(../assets/fonts/Niconne-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto;
-    src: url(Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 html, body{
@@ -37,6 +37,11 @@ header{
     color: white;
     margin: 1vw;
     margin: 0;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
 }
 
 header > h1{
@@ -105,8 +110,8 @@ h3{
     padding: 0.5em;
     text-align: center;
     justify-content: center;
-
     border-radius: 20px;
+    text-decoration: none;
 }
 
 .tel{ 
@@ -126,7 +131,7 @@ button{
 
     text-decoration: none;
     transition: 0.17s;
-    color: var(--color3);
+    color: white;
     border-radius: 100rem;
     float: right;
 }
@@ -181,7 +186,9 @@ div.gallery-item {
   margin: 1%;
 }
 
-
+.gallery > .gallery-item > .img-desc >  .prices{
+    text-decoration: none;
+} 
 
 h4{
     font-size: 1.17em;
@@ -201,9 +208,15 @@ footer{
     color: white;
 }
 
-footer > h2{
+footer h2{
     text-align: left;
     font-size: 2rem;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    
 }
 
 @media screen and (max-width: 480px) {
