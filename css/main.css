@@ -1,21 +1,22 @@
-/* || Utils */
+/* || Utility */
 
 :root {
-    --color1: #e9F1F7;
+    --color1: rgb(239, 239, 239);
     --color2: #B56FDC;
     --color3: rgba(171, 79, 171, 0.546);
     --color4: rgba(214, 152, 204, 0.251);
-    --color5: #C4C1DC;
+    --color5: rgba(58, 51, 62);
+    --color6: rgba(0,0,0,0.6);
 }
 
 @font-face {
     font-family: niconne;
-    src: url(../assets/fonts/Niconne-Regular.ttf);
+    src: url(Niconne-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto;
-    src: url(../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 /* … */
@@ -32,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(239, 239, 239);
+    background-color: var(--color1);
     font-family: roboto;
     font-weight: 300;
 }
@@ -81,7 +82,17 @@ header {
     margin: 0;
 }
 
-header > h1 {
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header > h1{
     margin-left: 10vw;
 }
 
@@ -121,7 +132,7 @@ header > h1 {
 
 .sub-header > nav > a:hover {
     color: var(--color2);
-    background-color: rgb(243, 243, 243);
+    background-color: var(--color1);
 }
 
 /* … */
@@ -141,12 +152,17 @@ main{
     padding: 0.5em;
     text-align: center;
     justify-content: center;
-
     border-radius: 20px;
+    text-decoration: none;
+}
+
+.sub-main a{
+    text-decoration: none;
+    color: black;
 }
 
 #tax-btn{
-    background-color: rgba(58, 51, 62);
+    background-color: var(--color5);
     border-radius: 20rem;
     padding: 0.5rem 1rem;
     opacity: 65%;
@@ -154,7 +170,7 @@ main{
 
     text-decoration: none;
     transition: 0.17s;
-    color: var(--color3);
+    color: white;
     border-radius: 100rem;
     float: right;
 }
@@ -162,34 +178,48 @@ main{
 #tax-btn:hover{
     opacity: 80%;
     transform: translateY(-2px);
-    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
-    -moz-box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.6);
+    box-shadow: 1px 2px 3px 0px var(--color6);
+    -webkit-box-shadow: 1px 2px 3px 0px var(--color6);
+    -moz-box-shadow: 1px 2px 3px 0px var(--color6);
 }
 
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     max-width: 100%;
     font-family: roboto;
     font-weight: 300;
 }
-
+ 
 .gallery-item{
     width:25%;
-    float: left; 
+    float: left;
     margin-bottom: 100%;
     margin-right: 5%;
     height:auto;    
+    
 }
-
+ 
 div.gallery-item {
   margin: 1%;
 }
-
+ 
 .gallery-item > a > img {
     width: 75%;
+    border-radius: 100%;
+}
+
+.gallery > .gallery-item > .img-desc >  .prices{
+    text-decoration: none;
+} 
+
+h4{
+    font-size: 1.17em;
+}
+
+main{
+    flex: 1;
 }
 
 .products-button {
@@ -208,7 +238,7 @@ div.gallery-item {
 
 .products-button > a:hover{
     color: var(--color2);
-    background-color: rgb(243, 243, 243);
+    background-color: var(--color1);
 }
 
 h3{
@@ -230,9 +260,15 @@ footer{
     color: white;
 }
 
-footer > h2{
+footer h2{
     text-align: left;
     font-size: 2rem;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    
 }
 
 /* … */
