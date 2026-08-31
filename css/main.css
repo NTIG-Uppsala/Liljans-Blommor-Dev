@@ -11,12 +11,12 @@
 
 @font-face {
     font-family: niconne;
-    src: url(../assets/fonts/Niconne-Regular.ttf);
+    src: url(Niconne-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto;
-    src: url(../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 /* … */
@@ -82,7 +82,17 @@ header {
     margin: 0;
 }
 
-header > h1 {
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header > h1{
     margin-left: 10vw;
 }
 
@@ -143,6 +153,12 @@ main{
     text-align: center;
     justify-content: center;
     border-radius: 20px;
+    text-decoration: none;
+}
+
+.sub-main a{
+    text-decoration: none;
+    color: black;
 }
 
 #tax-btn{
@@ -154,7 +170,7 @@ main{
 
     text-decoration: none;
     transition: 0.17s;
-    color: var(--color3);
+    color: white;
     border-radius: 100rem;
     float: right;
 }
@@ -170,26 +186,39 @@ main{
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     max-width: 100%;
     font-family: roboto;
     font-weight: 300;
 }
-
+ 
 .gallery-item{
     width:25%;
-    float: left; 
+    float: left;
     margin-bottom: 100%;
     margin-right: 5%;
     height: auto;    
 }
-
+ 
 div.gallery-item {
   margin: 1%;
 }
-
+ 
 .gallery-item > a > img {
     width: 75%;
+    border-radius: 100%;
+}
+
+.gallery > .gallery-item > .img-desc >  .prices{
+    text-decoration: none;
+} 
+
+h4{
+    font-size: 1.17em;
+}
+
+main{
+    flex: 1;
 }
 
 .products-button {
@@ -226,9 +255,15 @@ footer{
     color: white;
 }
 
-footer > h2{
+footer h2{
     text-align: left;
     font-size: 2rem;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    
 }
 
 /* … */
