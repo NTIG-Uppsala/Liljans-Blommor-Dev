@@ -50,6 +50,7 @@ h2 {
 
 h1{
     font-size: 2.5rem;
+    margin-top: 3vw;
 }
 
 h2{
@@ -61,7 +62,6 @@ h3{
     font-family: roboto;
     font-size: 1.2rem;
     text-align: center;
-    margin-top: -4%;
 }
 
 h4{
@@ -313,11 +313,30 @@ footer{
     height: fit-content;
     background-color: var(--color3);
     color: white;
+    margin: 0;
 }
 
 footer h2{
     text-align: left;
     font-size: 2rem;
+    margin: 1vh 0;
+}
+
+.sub-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sub-footer > div {
+    border-left: 0.01rem solid white;
+    padding-left: 0.5rem;
+    margin-bottom: 2vh;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5vh 0 0 0;
 }
 
 footer a{
@@ -326,6 +345,18 @@ footer a{
 }
 
 /* … */
+
+@media screen and (max-width: 1035px){
+    h1{
+        margin-top: 5vw;
+    }
+}
+
+@media screen and (max-width: 1035px){
+    h1{
+        margin-top: 5vw;
+    }
+}
 
 
 /* || Phone Media */
@@ -339,9 +370,9 @@ footer a{
         
     }
     div.gallery-item {
-        margin: 10px -10px;
+        margin: 1px -1px;
     }
-    .header-gradient > nav{
+    .sub-header > nav{
         display: grid;         
         grid-template-columns: 1fr 1fr;         
         grid-template-rows: auto auto;         
@@ -350,8 +381,8 @@ footer a{
     .text{
         margin: 2.5vw 5vw;
     }
-    .header-gradient{
-    height: 18vw;
+    .sub-header{
+        height: 18vw;
     }
     .navText{
         text-align: center;
@@ -369,7 +400,21 @@ footer a{
 
     h1{
         line-height: normal;
+        margin-top: 13vw;
     }
+
+    .sub-footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    footer ul {
+    padding: 0.5vh 0 1.5vh 0;
+    }
+
 }
+/* 
+
+} */
 
 /* … */
