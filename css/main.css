@@ -50,6 +50,7 @@ h2 {
 
 h1{
     font-size: 2.5rem;
+    margin-top: 3vw;
 }
 
 h2{
@@ -61,7 +62,6 @@ h3{
     font-family: roboto;
     font-size: 1.2rem;
     text-align: center;
-    margin-top: -4%;
 }
 
 h4{
@@ -272,10 +272,6 @@ th {
     background-color: var(--color1);
 }
 
-h3{
-    margin-top: 1vw;
-}
-
 /* … */
 
 
@@ -322,6 +318,12 @@ footer a{
 
 /* … */
 
+@media screen and (max-width: 1035px){
+    h1{
+        margin-top: 5vw;
+    }
+}
+
 
 /* || PHONE MEDIA */
 
@@ -336,9 +338,8 @@ footer a{
     }
 
     div.gallery-item {
-        margin: 10px -10px;
+        margin: 1px -1px;
     }
-
     .sub-header > nav{
         display: grid;         
         grid-template-columns: 1fr 1fr;         
@@ -376,6 +377,7 @@ footer a{
 
     h1{
         line-height: normal;
+        margin-top: 13vw;
     }
 
     .sub-footer{
@@ -385,7 +387,11 @@ footer a{
 
     footer ul {
     padding: 0.5vh 0 1.5vh 0;
+    }
+
 }
-}
+/* 
+
+} */
 
 /* … */
