@@ -240,6 +240,10 @@ main{
     background-color: var(--color1);
 }
 
+h3{
+    margin-top: 1vw;
+}
+
 /* … */
 
 
