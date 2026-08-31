@@ -114,6 +114,11 @@ h3{
     text-decoration: none;
 }
 
+.sub-main a{
+    text-decoration: none;
+    color: black;
+}
+
 .tel{ 
     font-family: roboto;
     font-size: 1.5rem;
@@ -168,22 +173,28 @@ button:hover{
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     max-width: 100%;
     font-family: roboto;
     font-weight: 300;
 }
-
+ 
 .gallery-item{
     width:25%;
-    float: left; 
+    float: left;
     margin-bottom: 100%;
     margin-right: 5%;
     height:auto;    
+    
 }
-
+ 
 div.gallery-item {
   margin: 1%;
+}
+ 
+.gallery-item > a > img {
+    width: 75%;
+    border-radius: 100%;
 }
 
 .gallery > .gallery-item > .img-desc >  .prices{
