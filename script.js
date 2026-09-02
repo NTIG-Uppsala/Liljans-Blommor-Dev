@@ -7,38 +7,38 @@ const change_prices = () => {
     console.log(`Debug: Taxes: ${localStorage.getItem("taxes")}`);
 
 
-    if (localStorage.getItem("taxes") === "exkl") {
+    if (localStorage.getItem("taxes") === "excl") {
         for (let i = 0; i < prices.length; i++) {
 
-            console.log(`Debug: Inkl: ${prices.item(i).innerHTML}`);
+            console.log(`Debug: Incl: ${prices.item(i).innerHTML}`);
 
             price_without_taxes = parseFloat(prices.item(i).innerHTML);
             price_with_taxes = price_without_taxes * 1.25;
             prices.item(i).innerHTML = price_with_taxes;
         }
 
-        localStorage.setItem("taxes", "inkl");
+        localStorage.setItem("taxes", "incl");
         button.innerHTML = "Exkludera moms";
 
     } else {
         for (let i = 0; i < prices.length; i++) {
 
-            console.log(`Debug: Exkl: ${prices.item(i).innerHTML}`);
+            console.log(`Debug: Excl: ${prices.item(i).innerHTML}`);
 
             price_with_taxes = parseFloat(prices.item(i).innerHTML);
             price_without_taxes = price_with_taxes / 1.25;
             prices.item(i).innerHTML = price_without_taxes;
         }
 
-        localStorage.setItem("taxes", "exkl");
+        localStorage.setItem("taxes", "excl");
         button.innerHTML = "Inkludera moms";
 
     }
 }
 
 
-if (localStorage.getItem("taxes") === "exkl") {
-    localStorage.setItem("taxes", "inkl");
+if (localStorage.getItem("taxes") === "excl") {
+    localStorage.setItem("taxes", "incl");
     change_prices();
 }
 
