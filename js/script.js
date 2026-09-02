@@ -1,4 +1,4 @@
-const button = document.getElementById("tax-btn");
+const button = document.getElementById("toggle");
 const prices = document.getElementsByClassName("prices");
 
 
