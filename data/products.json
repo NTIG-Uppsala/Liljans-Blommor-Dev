@@ -134,11 +134,11 @@
         },
         {
             "name": "Presentinslagning",
-            "price": "25 kr"
+            "price": 25
         },
         {
             "name": "Handskrivet kort",
-            "price": "15 kr"
+            "price": 15
         }
     ]
 }
