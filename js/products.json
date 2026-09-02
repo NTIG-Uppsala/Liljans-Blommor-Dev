@@ -2,143 +2,155 @@
     "products": [
         {
             "name": "Nejlika",
-            "price": "29 kr",
+            "price": 29,
             "img": "../assets/images/carnation.jpg"
         },
         {
             "name": "Liljestjälk",
-            "price": "69 kr",
+            "price": 69,
             "img": "../assets/images/LilyStalk.jpg"
         },
         {
             "name": "Gerbera",
-            "price": "35 kr",
+            "price": 35,
             "img": "../assets/images/gerbera.jpg"
         },
         {
             "name": "Eukalyptusgrönt (bunt)",
-            "price": "59 kr",
+            "price": 59,
             "img": "../assets/images/eucalyptusGreen.jpg"
         },
         {
             "name": "Röd ros",
-            "price": "39 kr",
+            "price": 39,
             "img": "../assets/images/redRose.jpg"
         },
         {
             "name": "Tulpan (bunt om 10)",
-            "price": "89 kr",
+            "price": 89,
             "img": "../assets/images/tulips.jpg"
         },
         {
             "name": "Sorgbukett",
-            "price": "450 kr",
+            "price": 450,
             "img": "../assets/images/funeralBouquet.jpg"
         },
         {
             "name": "Brudbukett",
-            "price": "1200 kr",
+            "price": 1200,
             "img": "../assets/images/brideBouquet.jpg"
         },
         {
             "name": "Stor bukett",
-            "price": "599 kr",
+            "price": 599,
             "img": "../assets/images/largeBouquet.jpg"
         },
         {
             "name": "Månadens säsongsbukett",
-            "price": "249 kr",
+            "price": 249,
             "img": "../assets/images/seasonalBouquet.jpg"
         },
         {
             "name": "Mellan storbukett",
-            "price": "399 kr",
+            "price": 399,
             "img": "../assets/images/mediumBouquet.jpg"
         },
         {
             "name": "Liten handbunden bukett",
-            "price": "249 kr",
+            "price": 249,
             "img": "../assets/images/smalbouquet.jpg"
         },
         {
+            "headline": "Krukväxter",
+            "price": "Pris"
+        },
+        {
             "name": "Orkidé i kruka",
-            "price": "199 kr"
+            "price": 199
         },
         {
             "name": "Fredskalla",
-            "price": "249 kr"
+            "price": 249
         },
         {
             "name": "Julstjärna",
-            "price": "89 kr"
+            "price": 89
         },
         {
             "name": "Liten kaktus",
-            "price": "79 kr"
+            "price": 79
         },
         {
             "name": "Kruka med örter (basilika, mynta)",
-            "price": "39 kr"
+            "price": 39
         },
         {
             "name": "Ytterkruka i keramik",
-            "price": "149 kr"
+            "price": 149
+        },
+        {
+            "headline": "Begravningsbinderi",
+            "price": "Pris"
         },
         {
             "name": "Kistdekoration",
-            "price": "från 2500 kr"
+            "price": 2500
         },
         {
             "name": "Begravningskrans",
-            "price": "1800 kr"
+            "price": 1800
         },
         {
             "name": "Sorgdekoration till urna",
-            "price": "950 kr"
+            "price": 950
         },
         {
             "name": "Band med tryckt hälsning",
-            "price": "150 kr"
+            "price": 150
+        },
+        {
+            "headline": "Tjänst",
+            "price": "Pris"
         },
         {
             "name": "Hemleverans inom Kiruna",
-            "price": "79 kr"
+            "price": 79
         },
         {
             "name": "Leverans utanför Kiruna (inom 3 mil)",
-            "price": "129 kr"
+            "price": 129
         },
         {
             "name": "Blomsterprenumeration, privat",
-            "price": "349 kr/mån"
+            "price": 349
         },
         {
             "name": "Kontorsblommor, abonnemang",
-            "price": "599 kr/mån"
+            "price": 599
         },
         {
             "name": "Bröllopsdekoration, helhetsuppdrag",
-            "price": "från 4500 kr"
+            "price": 4500
         },
         {
             "name": "Dekoration till företagsevent",
-            "price": "från 1500 kr"
+            "price": 1500
         },
         {
             "name": "Kurs i blomsterbindning (2 tim)",
-            "price": "495 kr/person"
+            "price": 495
         },
         {
             "name": "Växtvattning under semester",
-            "price": "199 kr/vecka"
+            "price": 199
         },
         {
             "name": "Presentinslagning",
-            "price": "25 kr"
+            "price": 25
         },
         {
             "name": "Handskrivet kort",
-            "price": "15 kr"
+            "price": 15
         }
     ]
 }
