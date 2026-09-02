@@ -6,7 +6,7 @@
     --color3: rgba(171, 79, 171, 0.546);
     --color4: rgba(214, 152, 204, 0.251);
     --color5: rgba(58, 51, 62);
-    --color6: rgba(0,0,0,0.6);
+    --color6: rgba(0, 0, 0, 0.6);
     --color7: #04AA6D;
 }
 
@@ -48,23 +48,23 @@ h2 {
     font-family: niconne;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
     margin-top: 3vw;
 }
 
-h2{
+h2 {
     font-size: 5rem;
     text-align: center;
 }
 
-h3{
+h3 {
     font-family: roboto;
     font-size: 1.2rem;
     text-align: center;
 }
 
-h4{
+h4 {
     font-size: 1.17em;
 }
 
@@ -83,17 +83,17 @@ header {
     margin: 0;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
 }
 
-header > h1{
+header>h1 {
     margin-left: 10vw;
 }
 
@@ -117,7 +117,7 @@ header > h1{
     align-content: center;
 }
 
-.sub-header > nav {
+.sub-header>nav {
     display: flex;
     height: 75%;
     margin: auto 10vw;
@@ -127,7 +127,7 @@ header > h1{
     font-size: 1.35rem;
 }
 
-.sub-header > nav > a {
+.sub-header>nav>a {
     text-decoration: none;
     transition: 0.17s;
     color: white;
@@ -137,7 +137,7 @@ header > h1{
     font-family: roboto;
 }
 
-.sub-header > nav > a:hover {
+.sub-header>nav>a:hover {
     color: var(--color2);
     background-color: var(--color1);
 }
@@ -147,11 +147,11 @@ header > h1{
 
 /* || Main section styles */
 
-main{
+main {
     flex: 1;
 }
 
-.sub-main{
+.sub-main {
     background-color: var(--color4);
     margin: 2.5vw 10vw;
     line-height: 1rem;
@@ -163,67 +163,65 @@ main{
     text-decoration: none;
 }
 
-.sub-main 
-
-.sub-main a{
+.sub-main .sub-main a {
     text-decoration: none;
     color: black;
 }
 
 .toggle {
-  position: relative;
-  width: 18vw;
-  height: 2rem;
-  padding: 5px;
-  background: var(--color3);
-  border-radius: 999px;
-  display: flex;
-  cursor: pointer;
-  
+    position: relative;
+    width: 18vw;
+    height: 2rem;
+    padding: 5px;
+    background: var(--color3);
+    border-radius: 999px;
+    display: flex;
+    cursor: pointer;
+
 }
 
 .toggle input {
-  display: none;
+    display: none;
 }
 
 .option {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color3);
-  font-size: 1rem;
-  font-weight: bold;
-  z-index: 2;
-  transition: color 0.25s ease;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color3);
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 2;
+    transition: color 0.25s ease;
 }
 
 .slider {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: calc(50% - 5px);
-  height: calc(100% - 10px);
-  background: var(--color7);
-  border-radius: 999px;
-  transition: transform 0.25s ease;
-  z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background: var(--color7);
+    border-radius: 999px;
+    transition: transform 0.25s ease;
+    z-index: 1;
 }
 
-#toggle:checked ~ .slider {
-  transform: translateX(100%);
+#toggle:checked~.slider {
+    transform: translateX(100%);
 }
 
-#toggle:not(:checked) ~ .excl {
-  color: #111;
+#toggle:not(:checked)~.excl {
+    color: #111;
 }
 
-#toggle:checked ~ .inkl {
-  color: #111;
+#toggle:checked~.inkl {
+    color: #111;
 }
 
-.gallery{
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -231,77 +229,82 @@ main{
     font-family: roboto;
     font-weight: 300;
 }
- 
-.gallery-item{
-    width:25%;
+
+.gallery-item {
+    width: 25%;
     float: left;
     margin-bottom: 100%;
     margin-right: 5%;
-    height:auto;    
-    
+    height: auto;
+
 }
- 
+
 div.gallery-item {
-  margin: 1%;
+    margin: 1%;
 }
- 
-.gallery-item > a > img {
+
+.gallery-item>a>img {
     width: 75%;
     border-radius: 100%;
 }
 
-.prices{
+.prices {
     text-decoration: none;
-} 
+}
 
-h4{
+h4 {
     font-size: 1.17em;
 }
 
 table {
-  font-family: roboto;
-  border-collapse: collapse;
-  width: 80%;
-  margin: 0 auto;
-  border-style: solid;
-  border-width: 0.3vh;
-  border-color: rgba(109, 80, 107, 0.269);
+    font-family: roboto;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 0.3vh;
+    border-color: rgba(109, 80, 107, 0.269);
 }
 
-td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-  border-radius: black;
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    border-radius: black;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-tr:hover {background-color: var(--color3);}
+tr:hover {
+    background-color: var(--color3);
+}
 
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: var(--color3);
-  color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--color3);
+    color: white;
 }
 
 .products-button {
     display: flex;
     justify-content: center;
-    margin-top: 2vh; 
+    margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
-.products-button > a{
+.products-button>a {
     color: black;
     padding: 0.5vw;
     border-radius: 10rem;
     text-decoration: none;
 }
 
-.products-button > a:hover{
+.products-button>a:hover {
     color: var(--color2);
     background-color: var(--color1);
 }
@@ -311,7 +314,7 @@ th {
 
 /* || Footer section styles */
 
-footer{
+footer {
     position: relative;
     padding-left: 1vw;
     bottom: 0;
@@ -322,7 +325,7 @@ footer{
     margin: 0;
 }
 
-footer h2{
+footer h2 {
     text-align: left;
     font-size: 2rem;
     margin: 1vh 0;
@@ -333,7 +336,7 @@ footer h2{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.sub-footer > div {
+.sub-footer>div {
     border-left: 0.01rem solid white;
     padding-left: 0.5rem;
     margin-bottom: 2vh;
@@ -345,21 +348,21 @@ footer ul {
     padding: 0.5vh 0 0 0;
 }
 
-footer a{
+footer a {
     color: white;
     text-decoration: none;
 }
 
 /* … */
 
-@media screen and (max-width: 1035px){
-    h1{
+@media screen and (max-width: 1035px) {
+    h1 {
         margin-top: 5vw;
     }
 }
 
-@media screen and (max-width: 1035px){
-    h1{
+@media screen and (max-width: 1035px) {
+    h1 {
         margin-top: 5vw;
     }
 }
@@ -368,23 +371,27 @@ footer a{
 /* || Phone Media */
 
 @media screen and (max-width: 480px) {
-    h2{
+    h2 {
         font-size: 200%;
     }
-    .gallery-item{
+
+    .gallery-item {
         width: 50%;
-        
+
     }
+
     div.gallery-item {
         margin: 1px -1px;
     }
-    .sub-header > nav{
-        display: grid;         
-        grid-template-columns: 1fr 1fr;         
-        grid-template-rows: auto auto;         
-        max-height: 17vw;         
+
+    .sub-header>nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        max-height: 17vw;
     }
-    .text{
+
+    .text {
         margin: 2.5vw 5vw;
     }
 
@@ -400,31 +407,34 @@ footer a{
         font-size: 1.4rem;
     }
 
-    .sub-header{
-    height: 18vw;
+    .sub-header {
+        height: 18vw;
     }
-    .navText{
-        text-align: center;
-    }
-    .navBarText{
+
+    .navText {
         text-align: center;
     }
 
-    h1{
+    .navBarText {
+        text-align: center;
+    }
+
+    h1 {
         line-height: normal;
         margin-top: 13vw;
     }
 
-    .sub-footer{
+    .sub-footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
     }
 
     footer ul {
-    padding: 0.5vh 0 1.5vh 0;
+        padding: 0.5vh 0 1.5vh 0;
     }
 
 }
+
 /* 
 
 } */
