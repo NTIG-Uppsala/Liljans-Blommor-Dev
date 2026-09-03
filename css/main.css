@@ -384,6 +384,10 @@ footer a {
         margin: 1px -1px;
     }
 
+    .toggle {
+        width: 100%;
+    }
+
     .sub-header>nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
