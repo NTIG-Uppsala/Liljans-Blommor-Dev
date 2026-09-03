@@ -230,6 +230,15 @@ main {
     font-weight: 300;
 }
 
+#loading {
+    width: 4rem;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+
 .gallery-item {
     width: 25%;
     float: left;
@@ -271,7 +280,6 @@ th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-    border-radius: black;
 }
 
 tr:nth-child(even) {
@@ -373,6 +381,10 @@ footer a {
 @media screen and (max-width: 480px) {
     h2 {
         font-size: 200%;
+    }
+
+    #loading {
+        width: 3rem;
     }
 
     .gallery-item {

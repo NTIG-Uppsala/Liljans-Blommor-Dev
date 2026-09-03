@@ -3,9 +3,9 @@
 List of links for images
 
 
+## Images
 
-
-Cut flowers
+### Cut flowers
 
 
 Red rose = https://pixabay.com/sv/photos/reste-sig-taggar-ark-red-rose-g%C3%A5rd-5202381/
@@ -23,8 +23,7 @@ Gerbera = https://pixabay.com/sv/photos/blomma-barberton-daisy-v%C3%A4xt-gerbera
 Eucalyptus green = https://pixabay.com/sv/photos/l%C3%B6v-eucalyptus-eukalyptustr%C3%A4d-384363/
 
 
-
-Bouquetes
+### Bouquetes
 
 
 Smal bouquet = https://pixabay.com/photos/bunch-of-flowers-flower-decoration-57440/
@@ -40,11 +39,12 @@ Funeral bouquet = https://pixabay.com/photos/roses-morning-mist-graveyard-grief-
 Bride bouquet = https://pixabay.com/photos/wedding-bridal-bouquet-4860500/
 
 
-
-
 Potted plants = https://pixabay.com/photos/cactus-houseplant-plant-green-pot-4287345/
 
 
+## Gifs
+
+**Loading:** https://pixabay.com/gifs/loading-animation-spin-highlights-7528/
 
 
 ## Fonts

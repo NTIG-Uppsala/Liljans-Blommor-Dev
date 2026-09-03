@@ -1,5 +1,7 @@
 const toggle = document.getElementById("toggle");
 const prices = document.getElementsByClassName("prices");
+const gallery = document.getElementById("gallery");
+const table = document.getElementById("table");
 
 async function changePrices() {
     if (toggle.checked) {
@@ -25,22 +27,15 @@ async function changePrices() {
     }
 }
 
-toggle.addEventListener('change', changePrices);
-
-
-const gallery = document.getElementById("gallery");
-const table = document.getElementById("table")
-
-
 function generateHtmlForProductsWithImage(productsWithImg) {
     let productsWithImgHtml = "";
     for (i in productsWithImg) {
         productsWithImgHtml += `
             <div class="gallery-item">
-                <a target="_blank" href="${productsWithImg[i].img}">
+                <a class="inactiveLink" target="_blank" href="${productsWithImg[i].img}">
                     <img src="${productsWithImg[i].img}" alt="${productsWithImg[i].name}">
                 </a>
-                <div class="img-desc">${productsWithImg[i].name}	<u class="prices" data-productName="${productsWithImg[i].name}">${productsWithImg[i].price}</u> kr</div>
+                <div class="img-desc">${productsWithImg[i].name} <u class="prices" data-productName="${productsWithImg[i].name}">${productsWithImg[i].price}</u> kr</div>
             </div>`
     }
     gallery.innerHTML = productsWithImgHtml;
@@ -83,4 +78,8 @@ async function loadProductsFromJsonAndDisplay() {
     generateHtmlForProductsWithoutImage(productsWithoutImg);
 }
 
-loadProductsFromJsonAndDisplay();
+toggle.addEventListener('change', changePrices);
+
+if (gallery.getAttribute("data-product-page") === "loadProducts") {
+    loadProductsFromJsonAndDisplay();
+}
