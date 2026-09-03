@@ -79,4 +79,7 @@ async function loadProductsFromJsonAndDisplay() {
 }
 
 toggle.addEventListener('change', changePrices);
-loadProductsFromJsonAndDisplay();
+
+if (gallery.getAttribute("data-product-page") === "loadProducts") {
+    loadProductsFromJsonAndDisplay();
+}
