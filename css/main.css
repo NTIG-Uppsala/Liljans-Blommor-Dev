@@ -230,6 +230,10 @@ main {
     font-weight: 300;
 }
 
+#loading {
+    width: 4rem;
+}
+
 .inactiveLink {
     pointer-events: none;
     cursor: default;
@@ -378,6 +382,10 @@ footer a {
 @media screen and (max-width: 480px) {
     h2 {
         font-size: 200%;
+    }
+
+    #loading {
+        width: 3rem;
     }
 
     .gallery-item {
