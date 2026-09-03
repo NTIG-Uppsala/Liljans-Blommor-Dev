@@ -280,7 +280,6 @@ th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-    border-radius: black;
 }
 
 tr:nth-child(even) {
