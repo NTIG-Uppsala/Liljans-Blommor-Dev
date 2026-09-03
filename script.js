@@ -1,5 +1,7 @@
 const toggle = document.getElementById("toggle");
 const prices = document.getElementsByClassName("prices");
+const gallery = document.getElementById("gallery");
+const table = document.getElementById("table");
 
 async function changePrices() {
     if (toggle.checked) {
@@ -24,13 +26,6 @@ async function changePrices() {
         }
     }
 }
-
-toggle.addEventListener('change', changePrices);
-
-
-const gallery = document.getElementById("gallery");
-const table = document.getElementById("table")
-
 
 function generateHtmlForProductsWithImage(productsWithImg) {
     let productsWithImgHtml = "";
@@ -83,4 +78,5 @@ async function loadProductsFromJsonAndDisplay() {
     generateHtmlForProductsWithoutImage(productsWithoutImg);
 }
 
+toggle.addEventListener('change', changePrices);
 loadProductsFromJsonAndDisplay();
