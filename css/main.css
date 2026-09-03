@@ -230,6 +230,11 @@ main {
     font-weight: 300;
 }
 
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+
 .gallery-item {
     width: 25%;
     float: left;
