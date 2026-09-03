@@ -213,11 +213,11 @@ main {
     transform: translateX(100%);
 }
 
-#toggle:not(:checked)~.excl {
+#toggle:not(:checked)~.incl {
     color: #111;
 }
 
-#toggle:checked~.incl {
+#toggle:checked~.excl {
     color: #111;
 }
 
