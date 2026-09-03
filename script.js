@@ -1,5 +1,5 @@
-const toggle = document.getElementById("toggle");
 const prices = document.getElementsByClassName("prices");
+const toggle = document.getElementById("toggle");
 const gallery = document.getElementById("gallery");
 const table = document.getElementById("table");
 
@@ -78,8 +78,6 @@ async function loadProductsFromJsonAndDisplay() {
     generateHtmlForProductsWithoutImage(productsWithoutImg);
 }
 
-toggle.addEventListener('change', changePrices);
-
 if (gallery.getAttribute("data-product-page") === "loadProducts") {
     loadProductsFromJsonAndDisplay();
 }
@@ -88,3 +86,5 @@ if (localStorage.getItem("taxes") === "excludeTaxes") {
     toggle.checked = true;
     setTimeout(changePrices, 100);
 }
+
+toggle.addEventListener('change', changePrices);
