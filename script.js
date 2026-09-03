@@ -10,11 +10,11 @@ async function changePrices() {
             const priceWithoutTaxes = priceWithTaxes / 1.25;
             prices.item(i).innerHTML = Math.round(priceWithoutTaxes);
         }
+        localStorage.setItem("taxes", "excludeTaxes");
     } else {
         const response = await fetch("/data/products.json");
         const data = await response.json();
         for (let i = 0; i < prices.length; i++) {
-
             for (jsonIndex in data.products) {
                 const productNameHtml = prices.item(i).getAttribute("data-productName");
                 const productNameJson = data.products[jsonIndex].name;
@@ -22,8 +22,8 @@ async function changePrices() {
                     prices.item(i).innerHTML = data.products[jsonIndex].price;
                 }
             }
-
         }
+        localStorage.setItem("taxes", "includeTaxes");
     }
 }
 
@@ -82,4 +82,9 @@ toggle.addEventListener('change', changePrices);
 
 if (gallery.getAttribute("data-product-page") === "loadProducts") {
     loadProductsFromJsonAndDisplay();
+}
+
+if (localStorage.getItem("taxes") === "excludeTaxes") {
+    toggle.checked = true;
+    setTimeout(changePrices, 100);
 }
