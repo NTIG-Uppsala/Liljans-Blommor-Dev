@@ -15,12 +15,15 @@ Always in English
 ## Development environment standard
 -**Windows 11** - Version 25H2 (OS-version 26200.9106)
   operating system our machines use
+  
 -**Visual Studio Code 1.134** 
   Program we use for coding.
   Extensions:
      Live Server - Version 5.7.10
+
 **Github 3.22.0**
   verstioning / vertion control / vertion managment
+  
 -**Scribens:** https://www.scribens.com/sv/
   Spelling and wording
 
