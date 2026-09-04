@@ -12,7 +12,7 @@ async function changePrices() {
         }
         localStorage.setItem("taxes", "excludeTaxes");
     } else {
-        const response = await fetch("/data/products.json");
+        const response = await fetch("data/products.json");
         const data = await response.json();
         for (let i = 0; i < prices.length; i++) {
             for (jsonIndex in data.products) {
@@ -62,7 +62,7 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
 }
 
 async function loadProductsFromJsonAndDisplay() {
-    const response = await fetch("/data/products.json");
+    const response = await fetch("data/products.json");
     const data = await response.json();
     const productsWithImg = [];
     const productsWithoutImg = [];
