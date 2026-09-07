@@ -35,7 +35,7 @@ function generateHtmlForProductsWithImage(productsWithImg) {
                 <a class="inactiveLink" target="_blank" href="${productWithImg.img}">
                     <img src="${productWithImg.img}" alt="${productWithImg.name}">
                 </a>
-                <div class="img-desc">${productWithImg.name} <u class="prices" data-productName="${productWithImg.name}">${productWithImg.price}</u> kr</div>
+                <div class="img-desc">${productWithImg.name} <u class="prices" data-productName="${productWithImg.name}">${productWithImg.price}</u>&nbsp;kr</div>
             </div>`
     });
     gallery.innerHTML = productsWithImgHtml;
@@ -54,7 +54,7 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
             productsWithoutImgHtml += `
                 <tr>
                     <td>${productWithoutImg.name}</td>
-                    <td><u class="prices" data-productName="${productWithoutImg.name}">${productWithoutImg.price}</u> kr</td>
+                    <td><u class="prices" data-productName="${productWithoutImg.name}">${productWithoutImg.price}</u>&nbsp;kr</td>
                 </tr>`
         }
     });
