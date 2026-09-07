@@ -217,6 +217,7 @@ main {
     max-width: 100%;
     font-family: roboto;
     font-weight: 300;
+    margin: 5vh 0;
 }
 
 #loading {
