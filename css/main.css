@@ -44,6 +44,10 @@ img {
     border-radius: 50%;
 }
 
+.noMargin {
+    margin: 0;
+}
+
 h1,
 h2 {
     font-family: niconne;
