@@ -3,6 +3,8 @@ const toggleShowWithoutTaxes = document.getElementById("taxToggle");
 const gallery = document.getElementById("gallery");
 const productTable = document.getElementById("productTable");
 
+let jsonData = {};
+
 async function changePrices() {
     if (toggleShowWithoutTaxes.checked) {
         Array.from(prices).forEach(price => {
@@ -12,10 +14,8 @@ async function changePrices() {
         });
         localStorage.setItem("taxes", "excludeTaxes");
     } else {
-        const response = await fetch("../data/products.json");
-        const data = await response.json();
         Array.from(prices).forEach(price => {
-            data.products.forEach(product => {
+            jsonData.products.forEach(product => {
                 const productNameHtml = price.getAttribute("data-productName");
                 const productNameJson = product.name;
                 if (productNameHtml === productNameJson) {
@@ -63,11 +63,11 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
 
 async function loadProductsFromJsonAndDisplay() {
     const response = await fetch("../data/products.json");
-    const data = await response.json();
+    jsonData = await response.json();
     const productsWithImg = [];
     const productsWithoutImg = [];
 
-    data.products.forEach(product => {
+    jsonData.products.forEach(product => {
         if (product.img) {
             productsWithImg.push(product);
         } else {
