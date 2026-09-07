@@ -74,17 +74,19 @@ async function loadProductsFromJsonAndDisplay() {
             productsWithoutImg.push(product);
         }
     });
-    generateHtmlForProductsWithImage(productsWithImg);
-    generateHtmlForProductsWithoutImage(productsWithoutImg);
+    await generateHtmlForProductsWithImage(productsWithImg);
+    await generateHtmlForProductsWithoutImage(productsWithoutImg);
+
+    if (localStorage.getItem("taxes") === "excludeTaxes") {
+        toggleShowWithoutTaxes.checked = true;
+        changePrices();
+    }
 }
 
 if (gallery.getAttribute("data-product-page") === "loadProducts") {
     loadProductsFromJsonAndDisplay();
 }
 
-if (localStorage.getItem("taxes") === "excludeTaxes") {
-    toggleShowWithoutTaxes.checked = true;
-    setTimeout(changePrices, 100);
-}
+
 
 toggleShowWithoutTaxes.addEventListener('change', changePrices);
