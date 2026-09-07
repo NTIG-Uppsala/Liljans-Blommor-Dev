@@ -5,59 +5,59 @@ const productTable = document.getElementById("productTable");
 
 async function changePrices() {
     if (toggleShowWithoutTaxes.checked) {
-        for (let i = 0; i < prices.length; i++) {
-            const priceWithTaxes = parseInt(prices.item(i).innerHTML);
+        Array.from(prices).forEach(price => {
+            const priceWithTaxes = parseInt((price).innerHTML);
             const priceWithoutTaxes = priceWithTaxes / 1.25;
-            prices.item(i).innerHTML = Math.round(priceWithoutTaxes);
-        }
+            price.innerHTML = Math.round(priceWithoutTaxes);
+        });
         localStorage.setItem("taxes", "excludeTaxes");
     } else {
         const response = await fetch("../data/products.json");
         const data = await response.json();
-        for (let i = 0; i < prices.length; i++) {
-            for (jsonIndex in data.products) {
-                const productNameHtml = prices.item(i).getAttribute("data-productName");
-                const productNameJson = data.products[jsonIndex].name;
+        Array.from(prices).forEach(price => {
+            data.products.forEach(product => {
+                const productNameHtml = price.getAttribute("data-productName");
+                const productNameJson = product.name;
                 if (productNameHtml === productNameJson) {
-                    prices.item(i).innerHTML = data.products[jsonIndex].price;
+                    price.innerHTML = product.price;
                 }
-            }
-        }
+            });
+        });
         localStorage.setItem("taxes", "includeTaxes");
     }
 }
 
 function generateHtmlForProductsWithImage(productsWithImg) {
     let productsWithImgHtml = "";
-    for (i in productsWithImg) {
+    productsWithImg.forEach(productWithImg => {
         productsWithImgHtml += `
             <div class="gallery-item">
-                <a class="inactiveLink" target="_blank" href="${productsWithImg[i].img}">
-                    <img src="${productsWithImg[i].img}" alt="${productsWithImg[i].name}">
+                <a class="inactiveLink" target="_blank" href="${productWithImg.img}">
+                    <img src="${productWithImg.img}" alt="${productWithImg.name}">
                 </a>
-                <div class="img-desc">${productsWithImg[i].name} <u class="prices" data-productName="${productsWithImg[i].name}">${productsWithImg[i].price}</u> kr</div>
+                <div class="img-desc">${productWithImg.name} <u class="prices" data-productName="${productWithImg.name}">${productWithImg.price}</u> kr</div>
             </div>`
-    }
+    });
     gallery.innerHTML = productsWithImgHtml;
 }
 
 function generateHtmlForProductsWithoutImage(productsWithoutImg) {
     let productsWithoutImgHtml = "";
-    for (i in productsWithoutImg) {
-        if (productsWithoutImg[i].headline) {
+    productsWithoutImg.forEach(productWithoutImg => {
+        if (productWithoutImg.headline) {
             productsWithoutImgHtml += `
                 <tr>
-                    <th>${productsWithoutImg[i].headline}</th>
-                    <th>${productsWithoutImg[i].price}</th>
+                    <th>${productWithoutImg.headline}</th>
+                    <th>${productWithoutImg.price}</th>
                 </tr>`
-        } else if (productsWithoutImg[i].name) {
+        } else if (productWithoutImg.name) {
             productsWithoutImgHtml += `
                 <tr>
-                    <td>${productsWithoutImg[i].name}</td>
-                    <td><u class="prices" data-productName="${productsWithoutImg[i].name}">${productsWithoutImg[i].price}</u> kr</td>
+                    <td>${productWithoutImg.name}</td>
+                    <td><u class="prices" data-productName="${productWithoutImg.name}">${productWithoutImg.price}</u> kr</td>
                 </tr>`
         }
-    }
+    });
     productTable.innerHTML = productsWithoutImgHtml;
 }
 
@@ -67,13 +67,13 @@ async function loadProductsFromJsonAndDisplay() {
     const productsWithImg = [];
     const productsWithoutImg = [];
 
-    for (i in data.products) {
-        if (data.products[i].img) {
-            productsWithImg.push(data.products[i]);
+    data.products.forEach(product => {
+        if (product.img) {
+            productsWithImg.push(product);
         } else {
-            productsWithoutImg.push(data.products[i]);
+            productsWithoutImg.push(product);
         }
-    }
+    });
     generateHtmlForProductsWithImage(productsWithImg);
     generateHtmlForProductsWithoutImage(productsWithoutImg);
 }
