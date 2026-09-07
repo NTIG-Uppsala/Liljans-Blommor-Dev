@@ -1,10 +1,10 @@
 const prices = document.getElementsByClassName("prices");
-const toggle = document.getElementById("toggle");
+const toggleShowWithoutTaxes = document.getElementById("taxToggle");
 const gallery = document.getElementById("gallery");
-const table = document.getElementById("table");
+const productTable = document.getElementById("productTable");
 
 async function changePrices() {
-    if (toggle.checked) {
+    if (toggleShowWithoutTaxes.checked) {
         for (let i = 0; i < prices.length; i++) {
             const priceWithTaxes = parseInt(prices.item(i).innerHTML);
             const priceWithoutTaxes = priceWithTaxes / 1.25;
@@ -12,7 +12,7 @@ async function changePrices() {
         }
         localStorage.setItem("taxes", "excludeTaxes");
     } else {
-        const response = await fetch("data/products.json");
+        const response = await fetch("../data/products.json");
         const data = await response.json();
         for (let i = 0; i < prices.length; i++) {
             for (jsonIndex in data.products) {
@@ -58,11 +58,11 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
                 </tr>`
         }
     }
-    table.innerHTML = productsWithoutImgHtml;
+    productTable.innerHTML = productsWithoutImgHtml;
 }
 
 async function loadProductsFromJsonAndDisplay() {
-    const response = await fetch("data/products.json");
+    const response = await fetch("../data/products.json");
     const data = await response.json();
     const productsWithImg = [];
     const productsWithoutImg = [];
@@ -83,8 +83,8 @@ if (gallery.getAttribute("data-product-page") === "loadProducts") {
 }
 
 if (localStorage.getItem("taxes") === "excludeTaxes") {
-    toggle.checked = true;
+    toggleShowWithoutTaxes.checked = true;
     setTimeout(changePrices, 100);
 }
 
-toggle.addEventListener('change', changePrices);
+toggleShowWithoutTaxes.addEventListener('change', changePrices);

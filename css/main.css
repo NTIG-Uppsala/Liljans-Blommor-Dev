@@ -8,6 +8,7 @@
     --color5: rgba(58, 51, 62);
     --color6: rgba(0, 0, 0, 0.6);
     --color7: #04AA6D;
+    --color8: rgb(185, 185, 185);
 }
 
 @font-face {
@@ -79,22 +80,11 @@ header {
     font-family: niconne;
     background-color: var(--color3);
     color: white;
-    margin: 1vw;
-    margin: 0;
 }
 
 header a {
     color: white;
     text-decoration: none;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-}
-
-header>h1 {
-    margin-left: 10vw;
 }
 
 .top-header {
@@ -107,12 +97,11 @@ header>h1 {
 
 #tel {
     font-family: roboto;
-    font-size: 1.8rem;
-    padding-top: 1rem;
+    font-size: 1.35rem;
 }
 
 .sub-header {
-    height: 7.5vw;
+    height: 7vw;
     width: 100%;
     align-content: center;
 }
@@ -120,7 +109,6 @@ header>h1 {
 .sub-header>nav {
     display: flex;
     height: 75%;
-    margin: auto 10vw;
     border-radius: 100rem;
     justify-content: space-around;
     align-items: center;
@@ -163,7 +151,7 @@ main {
     text-decoration: none;
 }
 
-.sub-main .sub-main a {
+.sub-main a {
     text-decoration: none;
     color: black;
 }
@@ -173,11 +161,11 @@ main {
     width: 18vw;
     height: 2rem;
     padding: 5px;
-    background: var(--color3);
+    background: var(--color1);
     border-radius: 999px;
     display: flex;
     cursor: pointer;
-
+    outline: black solid 1px;
 }
 
 .toggle input {
@@ -190,7 +178,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color3);
+    color: var(--color8);
     font-size: 1rem;
     font-weight: bold;
     z-index: 2;
@@ -203,21 +191,22 @@ main {
     left: 5px;
     width: calc(50% - 5px);
     height: calc(100% - 10px);
-    background: var(--color7);
+    background: var(--color3);
     border-radius: 999px;
     transition: transform 0.25s ease;
     z-index: 1;
+    /* outline: black solid 1px; */
 }
 
-#toggle:checked~.slider {
+#taxToggle:checked~.slider {
     transform: translateX(100%);
 }
 
-#toggle:not(:checked)~.incl {
+#taxToggle:not(:checked)~.incl {
     color: #111;
 }
 
-#toggle:checked~.excl {
+#taxToggle:checked~.excl {
     color: #111;
 }
 
@@ -358,7 +347,11 @@ footer ul {
 
 footer a {
     color: white;
-    text-decoration: none;
+    transition: 100ms;
+}
+
+footer a:hover {
+    color: rgb(169, 211, 236);
 }
 
 /* … */
