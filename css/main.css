@@ -8,6 +8,7 @@
     --color5: rgba(58, 51, 62);
     --color6: rgba(0, 0, 0, 0.6);
     --color7: #04AA6D;
+    --color8: rgb(185, 185, 185);
 }
 
 @font-face {
@@ -160,11 +161,11 @@ main {
     width: 18vw;
     height: 2rem;
     padding: 5px;
-    background: var(--color3);
+    background: var(--color1);
     border-radius: 999px;
     display: flex;
     cursor: pointer;
-
+    outline: black solid 1px;
 }
 
 .toggle input {
@@ -177,7 +178,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color3);
+    color: var(--color8);
     font-size: 1rem;
     font-weight: bold;
     z-index: 2;
@@ -190,21 +191,22 @@ main {
     left: 5px;
     width: calc(50% - 5px);
     height: calc(100% - 10px);
-    background: var(--color7);
+    background: var(--color3);
     border-radius: 999px;
     transition: transform 0.25s ease;
     z-index: 1;
+    /* outline: black solid 1px; */
 }
 
-#toggle:checked~.slider {
+#taxToggle:checked~.slider {
     transform: translateX(100%);
 }
 
-#toggle:not(:checked)~.incl {
+#taxToggle:not(:checked)~.incl {
     color: #111;
 }
 
-#toggle:checked~.excl {
+#taxToggle:checked~.excl {
     color: #111;
 }
 
