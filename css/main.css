@@ -160,6 +160,11 @@ main {
     color: black;
 }
 
+.sub-main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .toggle {
     position: relative;
     width: 18vw;

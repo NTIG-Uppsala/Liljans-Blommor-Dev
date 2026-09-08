@@ -3,6 +3,14 @@ const toggleShowWithoutTaxes = document.getElementById("taxToggle");
 const gallery = document.getElementById("gallery");
 const productTable = document.getElementById("productTable");
 
+const telephoneNumberElements = document.getElementsByClassName("tel");
+const mailElements = document.getElementsByClassName("mail");
+const locationElements = document.getElementsByClassName("location")
+
+const weekdaysElements = document.getElementsByClassName("weekdays");
+const saturdayElements = document.getElementsByClassName("saturday");
+const sundayElements = document.getElementsByClassName("sunday");
+
 let jsonData = {};
 
 /*
@@ -73,34 +81,78 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
 
 /*
 
+    Html for contacts
+
+*/
+function generateHtmlForContacts() {
+    Array.from(telephoneNumberElements).forEach(telephoneNumberElement => {
+        telephoneNumberElement.innerHTML = `<a href="tel:+46${jsonData.contacts.tel}">${jsonData.contacts.tel}</a>`;
+    });
+    Array.from(mailElements).forEach(mailElement => {
+        mailElement.innerHTML = `<a href="mailto:${jsonData.contacts.mail}">${jsonData.contacts.mail}</a>`;
+    });
+    Array.from(locationElements).forEach(locationElement => {
+        locationElement.innerHTML = `${jsonData.contacts.address}, ${jsonData.contacts.postalCode} ${jsonData.contacts.city}`;
+    });
+}
+
+/*
+
+    Html for openingHours
+
+*/
+function generateHtmlForOpeningHours() {
+    Array.from(weekdaysElements).forEach(weekdaysElement => {
+        weekdaysElement.innerHTML = `Vardagar: ${jsonData.openingHours.weekdays}`
+    });
+    Array.from(saturdayElements).forEach(saturdayElement => {
+        saturdayElement.innerHTML = `Lördagar: ${jsonData.openingHours.saturday}`
+    });
+    Array.from(sundayElements).forEach(sundayElement => {
+        sundayElement.innerHTML = `Söndagar: ${jsonData.openingHours.sunday}`
+    });
+}
+
+/*
+
     Get products from Json and display html
 
 */
-async function loadProductsFromJsonAndDisplay() {
-    if (gallery.getAttribute("data-product-page") === "loadProducts") {
-        const response = await fetch("../data/products.json");
-        jsonData = await response.json();
-        const productsWithImg = [];
-        const productsWithoutImg = [];
+async function loadJsonAndDisplay() {
+    const response = await fetch("../data/products.json");
+    jsonData = await response.json();
+    try {
+        if (gallery.getAttribute("data-product-page") === "loadProducts") {
+            const productsWithImg = [];
+            const productsWithoutImg = [];
 
-        jsonData.products.forEach(product => {
-            if (product.img) {
-                productsWithImg.push(product);
-            } else {
-                productsWithoutImg.push(product);
+            jsonData.products.forEach(product => {
+                if (product.img) {
+                    productsWithImg.push(product);
+                } else {
+                    productsWithoutImg.push(product);
+                }
+            });
+            await generateHtmlForProductsWithImage(productsWithImg);
+            await generateHtmlForProductsWithoutImage(productsWithoutImg);
+
+            if (localStorage.getItem("taxes") === "excludeTaxes") {
+                toggleShowWithoutTaxes.checked = true;
+                changePrices();
             }
-        });
-        await generateHtmlForProductsWithImage(productsWithImg);
-        await generateHtmlForProductsWithoutImage(productsWithoutImg);
-
-        if (localStorage.getItem("taxes") === "excludeTaxes") {
-            toggleShowWithoutTaxes.checked = true;
-            changePrices();
         }
+    } catch (error) {
+        console.error(error);
     }
+
+
+    await generateHtmlForContacts();
+    await generateHtmlForOpeningHours();
 }
 
 
-loadProductsFromJsonAndDisplay();
+loadJsonAndDisplay();
 
-toggleShowWithoutTaxes.addEventListener('change', changePrices);
+if (toggleShowWithoutTaxes) {
+    toggleShowWithoutTaxes.addEventListener('change', changePrices);
+}

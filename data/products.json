@@ -163,6 +163,6 @@
     "openingHours": {
         "weekdays": "09-18",
         "saturday": "10-15",
-        "sunday": false
+        "sunday": "Stängt"
     }
 }
