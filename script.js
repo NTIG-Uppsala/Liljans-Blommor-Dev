@@ -32,6 +32,11 @@ async function changePrices() {
     }
 }
 
+/*
+
+    Html for products
+
+*/
 function generateHtmlForProductsWithImage(productsWithImg) {
     let productsWithImgHtml = "";
     productsWithImg.forEach(productWithImg => {
@@ -66,6 +71,11 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
     productTable.innerHTML = productsWithoutImgHtml;
 }
 
+/*
+
+    Get products from Json and display html
+
+*/
 async function loadProductsFromJsonAndDisplay() {
     if (gallery.getAttribute("data-product-page") === "loadProducts") {
         const response = await fetch("../data/products.json");

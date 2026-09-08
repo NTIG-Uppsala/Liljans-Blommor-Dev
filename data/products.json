@@ -160,9 +160,9 @@
         "postalCode": "981 37",
         "city": "Kiruna"
     },
-    "openHours": {
+    "openingHours": {
         "weekdays": "09-18",
         "saturday": "10-15",
-        "sunday": "false"
+        "sunday": false
     }
 }
