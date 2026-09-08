@@ -5,6 +5,11 @@ const productTable = document.getElementById("productTable");
 
 let jsonData = {};
 
+/*
+
+    Changeprices
+
+*/
 async function changePrices() {
     if (toggleShowWithoutTaxes.checked) {
         Array.from(prices).forEach(price => {

@@ -152,5 +152,17 @@
             "name": "Handskrivet kort",
             "price": 15
         }
-    ]
+    ],
+    "contacts": {
+        "tel": "555 - 3571114",
+        "mail": "lilja.notreal@notreal.se",
+        "address": "Kurravaaravägen 4",
+        "postalCode": "981 37",
+        "city": "Kiruna"
+    },
+    "openHours": {
+        "weekdays": "09-18",
+        "saturday": "10-15",
+        "sunday": "false"
+    }
 }
