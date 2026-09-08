@@ -67,31 +67,30 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
 }
 
 async function loadProductsFromJsonAndDisplay() {
-    const response = await fetch("../data/products.json");
-    jsonData = await response.json();
-    const productsWithImg = [];
-    const productsWithoutImg = [];
+    if (gallery.getAttribute("data-product-page") === "loadProducts") {
+        const response = await fetch("../data/products.json");
+        jsonData = await response.json();
+        const productsWithImg = [];
+        const productsWithoutImg = [];
 
-    jsonData.products.forEach(product => {
-        if (product.img) {
-            productsWithImg.push(product);
-        } else {
-            productsWithoutImg.push(product);
+        jsonData.products.forEach(product => {
+            if (product.img) {
+                productsWithImg.push(product);
+            } else {
+                productsWithoutImg.push(product);
+            }
+        });
+        await generateHtmlForProductsWithImage(productsWithImg);
+        await generateHtmlForProductsWithoutImage(productsWithoutImg);
+
+        if (localStorage.getItem("taxes") === "excludeTaxes") {
+            toggleShowWithoutTaxes.checked = true;
+            changePrices();
         }
-    });
-    await generateHtmlForProductsWithImage(productsWithImg);
-    await generateHtmlForProductsWithoutImage(productsWithoutImg);
-
-    if (localStorage.getItem("taxes") === "excludeTaxes") {
-        toggleShowWithoutTaxes.checked = true;
-        changePrices();
     }
 }
 
-if (gallery.getAttribute("data-product-page") === "loadProducts") {
-    loadProductsFromJsonAndDisplay();
-}
 
-
+loadProductsFromJsonAndDisplay();
 
 toggleShowWithoutTaxes.addEventListener('change', changePrices);
