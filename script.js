@@ -84,9 +84,22 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
     Html for contacts
 
 */
+
+function formatTelephoneNumber(rawTelephoneNumber) {
+    const onlyDigits = rawTelephoneNumber.replace(/\D/, "");
+    const withoutCountry = onlyDigits.slice(2);
+    const formatedTelNumber = withoutCountry.slice(0, 3) + " - " + withoutCountry.slice(3);
+    return formatedTelNumber;
+}
+
+/*
+
+    Html for contacts
+
+*/
 function generateHtmlForContacts() {
     Array.from(telephoneNumberElements).forEach(telephoneNumberElement => {
-        telephoneNumberElement.innerHTML = `<a href="tel:+46${jsonData.contacts.tel}">${jsonData.contacts.tel}</a>`;
+        telephoneNumberElement.innerHTML = `<a href="tel:${jsonData.contacts.tel}">${formatTelephoneNumber(jsonData.contacts.tel)}</a>`;
     });
     Array.from(mailElements).forEach(mailElement => {
         mailElement.innerHTML = `<a href="mailto:${jsonData.contacts.mail}">${jsonData.contacts.mail}</a>`;
@@ -148,6 +161,7 @@ async function loadJsonAndDisplay() {
 
     await generateHtmlForContacts();
     await generateHtmlForOpeningHours();
+    await formatTelephoneNumber(jsonData.contacts.tel);
 }
 
 
@@ -156,3 +170,5 @@ loadJsonAndDisplay();
 if (toggleShowWithoutTaxes) {
     toggleShowWithoutTaxes.addEventListener('change', changePrices);
 }
+
+
