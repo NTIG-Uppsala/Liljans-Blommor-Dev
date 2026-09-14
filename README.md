@@ -26,7 +26,7 @@ Always in English
 
 ### Programming language
 - **HTML** - version: HTML5
-- **CSS** - flytande version
+- **CSS** - flowing version
 - **Javascript** - es2023
 
 ### Development environment standard
