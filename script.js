@@ -79,6 +79,29 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
     productTable.innerHTML = productsWithoutImgHtml;
 }
 
+function generateHtmlForBestSellers(productsWithImg){
+
+    console.log("Best sellers")
+    let productsWithImgHtml = "";
+
+    productsWithImg.forEach(productWithImg => {
+
+        if( productWithImg.isBestSeller ){
+            productsWithImgHtml += `
+                <div class="gallery-item">
+                    <a class="inactiveLink" target="_blank" href="${productWithImg.img}">
+                        <img src="${productWithImg.img}" alt="${productWithImg.name}">
+                    </a>
+                    <div class="img-desc">${productWithImg.name} <u class="prices" data-productName="${productWithImg.name}">${productWithImg.price}</u>&nbsp;kr</div>
+                </div>`
+        }
+    });
+        
+
+    gallery.innerHTML = productsWithImgHtml;
+    
+}
+
 /*
 
     Html for contacts
@@ -122,17 +145,20 @@ async function loadJsonAndDisplay() {
     const response = await fetch("../data/data.json");
     jsonData = await response.json();
     try {
-        if (gallery.getAttribute("data-product-page") === "loadProducts") {
-            const productsWithImg = [];
-            const productsWithoutImg = [];
 
-            jsonData.products.forEach(product => {
-                if (product.img) {
-                    productsWithImg.push(product);
-                } else {
-                    productsWithoutImg.push(product);
-                }
-            });
+        const productsWithImg = [];
+        const productsWithoutImg = [];
+
+        jsonData.products.forEach(product => {
+            if (product.img) {
+                productsWithImg.push(product);
+            } else {
+                productsWithoutImg.push(product);
+            }
+        });
+
+        if (gallery.getAttribute("data-page") === "productsPage") {
+
             await generateHtmlForProductsWithImage(productsWithImg);
             await generateHtmlForProductsWithoutImage(productsWithoutImg);
 
@@ -140,6 +166,10 @@ async function loadJsonAndDisplay() {
                 toggleShowWithoutTaxes.checked = true;
                 changePrices();
             }
+        }else if (gallery.getAttribute("data-page") === "indexPage"){
+
+            generateHtmlForBestSellers(productsWithImg)
+
         }
     } catch (error) {
         console.error(error);

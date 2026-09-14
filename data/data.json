@@ -3,62 +3,74 @@
         {
             "name": "Nejlika",
             "price": 29,
-            "img": "../assets/images/carnation.jpg"
+            "img": "../assets/images/carnation.jpg",
+            "isBestSeller": false
         },
         {
             "name": "Liljestjälk",
             "price": 69,
-            "img": "../assets/images/LilyStalk.jpg"
+            "img": "../assets/images/LilyStalk.jpg",
+            "isBestSeller": false
         },
         {
             "name": "Gerbera",
             "price": 35,
-            "img": "../assets/images/gerbera.jpg"
+            "img": "../assets/images/gerbera.jpg",
+            "isBestSeller": false
         },
         {
             "name": "Eukalyptusgrönt (bunt)",
             "price": 59,
-            "img": "../assets/images/eucalyptusGreen.jpg"
+            "img": "../assets/images/eucalyptusGreen.jpg",
+            "isBestSeller": false
         },
         {
             "name": "Röd ros",
             "price": 39,
-            "img": "../assets/images/redRose.jpg"
+            "img": "../assets/images/redRose.jpg",
+            "isBestSeller": false
         },
         {
             "name": "Tulpan (bunt om 10)",
             "price": 89,
-            "img": "../assets/images/tulips.jpg"
+            "img": "../assets/images/tulips.jpg",
+            "isBestSeller": false
         },
         {
             "name": "Sorgbukett",
             "price": 450,
-            "img": "../assets/images/funeralBouquet.jpg"
+            "img": "../assets/images/funeralBouquet.jpg",
+            "isBestSeller": true
         },
         {
             "name": "Brudbukett",
             "price": 1200,
-            "img": "../assets/images/brideBouquet.jpg"
+            "img": "../assets/images/brideBouquet.jpg",
+            "isBestSeller": true
         },
         {
             "name": "Stor bukett",
             "price": 599,
-            "img": "../assets/images/largeBouquet.jpg"
+            "img": "../assets/images/largeBouquet.jpg",
+            "isBestSeller": true
         },
         {
             "name": "Månadens säsongsbukett",
             "price": 249,
-            "img": "../assets/images/seasonalBouquet.jpg"
+            "img": "../assets/images/seasonalBouquet.jpg",
+            "isBestSeller": true
         },
         {
             "name": "Mellan storbukett",
             "price": 399,
-            "img": "../assets/images/mediumBouquet.jpg"
+            "img": "../assets/images/mediumBouquet.jpg",
+            "isBestSeller": true
         },
         {
             "name": "Liten handbunden bukett",
             "price": 249,
-            "img": "../assets/images/smalbouquet.jpg"
+            "img": "../assets/images/smalbouquet.jpg",
+            "isBestSeller": true
         },
         {
             "headline": "Krukväxter",
@@ -66,27 +78,33 @@
         },
         {
             "name": "Orkidé i kruka",
-            "price": 199
+            "price": 199,
+            "isBestSeller": false
         },
         {
             "name": "Fredskalla",
-            "price": 249
+            "price": 249,
+            "isBestSeller": false
         },
         {
             "name": "Julstjärna",
-            "price": 89
+            "price": 89,
+            "isBestSeller": false
         },
         {
             "name": "Liten kaktus",
-            "price": 79
+            "price": 79,
+            "isBestSeller": false
         },
         {
             "name": "Kruka med örter (basilika, mynta)",
-            "price": 39
+            "price": 39,
+            "isBestSeller": false
         },
         {
             "name": "Ytterkruka i keramik",
-            "price": 149
+            "price": 149,
+            "isBestSeller": false
         },
         {
             "headline": "Begravningsbinderi",
@@ -94,63 +112,78 @@
         },
         {
             "name": "Kistdekoration",
-            "price": 2500
+            "price": 2500,
+            "isBestSeller": false
         },
         {
             "name": "Begravningskrans",
-            "price": 1800
+            "price": 1800,
+            "isBestSeller": false
         },
         {
             "name": "Sorgdekoration till urna",
-            "price": 950
+            "price": 950,
+            "isBestSeller": false
         },
         {
             "name": "Band med tryckt hälsning",
-            "price": 150
+            "price": 150,
+            "isBestSeller": false
         },
         {
             "headline": "Tjänst",
-            "price": "Pris"
+            "price": "Pris",
+            "isBestSeller": false
         },
         {
             "name": "Hemleverans inom Kiruna",
-            "price": 79
+            "price": 79,
+            "isBestSeller": false
         },
         {
             "name": "Leverans utanför Kiruna (inom 3 mil)",
-            "price": 129
+            "price": 129,
+            "isBestSeller": false
         },
         {
             "name": "Blomsterprenumeration, privat",
-            "price": 349
+            "price": 349,
+            "isBestSeller": false
         },
         {
             "name": "Kontorsblommor, abonnemang",
-            "price": 599
+            "price": 599,
+            "isBestSeller": false
         },
         {
             "name": "Bröllopsdekoration, helhetsuppdrag",
-            "price": 4500
+            "price": 4500,
+            "isBestSeller": false
         },
         {
             "name": "Dekoration till företagsevent",
-            "price": 1500
+            "price": 1500,
+            "isBestSeller": false
         },
         {
             "name": "Kurs i blomsterbindning (2 tim)",
-            "price": 495
+            "price": 495,
+            "isBestSeller": false
         },
         {
             "name": "Växtvattning under semester",
-            "price": 199
+            "price": 199,
+            "isBestSeller": false
         },
         {
             "name": "Presentinslagning",
-            "price": 25
+            "price": 25,
+            "isBestSeller": false
         },
         {
             "name": "Handskrivet kort",
-            "price": 15
+            "price": 15,
+            "isBestSeller": false
         }
     ],
     "contacts": {
