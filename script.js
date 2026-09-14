@@ -79,14 +79,14 @@ function generateHtmlForProductsWithoutImage(productsWithoutImg) {
     productTable.innerHTML = productsWithoutImgHtml;
 }
 
-function generateHtmlForBestSellers(productsWithImg){
+function generateHtmlForBestSellers(productsWithImg) {
 
     console.log("Best sellers")
     let productsWithImgHtml = "";
 
     productsWithImg.forEach(productWithImg => {
 
-        if( productWithImg.isBestSeller ){
+        if (productWithImg.isBestSeller) {
             productsWithImgHtml += `
                 <div class="gallery-item">
                     <a class="inactiveLink" target="_blank" href="${productWithImg.img}">
@@ -96,10 +96,10 @@ function generateHtmlForBestSellers(productsWithImg){
                 </div>`
         }
     });
-        
+
 
     gallery.innerHTML = productsWithImgHtml;
-    
+
 }
 
 /*
@@ -179,9 +179,9 @@ async function loadJsonAndDisplay() {
                 toggleShowWithoutTaxes.checked = true;
                 changePrices();
             }
-        }else if (gallery.getAttribute("data-page") === "indexPage"){
+        } else if (gallery.getAttribute("data-page") === "indexPage") {
 
-            generateHtmlForBestSellers(productsWithImg)
+            await generateHtmlForBestSellers(productsWithImg);
 
         }
     } catch (error) {
