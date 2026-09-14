@@ -3,7 +3,7 @@ For licenses; please refer to [licenses](information/liceneses.md)
 
 ## User
 
-**Changing data; ** please refer to [modifying data](information/modifyingData.md)
+**Changing data;** please refer to [modifying data](information/modifyingData.md)
 
 ## Developer
 
