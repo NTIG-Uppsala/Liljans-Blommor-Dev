@@ -307,9 +307,13 @@ th {
 
 .products-button>a {
     color: black;
-    padding: 0.5vw;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    padding-top: 0.7vh;
+    padding-bottom: 0.7vh;
     border-radius: 10rem;
-    text-decoration: none;
+    border: 1px var(--color6) solid;
+    text-decoration: underline;
 }
 
 .products-button>a:hover {
