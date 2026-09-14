@@ -1,5 +1,5 @@
 # Liljans/Blommor
-For licenses; please refer to [licenses](information/liceneses.md)
+**For licenses;** please refer to [licenses](information/liceneses.md)
 
 ## User
 
