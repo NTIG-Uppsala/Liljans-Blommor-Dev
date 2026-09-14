@@ -1,9 +1,9 @@
 # Liljans/Blommor
-[![](https://https://github.com/NTIG-Uppsala/Liljans-Blommor-Dev/workflows/Release/badge.svg)]
+For licenses; please refer to [licenses](information/liceneses.md)
 
 ## Developer
 
-#### Downloading/cloning repository
+#### Downloading/cloning repository from terminal/cmd
 **HTTPS:**
 ```
 git clone https://github.com/NTIG-Uppsala/Liljans-Blommor-Dev.git
