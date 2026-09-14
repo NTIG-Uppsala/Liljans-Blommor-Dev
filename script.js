@@ -119,7 +119,7 @@ function generateHtmlForOpeningHours() {
 
 */
 async function loadJsonAndDisplay() {
-    const response = await fetch("../data/products.json");
+    const response = await fetch("../data/data.json");
     jsonData = await response.json();
     try {
         if (gallery.getAttribute("data-product-page") === "loadProducts") {
