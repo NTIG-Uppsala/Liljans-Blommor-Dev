@@ -1,8 +1,5 @@
 # Liljans-Blommor
 
-List of links for images
-
-
 ## Images
 
 ### Cut flowers
