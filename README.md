@@ -1,9 +1,9 @@
 # Liljans/Blommor
-For licenses; please refer to [licenses](information/liceneses.md)
+**For licenses;** please refer to [licenses](information/liceneses.md)
 
 ## User
 
-**Changing data; ** please refer to [modifying data](information/modifyingData.md)
+**Changing data;** please refer to [modifying data](information/modifyingData.md)
 
 ## Developer
 
@@ -26,7 +26,7 @@ Always in English
 
 ### Programming language
 - **HTML** - version: HTML5
-- **CSS** - flytande version
+- **CSS** - flowing version
 - **Javascript** - es2023
 
 ### Development environment standard
