@@ -41,24 +41,24 @@ async function loadJsonAndDisplay() {
     const response = await fetch("../data/data.json");
     jsonData = await response.json();
 
-        const productsWithImg = [];
-        const productsWithoutImg = [];
+    const productsWithImg = [];
+    const productsWithoutImg = [];
 
-        jsonData.products.forEach(product => {
-            if (product.img) {
-                productsWithImg.push(product);
-            } else {
-                productsWithoutImg.push(product);
-            }
-        });
-
-        generateHtmlForProductsWithImage(productsWithImg);
-        generateHtmlForProductsWithoutImage(productsWithoutImg);
-
-        if (localStorage.getItem("taxes") === "excludeTaxes") {
-            toggleShowWithoutTaxes.checked = true;
-            changePrices();
+    jsonData.products.forEach(product => {
+        if (product.img) {
+            productsWithImg.push(product);
+        } else {
+            productsWithoutImg.push(product);
         }
+    });
+
+    generateHtmlForProductsWithImage(productsWithImg);
+    generateHtmlForProductsWithoutImage(productsWithoutImg);
+
+    if (localStorage.getItem("taxes") === "excludeTaxes") {
+        toggleShowWithoutTaxes.checked = true;
+        changePrices();
+    }
 
 }
 

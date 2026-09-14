@@ -10,13 +10,13 @@ const productTable = document.getElementById("productTable");
 
 */
 
-function generateHtmlForBestSellers(productsWithImg){
+function generateHtmlForBestSellers(productsWithImg) {
 
     let productsWithImgHtml = "";
 
     productsWithImg.forEach(productWithImg => {
 
-        if( productWithImg.isBestSeller ){
+        if (productWithImg.isBestSeller) {
             productsWithImgHtml += `
                 <div class="gallery-item">
                     <a class="inactiveLink" target="_blank" href="${productWithImg.img}">
@@ -26,9 +26,9 @@ function generateHtmlForBestSellers(productsWithImg){
                 </div>`
         }
     });
-        
+
     gallery.innerHTML = productsWithImgHtml;
-    
+
 }
 
 /*
@@ -54,9 +54,9 @@ async function loadJsonAndDisplay() {
     generateHtmlForBestSellers(productsWithImg)
 
     if (localStorage.getItem("taxes") === "excludeTaxes") {
-            toggleShowWithoutTaxes.checked = true;
-            changePrices();
-        }
+        toggleShowWithoutTaxes.checked = true;
+        changePrices();
+    }
 
 }
 
