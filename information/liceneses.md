@@ -1,7 +1,4 @@
-# Liljans-Blommor
-
-List of links for images
-
+# Liljans-Blommor - Licenses
 
 ## Images
 
