@@ -30,7 +30,7 @@ test("all links work", async ({ page }) => {
 
   for (let i in page_paths) {
 
-    await page.goto(page_paths[i], { waitUntil: 'networkidle' });
+    await page.goto(page_paths[i], { waitUntil: 'load' });
 
     for (let j in links) {
 
