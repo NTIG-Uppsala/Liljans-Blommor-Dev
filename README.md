@@ -23,7 +23,7 @@ After cloning the repo, navigate to the **playwright** folder and run the follow
 ```
 npm install
 ```
-_*Depending on earlier installs, browsers and other dependencies might need to be installed_
+_*Depending on earlier installs, browsers and other dependencies might need to be installed separately_
 #### _Run tests_
 To run _all_ tests, run the following command from the **playwright** directory:
 ```
