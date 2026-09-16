@@ -12,9 +12,23 @@ test("click button", async ({page}) =>{
 
 } )
 
-test("button local storage", async ({page}) =>{
+test("tax button localstorage index page", async ({page}) =>{
 
     await page.goto('http://localhost:3000/');
+
+    await page.getByText("Inklusive moms").check()
+
+    await expect(page.getByText("Inklusive moms")).toBeChecked()
+
+    await page.reload()
+
+    await expect(page.getByText("Inklusive moms"), "Button was not checked after reload").toBeChecked()
+
+})
+
+test("tax button localstorage product page", async ({page}) =>{
+
+    await page.goto('http://localhost:3000//pages/products.html');
 
     await page.getByText("Inklusive moms").check()
 
