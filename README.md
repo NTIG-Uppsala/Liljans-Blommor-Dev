@@ -17,6 +17,19 @@ git clone https://github.com/NTIG-Uppsala/Liljans-Blommor-Dev.git
 git clone git@github.com:NTIG-Uppsala/Liljans-Blommor-Dev.git
 ```
 
+### PlayWright tests
+#### _Initialize_
+After cloning the repo, navigate to the **playwright** folder and run the following command:
+```
+npm install
+```
+_*Depending on earlier installs, browsers and other dependencies might need to be installed separately_
+#### _Run tests_
+To run _all_ tests, run the following command from the **playwright** directory:
+```
+npx playwright test
+```
+
 ### Coding standard
 Always in English
 - **HTML:** https://se-education.org/guides/conventions/html.html
