@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test("click button", async ({page}) =>{
+test("Click button | index page ", async ({page}) =>{
 
     await page.goto('http://localhost:3000/');
 
@@ -15,7 +15,22 @@ test("click button", async ({page}) =>{
     }
 } )
 
-test("tax button localstorage index page", async ({page}) =>{
+test("Click button | product page ", async ({page}) =>{
+
+    await page.goto('http://localhost:3000//pages/products.html');
+
+    for(let i = 0; i < 8; i++){
+
+        await page.getByText("Inklusive moms").click();
+        await page.getByText("Inklusive moms").click();
+
+        await page.getByText("Inklusive moms").check();
+        await page.getByText("Exklusive moms").uncheck();
+
+    }
+} )
+
+test("Tax button localstorage | index page", async ({page}) =>{
 
     await page.goto('http://localhost:3000/');
 
@@ -29,7 +44,7 @@ test("tax button localstorage index page", async ({page}) =>{
 
 })
 
-test("tax button localstorage product page", async ({page}) =>{
+test("Tax button localstorage | product page", async ({page}) =>{
 
     await page.goto('http://localhost:3000//pages/products.html');
 
@@ -43,7 +58,7 @@ test("tax button localstorage product page", async ({page}) =>{
 
 })
 
-test("tax button tax index page", async ({page}) =>{
+test("Tax button tax | index page", async ({page}) =>{
 
     await page.goto('http://localhost:3000/', { waitUntil: "load" } );
 
@@ -63,7 +78,7 @@ test("tax button tax index page", async ({page}) =>{
 
 })
 
-test("tax button tax product page", async ({page}) =>{
+test("Tax button tax | product page", async ({page}) =>{
 
     await page.goto('http://localhost:3000//pages/products.html', { waitUntil: "load" } );
 

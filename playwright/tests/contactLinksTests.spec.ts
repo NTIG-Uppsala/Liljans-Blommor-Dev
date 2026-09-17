@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test(`Vaildate phone and email link formatting standards`, async ({ page }) => {
+test(`Vaildate phone and email link formatting standards | all pages`, async ({ page }) => {
 
   const page_paths = [
     "http://localhost:3000/index.html",
@@ -22,7 +22,7 @@ test(`Vaildate phone and email link formatting standards`, async ({ page }) => {
   }
 });
 
-test(`Validate email link formatting standards`, async ({ page }) => {
+test(`Validate email link formatting standards | all pages`, async ({ page }) => {
 
   const page_paths = [
     "http://localhost:3000/index.html",
