@@ -19,11 +19,16 @@ git clone git@github.com:NTIG-Uppsala/Liljans-Blommor-Dev.git
 
 ### PlayWright tests
 #### _Initialize_
-After cloning the repo, navigate to the **playwright** folder and run the following command:
+After cloning down the repo, navigate to the **playwright** directory and run the following commands:
+##### Install dependencies
 ```
-npm install
+npm ci
 ```
-_*Depending on earlier installs, browsers and other dependencies might need to be installed separately_
+##### Install Playwright Browsers
+```
+npx playwright install --with-deps
+```
+
 #### _Run tests_
 To run _all_ tests, run the following command from the **playwright** directory:
 ```
