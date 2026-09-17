@@ -16,7 +16,6 @@ test(`Vaildate phone and email link formatting standards | all pages`, async ({ 
     const phoneNummbers = await page.locator(".tel").all();
 
     for (let i in phoneNummbers) {
-      console.log(phoneNummbers[i]);
       await phoneNummbers[i].click();
     }
   }
@@ -38,7 +37,6 @@ test(`Validate email link formatting standards | all pages`, async ({ page }) =>
     const emails = await page.locator(".mail").all();
 
     for (let j in emails) {
-      console.log(emails[j]);
       await emails[j].click();
     }
   }
