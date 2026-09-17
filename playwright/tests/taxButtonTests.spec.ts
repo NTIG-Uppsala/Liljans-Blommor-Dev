@@ -30,7 +30,7 @@ test("Tax button localstorage | index page", async ({ page }) => {
 
     await page.getByText("Inklusive moms").check();
 
-    await expect(page.getByText("Inklusive moms")).toBeChecked();
+    await expect(page.getByText("Inklusive moms"), "Tax button did not check").toBeChecked();
 
     await page.reload();
 
@@ -44,7 +44,7 @@ test("Tax button localstorage | product page", async ({ page }) => {
 
     await page.getByText("Inklusive moms").check();
 
-    await expect(page.getByText("Inklusive moms")).toBeChecked();
+    await expect(page.getByText("Inklusive moms"), "Tax button did not check").toBeChecked();
 
     await page.reload();
 
@@ -66,9 +66,9 @@ test("Tax button tax | index page", async ({ page }) => {
 
     await page.getByText("Inklusive moms").click();
 
-    await expect(prices[0]).toContainText(firstPriceWithoutMoms);
+    await expect(prices[0], "First product price did not match after tax").toContainText(firstPriceWithoutMoms);
 
-    await expect(prices[prices.length - 1]).toContainText(lastPriceWithoutMoms);
+    await expect(prices[prices.length - 1], "Last product price did not match after tax").toContainText(lastPriceWithoutMoms);
 
 })
 
@@ -86,8 +86,8 @@ test("Tax button tax | product page", async ({ page }) => {
 
     await page.getByText("Inklusive moms").click();
 
-    await expect(prices[0]).toContainText(firstPriceWithoutMoms);
+    await expect(prices[0], "First product price did not match after tax").toContainText(firstPriceWithoutMoms);
 
-    await expect(prices[prices.length - 1]).toContainText(lastPriceWithoutMoms);
+    await expect(prices[prices.length - 1], "Last product price did not match after tax").toContainText(lastPriceWithoutMoms);
 
 })
