@@ -19,9 +19,9 @@ function generateHtmlForImgProducts(imgProducts) {
     imgProducts.forEach(imgProduct => {
         productsWithImgHtml += `
             <div class="gallery-item">
-                <a class="inactiveLink" target="_blank" href="${imgProduct.img}">
+
                     <img src="${imgProduct.img}" alt="${imgProduct.name}">
-                </a>
+
                 <div class="img-desc">${imgProduct.name} <u class="prices" data-productName="${imgProduct.name}">${imgProduct.price}</u>&nbsp;kr</div>
             </div>`
     });
