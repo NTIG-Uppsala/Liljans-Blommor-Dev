@@ -141,6 +141,12 @@ header a {
 
 main {
     flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 }
 
 .sub-main {
@@ -153,6 +159,9 @@ main {
     justify-content: center;
     border-radius: 20px;
     text-decoration: none;
+
+    width: 100rem;
+    max-width: 100%;
 }
 
 .sub-main a {
@@ -165,9 +174,21 @@ main {
     padding: 0;
 }
 
+.sub-main h1 {
+
+    font-size: 3.5rem;
+
+}
+
+.toggleContainer {
+
+    width: 100%;
+
+}
+
 .toggle {
     position: relative;
-    width: 18vw;
+    width: 25%;
     height: 2rem;
     padding: 5px;
     background: var(--color1);
@@ -220,6 +241,8 @@ main {
 }
 
 #gallery {
+
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -233,27 +256,37 @@ main {
     width: 4rem;
 }
 
-.inactiveLink {
-    pointer-events: none;
-    cursor: default;
-}
-
 .gallery-item {
     width: 25%;
+    min-width: 13rem;
     float: left;
     margin-bottom: 100%;
     margin-right: 5%;
-    height: auto;
-
+    height: fit-content;
 }
 
 div.gallery-item {
     margin: 1%;
 }
 
-.gallery-item>a>img {
-    width: 75%;
+
+.gallery-item>img {
+
+    width: 100%;
+    height: auto;
     border-radius: 100%;
+}
+
+.img-desc {
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+
+    height: fit-content;
+
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
 }
 
 .prices {
@@ -371,9 +404,41 @@ footer a:hover {
 
 /* … */
 
-@media screen and (max-width: 1035px) {
-    h1 {
-        margin-top: 5vw;
+@media screen and (max-width: 1800px) {
+
+    .sub-main {
+        width: 85rem;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    .sub-main {
+        width: 70rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .sub-main {
+        width: 60rem;
+    }
+
+    .toggle {
+
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .sub-main {
+        width: 50rem;
+    }
+
+    .toggle {
+
+        width: 35%;
     }
 }
 
@@ -383,6 +448,51 @@ footer a:hover {
     }
 }
 
+@media screen and (max-width: 900px) {
+
+    .sub-main {
+        width: 40rem;
+    }
+
+    .toggleContainer {
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+    .toggle {
+
+        width: 70%;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .sub-main {
+        width: 30rem;
+    }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    main h2 {
+
+        font-size: 4rem;
+
+    }
+
+    .sub-main {
+        width: 25rem;
+    }
+
+}
 
 /* || Phone Media */
 
@@ -393,11 +503,6 @@ footer a:hover {
 
     #loading {
         width: 3rem;
-    }
-
-    .gallery-item {
-        width: 50%;
-
     }
 
     div.gallery-item {
@@ -455,6 +560,20 @@ footer a:hover {
 
     footer ul {
         padding: 0.5vh 0 1.5vh 0;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .sub-main {
+        width: 20rem;
+    }
+
+    main h2 {
+
+        font-size: 3rem;
+
     }
 
 }
