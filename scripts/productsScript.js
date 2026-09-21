@@ -3,57 +3,48 @@ const gallery = document.getElementById("gallery");
 const productTable = document.getElementById("productTable");
 
 
-function generateHtmlForProductsWithImage(productsWithImg) {
-    let productsWithImgHtml = "";
-    productsWithImg.forEach(productWithImg => {
-        productsWithImgHtml += `
-            <div class="gallery-item">
-                <a class="inactiveLink" target="_blank" href="${productWithImg.img}">
-                    <img src="${productWithImg.img}" alt="${productWithImg.name}">
-                </a>
-                <div class="img-desc">${productWithImg.name} <u class="prices" data-productName="${productWithImg.name}">${productWithImg.price}</u>&nbsp;kr</div>
-            </div>`
-    });
-    gallery.innerHTML = productsWithImgHtml;
-}
 
-function generateHtmlForProductsWithoutImage(productsWithoutImg) {
-    let productsWithoutImgHtml = "";
-    productsWithoutImg.forEach(productWithoutImg => {
-        if (productWithoutImg.headline) {
-            productsWithoutImgHtml += `
+function generateHtmlProducts(productCategories) {
+    let productsHtml = "";
+
+    productCategories.forEach(productCategory => {
+        productsHtml += `
                 <tr>
-                    <th>${productWithoutImg.headline}</th>
-                    <th>${productWithoutImg.price}</th>
-                </tr>`
-        } else if (productWithoutImg.name) {
-            productsWithoutImgHtml += `
+                    <th>${productCategory.categoryName}</th>
+                    <th>Pris</th>
+                </tr>
+            `
+        productCategory.products.forEach(product => {
+            productsHtml += `
                 <tr>
-                    <td>${productWithoutImg.name}</td>
-                    <td><u class="prices" data-productName="${productWithoutImg.name}">${productWithoutImg.price}</u>&nbsp;kr</td>
-                </tr>`
-        }
-    });
-    productTable.innerHTML = productsWithoutImgHtml;
+                    <td>${product.name}</td>
+                    <td><u class="prices" data-productName="${product.name}">${product.price}</u>&nbsp;kr</td>
+                </tr>
+            `
+        })
+    })
+
+    productTable.innerHTML = productsHtml;
 }
 
 async function loadJsonAndDisplay() {
-    const response = await fetch("../data/data.json");
-    jsonData = await response.json();
+    const response = await fetch("../data/products.json");
+    const jsonProducts = await response.json();
 
-    const productsWithImg = [];
-    const productsWithoutImg = [];
+    const showcaseProducts = [];
+    const productCategories = [];
 
-    jsonData.products.forEach(product => {
-        if (product.img) {
-            productsWithImg.push(product);
-        } else {
-            productsWithoutImg.push(product);
-        }
-    });
+    Object.values(jsonProducts).forEach(productCategory => {
+        productCategories.push(productCategory);
+        productCategory.products.forEach(product => {
+            if (product.isShowcase && product.img !== false && product.img !== "") {
+                showcaseProducts.push(product);
+            }
+        })
+    })
 
-    generateHtmlForProductsWithImage(productsWithImg);
-    generateHtmlForProductsWithoutImage(productsWithoutImg);
+    generateHtmlForImgProducts(showcaseProducts);
+    generateHtmlProducts(productCategories);
 
     if (localStorage.getItem("taxes") === "excludeTaxes") {
         toggleShowWithoutTaxes.checked = true;
