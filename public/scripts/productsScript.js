@@ -28,7 +28,7 @@ function generateHtmlProducts(productCategories) {
 }
 
 async function loadJsonAndDisplay() {
-    const response = await fetch("../data/products.json");
+    const response = await fetch("../../data/products.json");
     const jsonProducts = await response.json();
 
     const showcaseProducts = [];

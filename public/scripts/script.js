@@ -19,9 +19,7 @@ function generateHtmlForImgProducts(imgProducts) {
     imgProducts.forEach(imgProduct => {
         productsWithImgHtml += `
             <div class="gallery-item">
-
                     <img src="${imgProduct.img}" alt="${imgProduct.name}">
-
                 <div class="img-desc">${imgProduct.name} <u class="prices" data-productName="${imgProduct.name}">${imgProduct.price}</u>&nbsp;kr</div>
             </div>`
     });
@@ -81,10 +79,10 @@ function generateHtmlForOpeningHours(openingHours) {
 
 */
 async function loadJsonAndDisplay() {
-    const contactsResponse = await fetch("../data/contacts.json");
+    const contactsResponse = await fetch("../../data/contacts.json");
     const contacts = await contactsResponse.json();
 
-    const openingHoursResponse = await fetch("../data/openingHours.json");
+    const openingHoursResponse = await fetch("../../data/openingHours.json");
     const openingHours = await openingHoursResponse.json();
 
 
