@@ -44,6 +44,10 @@ Potted plants = https://pixabay.com/photos/cactus-houseplant-plant-green-pot-428
 **Loading:** https://pixabay.com/gifs/loading-animation-spin-highlights-7528/
 
 
+## Favicon
+**Flower favicon:** https://pixabay.com/sv/vectors/blomma-%C3%A4pple-rosa-146451/
+
+
 ## Fonts
 
 ### Niconne
