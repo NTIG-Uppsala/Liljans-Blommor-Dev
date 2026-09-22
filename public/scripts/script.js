@@ -35,8 +35,8 @@ function generateHtmlForImgProducts(imgProducts) {
 function formatTelephoneNumber(rawTelephoneNumber) {
     const onlyDigits = rawTelephoneNumber.replace(/\D/g, "");
     const withoutCountry = onlyDigits.slice(2);
-    const formatedTelNumber = withoutCountry.slice(0, 3) + " - " + withoutCountry.slice(3);
-    return formatedTelNumber;
+    const formattedTelNumber = withoutCountry.slice(0, 3) + " - " + withoutCountry.slice(3);
+    return formattedTelNumber;
 }
 
 /*
