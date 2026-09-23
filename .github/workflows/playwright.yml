@@ -6,7 +6,7 @@ on:
     branches: [ main, master ]
 defaults:
       run:
-        working-directory: ./playwright
+        working-directory: ./
 jobs:
   test:
     timeout-minutes: 60
@@ -20,13 +20,13 @@ jobs:
       with:
         node-version: lts/*
         name: Run installation script
-        run: ./setupScript.sh
+        run: /setupScript.sh
     # - name: Install dependencies
     #   run: npm ci
     # - name: Install Playwright Browsers
     #   run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: cd playwright; npx playwright test
       env:
         ENVIRONMENT: "DEV"
     - uses: actions/upload-artifact@v4

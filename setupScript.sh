@@ -11,6 +11,8 @@ main(){
     if [[ $subdirs =~ "testData" ]];
     then
 
+        printf "$ENVIORMENT"
+
         if [[ "$ENVIRONMENT" = "DEV" ]]
         then 
             printf "In Development environment: \nTrying to replace files... \n"
@@ -26,7 +28,7 @@ main(){
         fi
 
     else 
-        printf "The directories \"data\" or \"testData\" could not be found in current directory \n"
+        printf "The directory \"testData\" could not be found in current directory \n"
     fi
 
 }
@@ -47,7 +49,7 @@ installNode(){
 
 changeToTestData(){
 
-    rsync -av --delete "testData/" "data/ \n"
+    rsync -av --delete "testData/" "data/"
 
 }
 

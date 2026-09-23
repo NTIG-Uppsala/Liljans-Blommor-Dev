@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test'
 
+const PORT = 3948;
+
 test("Click button | index page ", async ({ page }) => {
 
-    await page.goto('http://localhost:3000/');
+    await page.goto(`http://localhost:${PORT}/`);
 
     await page.getByText("Inklusive moms").click();
     await page.getByText("Inklusive moms").click();
@@ -14,7 +16,7 @@ test("Click button | index page ", async ({ page }) => {
 
 test("Click button | product page ", async ({ page }) => {
 
-    await page.goto('http://localhost:3000//pages/products.html');
+    await page.goto(`http://localhost:${PORT}/`);
 
     await page.getByText("Inklusive moms").click();
     await page.getByText("Inklusive moms").click();
@@ -26,7 +28,7 @@ test("Click button | product page ", async ({ page }) => {
 
 test("Tax button localstorage | index page", async ({ page }) => {
 
-    await page.goto('http://localhost:3000/');
+    await page.goto(`http://localhost:${PORT}/`);
 
     await page.getByText("Inklusive moms").check();
 
@@ -40,7 +42,7 @@ test("Tax button localstorage | index page", async ({ page }) => {
 
 test("Tax button localstorage | product page", async ({ page }) => {
 
-    await page.goto('http://localhost:3000//pages/products.html');
+    await page.goto(`http://localhost:${PORT}/`);
 
     await page.getByText("Inklusive moms").check();
 
@@ -54,7 +56,7 @@ test("Tax button localstorage | product page", async ({ page }) => {
 
 test("Tax button tax | index page", async ({ page }) => {
 
-    await page.goto('http://localhost:3000/', { waitUntil: "load" });
+    await page.goto('`http://localhost:${PORT}/`', { waitUntil: "load" });
 
     const prices = await page.locator(".prices").all();
 
@@ -74,7 +76,7 @@ test("Tax button tax | index page", async ({ page }) => {
 
 test("Tax button tax | product page", async ({ page }) => {
 
-    await page.goto('http://localhost:3000//pages/products.html', { waitUntil: "load" });
+    await page.goto(`http://localhost:${PORT}/`, { waitUntil: "load" });
 
     const prices = await page.locator(".prices").all();
 
