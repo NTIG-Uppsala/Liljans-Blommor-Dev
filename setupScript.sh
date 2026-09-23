@@ -4,6 +4,8 @@ source .env
 
 main(){
 
+    cd public &&
+
     subdirs=$(ls)
 
     if [[ $subdirs =~ "testData" ]];
@@ -11,7 +13,7 @@ main(){
 
         if [[ "$ENVIRONMENT" = "DEV" ]]
         then 
-            printf "In Development environment: \nTrying to replace files... \n "
+            printf "In Development environment: \nTrying to replace files... \n"
 
             installNode
 

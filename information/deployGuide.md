@@ -30,7 +30,7 @@ _Navigate to the repository's root folder_
 Run the setup script:
 
 ```
-./test1.sh
+./setupScript.sh
 ```
 
 Setup should be all done.

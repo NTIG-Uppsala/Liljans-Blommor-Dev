@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: lts/*
         name: Run installation script
-        run: ./test1.sh
+        run: ./setupScript.sh
     # - name: Install dependencies
     #   run: npm ci
     # - name: Install Playwright Browsers
