@@ -47,11 +47,11 @@ The products key should contain a list filled with product objects (see below).
 ```
 
 The products list's product object should contain all of the above shown keys.
-"name" - a string containing the name of the product.
-"price" - an integer containing the product price including taxes.
-"isBestSeller" - a boolean, true or false, defining if the product should be shown on the homepage or not
-"isShowCase" - a boolean, true or false, defining if the products image should be shown on the products page or not
-"img" - a string containing the pathway to the products image, e.g: "../assets/images/example.jpg", may be left empty
+* "name" - a string containing the name of the product.
+* "price" - an integer containing the product price including taxes.
+* "isBestSeller" - a boolean, true or false, defining if the product should be shown on the homepage or not
+* "isShowCase" - a boolean, true or false, defining if the products image should be shown on the products page or not
+* "img" - a string containing the pathway to the products image, e.g: "../assets/images/example.jpg", may be left empty
 
 ## Changing the **contacts**:
 
