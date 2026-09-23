@@ -5,10 +5,10 @@ test('Validate phone link formatting standards | all pages', async ({ page }) =>
   const PORT = 3000;
 
   const page_paths = [
-    `localhost:${PORT}/public/pages/index.html`,
-    `localhost:${PORT}/public/pages/products.html`,
-    `localhost:${PORT}/public/pages/contact.html`,
-    `localhost:${PORT}/public/pages/aboutus.html`,
+    `localhost:${PORT}/pages/index.html`,
+    `localhost:${PORT}/pages/products.html`,
+    `localhost:${PORT}/pages/contact.html`,
+    `localhost:${PORT}/pages/aboutus.html`,
   ];
 
   for (const url of page_paths) {
