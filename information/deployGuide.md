@@ -37,4 +37,4 @@ Setup should be all done.
 
 ### Data management
 
-Please refer to [modifying data](information/modifyingData.md)
+Please refer to [modifying data](./modifyingData.md)
