@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-const PORT = 3948;
+const PORT = 4321;
 
 test("Click button | index page ", async ({ page }) => {
 
@@ -16,7 +16,7 @@ test("Click button | index page ", async ({ page }) => {
 
 test("Click button | product page ", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/`);
+    await page.goto(`http://localhost:${PORT}/pages/products.html`);
 
     await page.getByText("Inklusive moms").click();
     await page.getByText("Inklusive moms").click();
@@ -42,7 +42,7 @@ test("Tax button localstorage | index page", async ({ page }) => {
 
 test("Tax button localstorage | product page", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/`);
+    await page.goto(`http://localhost:${PORT}/pages/products.html`);
 
     await page.getByText("Inklusive moms").check();
 
@@ -56,7 +56,7 @@ test("Tax button localstorage | product page", async ({ page }) => {
 
 test("Tax button tax | index page", async ({ page }) => {
 
-    await page.goto('`http://localhost:${PORT}/`', { waitUntil: "load" });
+    await page.goto(`http://localhost:${PORT}/`, { waitUntil: "load" });
 
     const prices = await page.locator(".prices").all();
 
@@ -76,7 +76,7 @@ test("Tax button tax | index page", async ({ page }) => {
 
 test("Tax button tax | product page", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/`, { waitUntil: "load" });
+    await page.goto(`http://localhost:${PORT}/pages/products.html`, { waitUntil: "load" });
 
     const prices = await page.locator(".prices").all();
 
