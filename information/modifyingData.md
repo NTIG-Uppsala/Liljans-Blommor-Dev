@@ -1,44 +1,71 @@
 # Liljans Blommor - Modifying Data
 
-_Modifying the data/data.json file_
+## Changing the **products**:
 
-### Changing the **products**:
+_Navigate to data/products.json_
+
+The products.json file contains 2 main parts, the categories and the products inside the category.
+
+### Categories
+
 ```json
 {
-	"products": [
-		{
-			"name": "example name",
-			"price": 123,
-			"img": "src/link",
-			"isBestSeller": false
-		},
-		...
-	],
-  ...
+    "category1": {
+        "categoryName": "Example name",
+        "products": [ ... ]
+	},
+	"category2": {
+        "categoryName": "Example name",
+        "products": [ ... ]
+	},
+	...
 }
 ```
-Every product object needs tocontain the _"name"_, _"price"_ and _"isBestSeller"_ keys, the _"img"_ key is optional and should contain the pathway to the image.
+Every category should contain the categoryName and products keys. The object name itself (e.g. category1 & category2) is free to name whatever fits the category.
+The categoryName key should contain a string with the category name displayed on the website.
+The products key should contain a list filled with product objects (see below).
 
-### Changing the **contacts**:
+### Products list
+
 ```json
 {
-  ...
+    "category1": {
+        "categoryName": "Example name",
+        "products": [
+			"name": "Example",
+			"price": 123,
+			"isBestSeller": false,
+			"isShowcase": true,
+			"img": "yourImgPathway"
+		]
+	},
+	...
+}
+```
+
+## Changing the **contacts**:
+
+_Navigate to data/contacts.json_
+
+```json
+{
 	"contacts": {
 		"tel": "+46123456789",
 		"mail": "ex.mail@mail.com",
 		"address": "address",
 		"postalCode": "123 45",
 		"city": "City name"
-	},
-  ...
+	}
 }
 ```
 The contacts object should contain all of the above shown keys. _Note; the telephone number should be 'raw' an not contain spaces, hyphens, etc._
 
-### Changing the **openingHours**:
+## Changing the **openingHours**:
+
+_Navigate to data/openingHours.json_
+
 ```json
 {
-  ...
 	"openingHours": {
 		"weekdays": "00-00",
 		"saturday": "00-00",
