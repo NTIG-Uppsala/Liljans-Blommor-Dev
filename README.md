@@ -1,4 +1,4 @@
-# Liljans/Blommor
+# Liljans Blommor
 **For licenses;** please refer to [licenses](information/liceneses.md)
 
 ## User
@@ -6,28 +6,10 @@
 **Changing data;** please refer to [modifying data](information/modifyingData.md)
 
 ## Developer
-
-#### Downloading/cloning repository from terminal/cmd
-**HTTPS:**
-```
-git clone https://github.com/NTIG-Uppsala/Liljans-Blommor-Dev.git
-```
-**SSH _(key required)_:**
-```
-git clone git@github.com:NTIG-Uppsala/Liljans-Blommor-Dev.git
-```
+_Please refer to the [deploy guide](information/deployGuide.md) to initialize the project_
 
 ### PlayWright tests
-#### _Initialize_
-After cloning down the repo, navigate to the **playwright** directory and run the following commands:
-##### Install dependencies
-```
-npm ci
-```
-##### Install Playwright Browsers
-```
-npx playwright install --with-deps
-```
+_Please refer to the [deploy guide](information/deployGuide.md) before running tests_
 
 #### _Run tests_
 To run _all_ tests, run the following command from the **playwright** directory:
@@ -56,9 +38,11 @@ Always in English
   Extensions:
      Live Server - Version 5.7.10
      Code Spell Checker - Version 4.9.3
+     Github Actions
+     Playwright Test for VSCode
 
 **Github 3.22.0**
-  verstioning / vertion control / vertion managment
+  versioning / version control / version managment
   
 - **Scribens:** https://www.scribens.com/sv/
   Spelling and wording
