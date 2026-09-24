@@ -72,6 +72,12 @@ test("Tax button tax | index page", async ({ page }) => {
 
     await expect(prices[prices.length - 1], "Last product price did not match after tax").toContainText(lastPriceWithoutMoms);
 
+    await page.getByText("Inklusive moms").click();
+
+    await expect(prices[0], "First product price did not match after two clicks").toContainText(firstPrice);
+
+    await expect(prices[prices.length - 1], "Last product price did not match after two clicks").toContainText(lastPrice);
+
 })
 
 test("Tax button tax | product page", async ({ page }) => {
@@ -91,5 +97,11 @@ test("Tax button tax | product page", async ({ page }) => {
     await expect(prices[0], "First product price did not match after tax").toContainText(firstPriceWithoutMoms);
 
     await expect(prices[prices.length - 1], "Last product price did not match after tax").toContainText(lastPriceWithoutMoms);
+
+    await page.getByText("Inklusive moms").click();
+
+    await expect(prices[0], "First product price did not match after two clicks").toContainText(firstPrice);
+
+    await expect(prices[prices.length - 1], "Last product price did not match after two clicks").toContainText(lastPrice);
 
 })

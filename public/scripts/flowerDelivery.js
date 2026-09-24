@@ -28,8 +28,6 @@ async function checkIfPostalCodeMatches() {
         }
     }
 
-    console.log(postalCodeInput.value)
-
     if (postalCodeInput.value == "") {
 
         flowerTextBox.innerHTML = ``;
