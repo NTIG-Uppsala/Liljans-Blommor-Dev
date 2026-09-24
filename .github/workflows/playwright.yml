@@ -10,8 +10,7 @@ defaults:
       run:
         working-directory: ./
 
-env:
-  ENVIRONMENT: DEV
+
 
 jobs:
   setup:
@@ -24,6 +23,8 @@ jobs:
         node-version: lts/*
     - name: Run installation script
       run: bash ./setupScript.sh
+      env:
+        ENVIRONMENT: DEV
 
   test:
     timeout-minutes: 60
