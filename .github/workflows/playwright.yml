@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: lts/*
     - name: Run installation script
-      run: ./setupScript.sh
+      run: bash ./setupScript.sh
 
   test:
     timeout-minutes: 60
