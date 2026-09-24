@@ -6,7 +6,7 @@ const weekdaysElements = document.getElementsByClassName("weekdays");
 const saturdayElements = document.getElementsByClassName("saturday");
 const sundayElements = document.getElementsByClassName("sunday");
 
-
+let jsonProducts = {};
 
 /*
 
