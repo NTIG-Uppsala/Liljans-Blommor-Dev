@@ -58,7 +58,7 @@ installPlaywrightDependencies(){
 
     ls -a &&
 
-    cd playwright &&
+    cd ../playwright &&
 
     npm ci && 
 
