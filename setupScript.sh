@@ -11,6 +11,7 @@ main(){
     if [[ $subdirs =~ "testData" ]];
     then
 
+        printf "aaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      "
         printf "$ENVIORMENT"
 
         if [[ "$ENVIRONMENT" = "DEV" ]]
