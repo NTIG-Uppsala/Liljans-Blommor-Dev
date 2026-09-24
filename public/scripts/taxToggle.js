@@ -13,12 +13,14 @@ async function changePrices() {
         localStorage.setItem("taxes", "excludeTaxes");
     } else {
         Array.from(prices).forEach(price => {
-            jsonData.products.forEach(product => {
-                const productNameHtml = price.getAttribute("data-productName");
-                const productNameJson = product.name;
-                if (productNameHtml === productNameJson) {
-                    price.innerHTML = product.price;
-                }
+            Object.values(jsonProducts).forEach(productCategory => {
+                productCategory.products.forEach(product => {
+                    const productNameHtml = price.getAttribute("data-productName");
+                    const productNameJson = product.name;
+                    if (productNameHtml === productNameJson) {
+                        price.innerHTML = product.price;
+                    }
+                });
             });
         });
         localStorage.setItem("taxes", "includeTaxes");
