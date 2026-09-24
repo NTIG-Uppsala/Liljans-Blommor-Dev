@@ -11,7 +11,7 @@ main(){
     if [[ $subdirs =~ "testData" ]];
     then
 
-        printf "aaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      "
+        printf "ENVIRONMENT:"
         printf "$ENVIORMENT"
 
         if [[ "$ENVIRONMENT" = "DEV" ]]
@@ -56,7 +56,7 @@ changeToTestData(){
 
 installPlaywrightDependencies(){
 
-    cd playwright &&
+    cd ../playwright &&
 
     npm ci && 
 

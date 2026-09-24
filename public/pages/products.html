@@ -42,15 +42,28 @@
                 <span class="slider"></span>
             </label>
         </div>
-        <div class="flowerDeliveryMain">
-            <div class="flowerDelivery">
-                <label for="postalCode" class="postalCode">Postkod</label><br>
-                <input type="text" id="postalCode"><br>
-                <br>
-                <input type="checkbox" id="company">
-                <label for="company" class="company">Detta är en företags adress</label>
-            </div>
-        </div>
+        <section class="flowerDelivery">
+            <h3>Postnummer</h3>
+
+            <label class="addressInput" for="postalCode">
+                <span class="locationIcon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path>
+                        <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                </span>
+
+                <input type="text" id="postalCode" name="postalCode" placeholder="95959" inputmode="numeric"
+                    autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}"
+                    oninput="this.value = this.value.replace(/[^0-9 ]/g, '')" required>
+            </label>
+
+            <label class="companyCheckbox">
+                <input type="checkbox" id="company" name="company">
+                <span>Detta är en företagsadress</span>
+            </label>
+        </section>
+
     </main>
 
 
