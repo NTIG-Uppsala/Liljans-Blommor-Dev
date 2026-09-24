@@ -19,10 +19,14 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-        name: Run installation script
-        run: ./setupScript.sh
+        # name: Run installation script
+        # run: ./setupScript.sh
+      # env:
+      #   ENVIRONMENT: "DEV"
+    - name: Run installation script
       env:
-        ENVIRONMENT: "DEV"
+          ENVIRONMENT: "DEV"
+      run: ./setupScript.sh
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
@@ -40,8 +44,8 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-        name: Run installation script
-        run: ./setupScript.sh
+        # name: Run installation script
+        # run: ./setupScript.sh
     - name: Run Playwright tests
       run: npx playwright test
       env:
