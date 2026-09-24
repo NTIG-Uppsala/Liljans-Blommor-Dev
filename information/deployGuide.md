@@ -19,9 +19,8 @@ ENVIRONMENT="DEV"
 
 Example workflow:
 ```
-nano .env
+echo 'export ENVIRONMENT="DEV"' > .env
 ```
-↳ Type or copy and paste: ENVIRONMENT="DEV", inside the text editor, save and write out.
 
 ### Setup script
 
@@ -30,7 +29,7 @@ _Navigate to the repository's root folder_
 Run the setup script:
 
 ```
-./setupScript.sh
+bash ./setupScript.sh
 ```
 
 Setup should be all done.
