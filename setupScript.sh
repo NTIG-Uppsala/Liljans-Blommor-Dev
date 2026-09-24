@@ -56,6 +56,8 @@ changeToTestData(){
 
 installPlaywrightDependencies(){
 
+    ls -a &&
+
     cd playwright &&
 
     npm ci && 
