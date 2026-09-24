@@ -357,10 +357,24 @@ th {
     background-color: var(--color1);
 }
 
+#flowerDeliveryTitleContainer {
+
+    width: var(--subMainWidth);
+    height: fit-content;
+}
+
+#flowerDeliveryTitleContainer h2 {
+
+    margin: 0;
+
+    font-size: 3rem;
+
+}
+
 .flowerDelivery {
     width: var(--subMainWidth);
     max-width: 100%;
-    margin: 2.5vw 10vw;
+    margin: 2rem 0rem 4rem 0rem;
     padding: 1rem;
 
     box-sizing: border-box;
@@ -502,6 +516,24 @@ th {
     color: white;
     font-size: 0.9rem;
     font-weight: bold;
+}
+
+#flowerDeliveryAvailableBox {
+
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+    width: 100%;
+    height: 2rem;
+}
+
+#flowerDeliveryAvailableBox p {
+
+    color: black;
+    margin: 0;
+    margin-left: 0.5rem;
+
 }
 
 

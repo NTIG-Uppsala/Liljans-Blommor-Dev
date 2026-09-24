@@ -1,30 +1,51 @@
-const zipCodeInput = 98130;
+const postalCodeInput = document.getElementById("postalCode")
+const flowerTextBox = document.getElementById("flowerDeliveryAvailableBox")
 
-async function getZipCodes() {
+async function getPostalCodes() {
 
-    const response = await fetch("../data/zipCodes.json");
-    const zipCodesResponse = await response.json();
+    const response = await fetch("../data/postalCodes.json");
+    const postalCodesResponse = await response.json();
 
-    zipCodes = zipCodesResponse.zipCodes;
+    const postalCodes = postalCodesResponse.postalCodes;
 
-    return zipCodes;
-
+    return postalCodes
 }
 
-async function checkIfZipCodeMatches() {
+async function checkIfPostalCodeMatches() {
 
-    let zipCodes = await getZipCodes();
+    let postalCodeMatches = false;
 
-    for (let zipCode of zipCodes) {
+    const postalCodes = await getPostalCodes();
 
-        if (zipCodeInput == zipCode) {
+    for (let postalCode of postalCodes) {
 
-            console.log("matches")
+        if (postalCodeInput.value == postalCode) {
+
+            postalCodeMatches = true;
+
+            break;
 
         }
-
     }
 
+    console.log(postalCodeInput.value)
+
+    if (postalCodeInput.value == "") {
+
+        flowerTextBox.innerHTML = ``;
+
+    } else if (postalCodeMatches) {
+
+        flowerTextBox.innerHTML = `<p> Leverans är tillgängligt för: ${postalCodeInput.value} </p>`;
+
+    } else if (!postalCodeMatches) {
+
+        flowerTextBox.innerHTML = `<p> Leverans är inte tillgängligt för: ${postalCodeInput.value} </p>`;
+
+    }
 }
 
-checkIfZipCodeMatches()
+postalCodeInput.addEventListener("input", checkIfPostalCodeMatches)
+
+checkIfPostalCodeMatches()
+
