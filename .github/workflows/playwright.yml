@@ -7,18 +7,13 @@ on:
     branches: [ main, master ]
 
 defaults:
-      run:
-        working-directory: ./
-
-
+  run:
+    working-directory: ./playwright
 
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./playwright
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -27,9 +22,11 @@ jobs:
 
     - name: Create .env file
       run: echo 'export ENVIRONMENT="DEV"' > .env
+      working-directory: ./
 
     - name: Run installation script
       run: bash ./setupScript.sh
+      working-directory: ./
 
     - name: Run Playwright tests
       run: npx playwright test
