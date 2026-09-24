@@ -26,7 +26,7 @@ jobs:
       # env:
       #   ENVIRONMENT: "DEV"
     - name: Run installation script
-      run: ./setupScript.sh
+      run: sudo ./setupScript.sh
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
