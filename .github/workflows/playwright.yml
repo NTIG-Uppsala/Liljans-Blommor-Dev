@@ -13,19 +13,6 @@ defaults:
 
 
 jobs:
-  setup:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Create .env file
-      run: echo 'export ENVIRONMENT="DEV"' > .env
-    - name: Run installation script
-      run: bash ./setupScript.sh
-
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -37,12 +24,16 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-        # name: Run installation script
-        # run: ./setupScript.sh
+
+    - name: Create .env file
+      run: echo 'export ENVIRONMENT="DEV"' > .env
+
+    - name: Run installation script
+      run: bash ./setupScript.sh
+
     - name: Run Playwright tests
       run: npx playwright test
-      env:
-        ENVIRONMENT: "DEV"
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
