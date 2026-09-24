@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+const PORT = 4321;
+
 test("Nav links | all pages", async ({ page }) => {
 
   const links = [
@@ -10,10 +12,10 @@ test("Nav links | all pages", async ({ page }) => {
   ];
 
   const page_paths = [
-    "http://localhost:3000/index.html",
-    "http://localhost:3000/pages/products.html",
-    "http://localhost:3000/pages/contact.html",
-    "http://localhost:3000/pages/aboutus.html",
+    `localhost:${PORT}/pages/index.html`,
+    `localhost:${PORT}/pages/products.html`,
+    `localhost:${PORT}/pages/contact.html`,
+    `localhost:${PORT}/pages/aboutus.html`,
   ];
 
   for (let i in page_paths) {

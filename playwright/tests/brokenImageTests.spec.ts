@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-const PORT = 3000;
+const PORT = 4321;
 const pages = [
-    `localhost:${PORT}/index.html`,
+    `localhost:${PORT}/pages//index.html`,
     `localhost:${PORT}/pages/aboutus.html`,
     `localhost:${PORT}/pages/contact.html`,
     `localhost:${PORT}/pages/products.html`,
@@ -27,7 +27,7 @@ test("Check broken images | all pages", async ({ page }) => {
 
 test("Check broken images | homepage", async ({ page }) => {
 
-    await page.goto(`localhost:${PORT}/index.html`, { waitUntil: "networkidle" });
+    await page.goto(`localhost:${PORT}/pages/index.html`, { waitUntil: "networkidle" });
 
     const brokenImages = await page.evaluate(() => {
         return Array.from(document.querySelectorAll("img"))

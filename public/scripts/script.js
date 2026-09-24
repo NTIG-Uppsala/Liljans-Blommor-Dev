@@ -79,10 +79,10 @@ function generateHtmlForOpeningHours(openingHours) {
 
 */
 async function loadJsonAndDisplay() {
-    const contactsResponse = await fetch("../../data/contacts.json");
+    const contactsResponse = await fetch("../data/contacts.json");
     const contacts = await contactsResponse.json();
 
-    const openingHoursResponse = await fetch("../../data/openingHours.json");
+    const openingHoursResponse = await fetch("../data/openingHours.json");
     const openingHours = await openingHoursResponse.json();
 
 
