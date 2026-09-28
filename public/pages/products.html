@@ -18,10 +18,11 @@
 
         <div class="sub-header">
             <nav>
-                <a class="navBarText" href="../pages/index.html">Startsida</a>
-                <a class="navBarText" href="../pages/products.html">Produkter</a>
-                <a class="navBarText" href="../pages/contact.html">Kontakt</a>
-                <a class="navBarText" href="../pages/aboutus.html">Om oss</a>
+                <a class="navBarText" href="index.html">Startsida</a>
+                <a class="navBarText" href="products.html">Produkter</a>
+                <a class="navBarText" href="products.html#flowerDeliveryTitle">Blommogram</a>
+                <a class="navBarText" href="contact.html">Kontakt</a>
+                <a class="navBarText" href="aboutus.html">Om oss</a>
             </nav>
         </div>
     </header>
@@ -45,11 +46,20 @@
 
         <div id="flowerDeliveryTitleContainer">
 
-            <h2>Blommogram</h2>
+            <h2 id="flowerDeliveryTitle">Blommogram</h2>
 
         </div>
 
         <section class="flowerDelivery">
+
+            <h2>Blommorgram?</h2>
+
+            <p>Blommogram är ett blombud du kan beställa för att leverera en blombeställning till en address på distans,
+                exempelvis när
+                någon
+                fyller år.</p>
+            <p>Här nedan kan man skriva in postnumret till den address du funderar på att skicka till för att se om
+                addressen är tillgänglig.</p>
 
             <h3>Postnummer</h3>
 
@@ -61,14 +71,19 @@
                     </svg>
                 </span>
 
-                <input type="text" id="postalCode" name="postalCode" placeholder="95959" inputmode="numeric"
-                    autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}"
-                    oninput="this.value = this.value.replace(/[^0-9 ]/g, '')" required>
+                <input type="text" id="postalCode" name="postalCode" placeholder="ex: 95959" inputmode="numeric"
+                    autocomplete="postal-code" maxlength="6" pattern="[0-9]{5}"
+                    oninput="this.value = this.value.replace(/[^0-9\s]/g, '')" required>
             </label>
 
-            <div id="flowerDeliveryAvailableBox">
+            <div id="flowerDeliveryAvailableBox"></div>
 
-            </div>
+            <p>För att beställa ett blommogram, kontakta oss via tel eller mail:</p>
+
+            <ul>
+                <li>Tel: <span class="tel">Laddar...</span></li>
+                <li>E-post: <span class="mail">Laddar...</span></li>
+            </ul>
         </section>
 
     </main>

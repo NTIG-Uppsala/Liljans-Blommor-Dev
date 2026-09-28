@@ -1,6 +1,12 @@
 const postalCodeInput = document.getElementById("postalCode")
 const flowerTextBox = document.getElementById("flowerDeliveryAvailableBox")
 
+function formattedPostalCode(postalCodeInput) {
+    const onlyDigits = postalCodeInput.replace(/\D/g, "");
+    const integer = parseInt(onlyDigits);
+    return integer;
+}
+
 async function getPostalCodes() {
 
     const response = await fetch("../data/postalCodes.json");
@@ -19,7 +25,7 @@ async function checkIfPostalCodeMatches() {
 
     for (let postalCode of postalCodes) {
 
-        if (postalCodeInput.value == postalCode) {
+        if (formattedPostalCode(postalCodeInput.value) === parseInt(postalCode)) {
 
             postalCodeMatches = true;
 
@@ -34,11 +40,13 @@ async function checkIfPostalCodeMatches() {
 
     } else if (postalCodeMatches) {
 
-        flowerTextBox.innerHTML = `<p> Leverans är tillgängligt för: ${postalCodeInput.value} </p>`;
+        flowerTextBox.innerHTML = `
+        <p> Leverans är tillgängligt för: ${formattedPostalCode(postalCodeInput.value)} </p>`;
+
 
     } else if (!postalCodeMatches) {
 
-        flowerTextBox.innerHTML = `<p> Leverans är inte tillgängligt för: ${postalCodeInput.value} </p>`;
+        flowerTextBox.innerHTML = `<p> Leverans är inte tillgängligt för: ${formattedPostalCode(postalCodeInput.value)} </p>`;
 
     }
 }
