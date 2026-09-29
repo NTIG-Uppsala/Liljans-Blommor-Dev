@@ -1,0 +1,108 @@
+import { test, expect } from '@playwright/test';
+const PORT = 4321;
+
+const postalCodes = {
+    "correct": [
+        "98130",
+        "981 36",
+        "981-45",
+    ],
+    "incorrect": [
+        "12345",
+        "83495",
+    ],
+    "edgeCases": [
+        "<p>Hello</p>",
+        "~\$c}£$\@$--wd\n",
+    ]
+}
+
+
+test('Placeholder | product page', async ({ page }) => {
+    const url = `localhost:${PORT}/pages/products.html`
+    await page.goto(url, { waitUntil: "networkidle" });
+    const postalInput = page.locator("input#postalCode");
+    await postalInput.scrollIntoViewIfNeeded();
+
+    const placeholderMessage = "ex: 95959";
+
+    expect(postalInput).toHaveAttribute("placeholder", placeholderMessage);
+});
+
+
+test('Correct postal codes | product page', async ({ page }) => {
+    const url = `localhost:${PORT}/pages/products.html`
+    await page.goto(url, { waitUntil: "networkidle" });
+    const postalInput = page.locator("input#postalCode");
+    await postalInput.scrollIntoViewIfNeeded();
+    const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
+
+    console.log(`Before entering data: ${await postalInput.inputValue() || "[nothing]"}`);
+
+    for (const postalCode of postalCodes.correct) {
+        await postalInput.fill("");
+        await postalInput.type(postalCode);
+        console.log(`After entering data: ${await postalInput.inputValue()}`);
+
+        console.log(`Flower delivery text: ${await flowerDeliveryAvailableBox.textContent()}`);
+
+        const expectToContainText = `Leverans är tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
+
+        expect(
+            await flowerDeliveryAvailableBox.textContent(),
+            `Postalcode: ${postalCode} didn't work`
+        ).toContain(expectToContainText);
+    }
+});
+
+
+test('Incorrect postal codes | product page', async ({ page }) => {
+    const url = `localhost:${PORT}/pages/products.html`
+    await page.goto(url, { waitUntil: "networkidle" });
+    const postalInput = page.locator("input#postalCode");
+    await postalInput.scrollIntoViewIfNeeded();
+    const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
+
+    console.log(`Before entering data: ${await postalInput.inputValue() || "[nothing]"}`);
+
+    for (const postalCode of postalCodes.incorrect) {
+        await postalInput.fill("");
+        await postalInput.type(postalCode);
+        console.log(`After entering data: ${await postalInput.inputValue()}`);
+
+        console.log(`Flower delivery text: ${await flowerDeliveryAvailableBox.textContent()}`);
+
+        const expectToContainText = `Leverans är inte tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
+
+        expect(
+            await flowerDeliveryAvailableBox.textContent(),
+            `Postalcode: ${postalCode} didn't work`
+        ).toContain(expectToContainText);
+    }
+});
+
+
+test('Edge cases | product page', async ({ page }) => {
+    const url = `localhost:${PORT}/pages/products.html`
+    await page.goto(url, { waitUntil: "networkidle" });
+    const postalInput = page.locator("input#postalCode");
+    await postalInput.scrollIntoViewIfNeeded();
+    const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
+
+    console.log(`Before entering data: ${await postalInput.inputValue() || "[nothing]"}`);
+
+    for (const postalCode of postalCodes.edgeCases) {
+        await postalInput.fill("");
+        await postalInput.type(postalCode);
+        console.log(`After entering data: ${await postalInput.inputValue()}`);
+
+        console.log(`Flower delivery text: ${await flowerDeliveryAvailableBox.textContent()}`);
+
+        const expectToContainText = ``;
+
+        expect(
+            await flowerDeliveryAvailableBox.textContent(),
+            `Postalcode: ${postalCode} didn't work`
+        ).toContain(expectToContainText);
+    }
+});
