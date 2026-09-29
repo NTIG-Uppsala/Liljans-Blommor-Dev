@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 const PORT = 4321;
+const protocol = "http://"
 
 const postalCodes = {
     "correct": [
@@ -19,7 +20,7 @@ const postalCodes = {
 
 
 test('Placeholder | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`
+    const url = `${protocol}localhost:${PORT}/pages/products.html`
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     await postalInput.scrollIntoViewIfNeeded();
@@ -31,11 +32,11 @@ test('Placeholder | product page', async ({ page }) => {
 
 
 test('Correct postal codes | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`
+    const url = `${protocol}localhost:${PORT}/pages/products.html`
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
-    await postalInput.scrollIntoViewIfNeeded();
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
+    await postalInput.scrollIntoViewIfNeeded();
 
     for (const postalCode of postalCodes.correct) {
         await postalInput.fill("");
@@ -52,11 +53,11 @@ test('Correct postal codes | product page', async ({ page }) => {
 
 
 test('Incorrect postal codes | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`
+    const url = `${protocol}localhost:${PORT}/pages/products.html`
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
-    await postalInput.scrollIntoViewIfNeeded();
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
+    await postalInput.scrollIntoViewIfNeeded();
 
     for (const postalCode of postalCodes.incorrect) {
         await postalInput.fill("");
@@ -73,15 +74,15 @@ test('Incorrect postal codes | product page', async ({ page }) => {
 
 
 test('Edge cases | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`
+    const url = `${protocol}localhost:${PORT}/pages/products.html`
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
-    await postalInput.scrollIntoViewIfNeeded();
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
+    await postalInput.scrollIntoViewIfNeeded();
 
     for (const postalCode of postalCodes.edgeCases) {
         await postalInput.fill("");
-        await postalInput.fill(postalCode); //.fill instead of .type to really test the edge cases
+        await postalInput.fill(postalCode); //.fill instead of .pressSequantially to really test the edge cases
 
         const expectToContainText = ``;
 
