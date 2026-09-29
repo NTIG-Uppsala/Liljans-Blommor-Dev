@@ -12,23 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="top-header">
-            <h1>Liljans Blommor</h1>
-            <h1 id="tel">Tel: <span class="tel">Laddar...</span></h1>
-        </div>
 
-        <div class="sub-header">
-            <nav>
-                <a class="navBarText" href="index.html">Startsida</a>
-                <a class="navBarText" href="products.html">Produkter</a>
-                <a class="navBarText" href="products.html#flowerDeliveryTitle">Blommogram</a>
-                <a class="navBarText" href="contact.html">Kontakt</a>
-                <a class="navBarText" href="aboutus.html">Om&nbsp;oss</a>
-            </nav>
-        </div>
-    </header>
-
+    <header></header>
 
     <main>
 
@@ -53,7 +38,7 @@
 
             </div>
             <div class="products-button">
-                <a href="pages/products.html">Gå till produkter</a>
+                <a href="products.html">Gå till produkter</a>
             </div>
 
 
@@ -69,36 +54,18 @@
 
         </div>
     </main>
-    <footer>
-        <h2>Liljans Blommor</h2>
-        <div class="sub-footer">
-            <div>
-                <b>Kontakt</b>
-                <ul>
-                    <li>Tel: <span class="tel">Laddar...</span></li>
-                    <li>E-post: <span class="mail">Laddar...</span></li>
-                </ul>
-            </div>
-            <div>
-                <b>Adress</b>
-                <ul>
-                    <li class="location">Laddar...</li>
-                </ul>
-            </div>
-            <div>
-                <b>Öppettider</b>
-                <ul>
-                    <li class="weekdays">Laddar...</li>
-                    <li class="saturday">Laddar...</li>
-                    <li class="sunday">Laddar...</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+
+    <footer></footer>
 
     <script src="../scripts/script.js"></script>
     <script src="../scripts/indexScript.js"></script>
     <script src="../scripts/taxToggle.js"></script>
+    <script src="../scripts/components.js"></script>
+
+    <script>
+        loadComponent("header", "../components/header.html");
+        loadComponent("footer", "../components/footer.html");
+    </script>
 
 
 </body>
