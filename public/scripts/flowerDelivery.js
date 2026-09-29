@@ -18,7 +18,7 @@ async function getPostalCodes() {
         return parseInt(postalCode);
     });
 
-    return postalCodes;
+    return postalCodes
 }
 
 async function checkIfPostalCodeMatches() {
@@ -30,12 +30,16 @@ async function checkIfPostalCodeMatches() {
     const currentPostalCode = formattedPostalCode(postalCodeInput.value);
     const postalCodeMatches = postalCodes.includes(currentPostalCode);
 
-    if (!currentPostalCode) {
-        flowerTextBox.innerHTML = ``;
-    } else if (postalCodeMatches) {
-        flowerTextBox.innerHTML = `<p>Leverans är tillgängligt för: ${currentPostalCode}</p>`;
-    } else if (!postalCodeMatches) {
-        flowerTextBox.innerHTML = `<p>Leverans är inte tillgängligt för: ${currentPostalCode}</p>`;
+    try {
+        if (!currentPostalCode) {
+            flowerTextBox.innerHTML = ``;
+        } else if (postalCodeMatches) {
+            flowerTextBox.innerHTML = `<p>Leverans är tillgängligt för: ${currentPostalCode}</p>`;
+        } else if (!postalCodeMatches) {
+            flowerTextBox.innerHTML = `<p>Leverans är inte tillgängligt för: ${currentPostalCode}</p>`;
+        }
+    } catch (e) {
+        flowerTextBox.innerHTML = `<p>Något gick fel.</p>`;
     }
 }
 
