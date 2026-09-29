@@ -47,7 +47,7 @@ test('Correct postal codes | product page', async ({ page }) => {
         await expect(
             flowerDeliveryAvailableBox,
             `Postalcode: ${postalCode} didn't work`
-        ).toContainText(expectToContainText);
+        ).toHaveText(expectToContainText);
     }
 });
 
@@ -68,7 +68,7 @@ test('Incorrect postal codes | product page', async ({ page }) => {
         await expect(
             flowerDeliveryAvailableBox,
             `Postalcode: ${postalCode} didn't work`
-        ).toContainText(expectToContainText);
+        ).toHaveText(expectToContainText);
     }
 });
 
@@ -89,6 +89,6 @@ test('Edge cases | product page', async ({ page }) => {
         await expect(
             flowerDeliveryAvailableBox,
             `Postalcode: ${postalCode} didn't work`
-        ).toContainText(expectToContainText);
+        ).toHaveText(expectToContainText);
     }
 });
