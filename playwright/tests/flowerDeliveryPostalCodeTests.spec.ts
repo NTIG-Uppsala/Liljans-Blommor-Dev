@@ -27,7 +27,7 @@ test('Placeholder | product page', async ({ page }) => {
 
     const placeholderMessage = "ex: 95959";
 
-    expect(postalInput).toHaveAttribute("placeholder", placeholderMessage);
+    await expect(postalInput).toHaveAttribute("placeholder", placeholderMessage);
 });
 
 
@@ -44,10 +44,10 @@ test('Correct postal codes | product page', async ({ page }) => {
 
         const expectToContainText = `Leverans är tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
-        expect(
-            await flowerDeliveryAvailableBox.textContent(),
+        await expect(
+            flowerDeliveryAvailableBox,
             `Postalcode: ${postalCode} didn't work`
-        ).toContain(expectToContainText);
+        ).toContainText(expectToContainText);
     }
 });
 
@@ -65,10 +65,10 @@ test('Incorrect postal codes | product page', async ({ page }) => {
 
         const expectToContainText = `Leverans är inte tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
-        expect(
-            await flowerDeliveryAvailableBox.textContent(),
+        await expect(
+            flowerDeliveryAvailableBox,
             `Postalcode: ${postalCode} didn't work`
-        ).toContain(expectToContainText);
+        ).toContainText(expectToContainText);
     }
 });
 
@@ -86,9 +86,9 @@ test('Edge cases | product page', async ({ page }) => {
 
         const expectToContainText = ``;
 
-        expect(
-            await flowerDeliveryAvailableBox.textContent(),
+        await expect(
+            flowerDeliveryAvailableBox,
             `Postalcode: ${postalCode} didn't work`
-        ).toContain(expectToContainText);
+        ).toContainText(expectToContainText);
     }
 });
