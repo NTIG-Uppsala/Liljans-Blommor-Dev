@@ -39,7 +39,7 @@ test('Correct postal codes | product page', async ({ page }) => {
 
     for (const postalCode of postalCodes.correct) {
         await postalInput.fill("");
-        await postalInput.type(postalCode);
+        await postalInput.pressSequentially(postalCode);
 
         const expectToContainText = `Leverans är tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
@@ -60,7 +60,7 @@ test('Incorrect postal codes | product page', async ({ page }) => {
 
     for (const postalCode of postalCodes.incorrect) {
         await postalInput.fill("");
-        await postalInput.type(postalCode);
+        await postalInput.pressSequentially(postalCode);
 
         const expectToContainText = `Leverans är inte tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
