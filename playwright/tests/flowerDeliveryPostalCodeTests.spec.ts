@@ -37,14 +37,9 @@ test('Correct postal codes | product page', async ({ page }) => {
     await postalInput.scrollIntoViewIfNeeded();
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
 
-    console.log(`Before entering data: ${await postalInput.inputValue() || "[nothing]"}`);
-
     for (const postalCode of postalCodes.correct) {
         await postalInput.fill("");
         await postalInput.type(postalCode);
-        console.log(`After entering data: ${await postalInput.inputValue()}`);
-
-        console.log(`Flower delivery text: ${await flowerDeliveryAvailableBox.textContent()}`);
 
         const expectToContainText = `Leverans är tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
@@ -63,14 +58,9 @@ test('Incorrect postal codes | product page', async ({ page }) => {
     await postalInput.scrollIntoViewIfNeeded();
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
 
-    console.log(`Before entering data: ${await postalInput.inputValue() || "[nothing]"}`);
-
     for (const postalCode of postalCodes.incorrect) {
         await postalInput.fill("");
         await postalInput.type(postalCode);
-        console.log(`After entering data: ${await postalInput.inputValue()}`);
-
-        console.log(`Flower delivery text: ${await flowerDeliveryAvailableBox.textContent()}`);
 
         const expectToContainText = `Leverans är inte tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
@@ -89,14 +79,9 @@ test('Edge cases | product page', async ({ page }) => {
     await postalInput.scrollIntoViewIfNeeded();
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
 
-    console.log(`Before entering data: ${await postalInput.inputValue() || "[nothing]"}`);
-
     for (const postalCode of postalCodes.edgeCases) {
         await postalInput.fill("");
-        await postalInput.type(postalCode);
-        console.log(`After entering data: ${await postalInput.inputValue()}`);
-
-        console.log(`Flower delivery text: ${await flowerDeliveryAvailableBox.textContent()}`);
+        await postalInput.fill(postalCode); //.fill instead of .type to really test the edge cases
 
         const expectToContainText = ``;
 
