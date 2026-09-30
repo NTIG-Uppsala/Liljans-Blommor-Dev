@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const PORT = 4321;
 
+
 test("Check broken images | homepage", async ({ page }) => {
 
     await page.goto(`localhost:${PORT}/pages/index.html`, { waitUntil: "networkidle" });
@@ -16,8 +17,8 @@ test("Check broken images | homepage", async ({ page }) => {
         brokenImages.length,
         `Broken images: ${brokenImages.toString()}`
     ).toBe(0);
-
 });
+
 
 test("Check broken images | products page", async ({ page }) => {
 
@@ -33,8 +34,8 @@ test("Check broken images | products page", async ({ page }) => {
         brokenImages.length,
         `Broken images: ${brokenImages.toString()}`
     ).toBe(0);
-
 });
+
 
 test("Check broken images | about us page", async ({ page }) => {
 
@@ -50,8 +51,8 @@ test("Check broken images | about us page", async ({ page }) => {
         brokenImages.length,
         `Broken images: ${brokenImages.toString()}`
     ).toBe(0);
-
 });
+
 
 test("Check broken images | contact page", async ({ page }) => {
 
@@ -67,5 +68,4 @@ test("Check broken images | contact page", async ({ page }) => {
         brokenImages.length,
         `Broken images: ${brokenImages.toString()}`
     ).toBe(0);
-
 });

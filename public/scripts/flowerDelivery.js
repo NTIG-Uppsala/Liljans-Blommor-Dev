@@ -1,13 +1,15 @@
-const postalCodeInput = document.getElementById("postalCode")
-const flowerTextBox = document.getElementById("flowerDeliveryAvailableBox")
+const postalCodeInput = document.getElementById("postalCode");
+const flowerTextBox = document.getElementById("flowerDeliveryAvailableBox");
 
 let postalCodes = [];
+
 
 function formattedPostalCode(postalCodeInput) {
     const onlyDigits = postalCodeInput.replace(/\D/g, "");
     const integer = parseInt(onlyDigits);
     return integer;
 }
+
 
 async function getPostalCodes() {
 
@@ -18,8 +20,9 @@ async function getPostalCodes() {
         return parseInt(postalCode);
     });
 
-    return postalCodes
+    return postalCodes;
 }
+
 
 async function checkIfPostalCodeMatches() {
 
@@ -43,7 +46,7 @@ async function checkIfPostalCodeMatches() {
     }
 }
 
-postalCodeInput.addEventListener("input", checkIfPostalCodeMatches)
 
-checkIfPostalCodeMatches()
+postalCodeInput.addEventListener("input", checkIfPostalCodeMatches);
 
+checkIfPostalCodeMatches();

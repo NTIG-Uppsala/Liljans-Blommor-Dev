@@ -1,6 +1,6 @@
 const telephoneNumberElements = document.getElementsByClassName("tel");
 const mailElements = document.getElementsByClassName("mail");
-const locationElements = document.getElementsByClassName("location")
+const locationElements = document.getElementsByClassName("location");
 
 const weekdaysElements = document.getElementsByClassName("weekdays");
 const saturdayElements = document.getElementsByClassName("saturday");
@@ -13,7 +13,6 @@ let jsonProducts = {};
     Html for img products //e.g. showcase and best seller products
 
 */
-
 function generateHtmlForImgProducts(imgProducts) {
     let productsWithImgHtml = "";
     imgProducts.forEach(imgProduct => {
@@ -21,7 +20,7 @@ function generateHtmlForImgProducts(imgProducts) {
             <div class="gallery-item">
                     <img src="${imgProduct.img}" alt="${imgProduct.name}">
                 <div class="img-desc">${imgProduct.name} <u class="prices" data-productName="${imgProduct.name}">${imgProduct.price}</u>&nbsp;kr</div>
-            </div>`
+            </div>`;
     });
     gallery.innerHTML = productsWithImgHtml;
 }
@@ -31,7 +30,6 @@ function generateHtmlForImgProducts(imgProducts) {
     Html for contacts
 
 */
-
 function formatTelephoneNumber(rawTelephoneNumber) {
     const onlyDigits = rawTelephoneNumber.replace(/\D/g, "");
     const withoutCountry = onlyDigits.slice(2);
@@ -63,13 +61,13 @@ function generateHtmlForContacts(contacts) {
 */
 function generateHtmlForOpeningHours(openingHours) {
     Array.from(weekdaysElements).forEach(weekdaysElement => {
-        weekdaysElement.innerHTML = `Vardagar: ${openingHours.weekdays}`
+        weekdaysElement.innerHTML = `Vardagar: ${openingHours.weekdays}`;
     });
     Array.from(saturdayElements).forEach(saturdayElement => {
-        saturdayElement.innerHTML = `Lördagar: ${openingHours.saturday}`
+        saturdayElement.innerHTML = `Lördagar: ${openingHours.saturday}`;
     });
     Array.from(sundayElements).forEach(sundayElement => {
-        sundayElement.innerHTML = `Söndagar: ${openingHours.sunday}`
+        sundayElement.innerHTML = `Söndagar: ${openingHours.sunday}`;
     });
 }
 
@@ -85,14 +83,9 @@ async function loadJsonAndDisplay() {
     const openingHoursResponse = await fetch("../data/openingHours.json");
     const openingHours = await openingHoursResponse.json();
 
-
     generateHtmlForContacts(contacts);
     generateHtmlForOpeningHours(openingHours);
 }
 
 
 loadJsonAndDisplay();
-
-
-
-

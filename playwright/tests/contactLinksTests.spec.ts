@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
+
 const PORT = 4321;
+
 
 test('Validate phone link formatting standards | all pages', async ({ page }) => {
 
@@ -30,6 +32,7 @@ test('Validate phone link formatting standards | all pages', async ({ page }) =>
     }
   }
 });
+
 
 test(`Validate email link formatting standards | all pages`, async ({ page }) => {
 

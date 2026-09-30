@@ -10,9 +10,9 @@ git clone https://github.com/NTIG-Uppsala/Liljans-Blommor-Dev.git
 git clone git@github.com:NTIG-Uppsala/Liljans-Blommor-Dev.git
 ```
 
-### Prepare setup script _(if in a development environment)_
+### 1. Prepare setup script _(if in a development environment)_
 
-_Navigate to the repository's root folder_
+_Navigate to the repositories root folder_
 
 Create a .env file and fill it with:
 ENVIRONMENT="DEV"
@@ -22,7 +22,7 @@ Example workflow:
 echo 'export ENVIRONMENT="DEV"' > .env
 ```
 
-### Setup script
+### 2. Setup script
 
 _Navigate to the repository's root folder_
 
@@ -36,4 +36,4 @@ Setup should be all done.
 
 ### Data management
 
-Please refer to [modifying data](./modifyingData.md)
+_Please refer to [modifying data](./modifyingData.md)_

@@ -1,10 +1,11 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from '@playwright/test';
 
 const PORT = 4321;
 
+
 test("Click button | index page ", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/`);
+    await page.goto(`localhost:${PORT}/`);
 
     await page.getByText("Inklusive moms").click();
     await page.getByText("Inklusive moms").click();
@@ -12,11 +13,13 @@ test("Click button | index page ", async ({ page }) => {
     await page.getByText("Inklusive moms").check();
     await page.getByText("Exklusive moms").uncheck();
 
-})
+    //Missing expect?
+});
+
 
 test("Click button | product page ", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/pages/products.html`);
+    await page.goto(`localhost:${PORT}/pages/products.html`);
 
     await page.getByText("Inklusive moms").click();
     await page.getByText("Inklusive moms").click();
@@ -24,11 +27,13 @@ test("Click button | product page ", async ({ page }) => {
     await page.getByText("Inklusive moms").check();
     await page.getByText("Exklusive moms").uncheck();
 
-})
+    //Missing expect?
+});
+
 
 test("Tax button localstorage | index page", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/`);
+    await page.goto(`localhost:${PORT}/`);
 
     await page.getByText("Inklusive moms").check();
 
@@ -37,12 +42,12 @@ test("Tax button localstorage | index page", async ({ page }) => {
     await page.reload();
 
     await expect(page.getByText("Inklusive moms"), "Button was not checked after reload").toBeChecked();
+});
 
-})
 
 test("Tax button localstorage | product page", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/pages/products.html`);
+    await page.goto(`localhost:${PORT}/pages/products.html`);
 
     await page.getByText("Inklusive moms").check();
 
@@ -51,12 +56,12 @@ test("Tax button localstorage | product page", async ({ page }) => {
     await page.reload();
 
     await expect(page.getByText("Inklusive moms"), "Button was not checked after reload").toBeChecked();
+});
 
-})
 
 test("Tax button tax | index page", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/`, { waitUntil: "load" });
+    await page.goto(`localhost:${PORT}/`, { waitUntil: "load" });
 
     const prices = await page.locator(".prices").all();
 
@@ -78,11 +83,11 @@ test("Tax button tax | index page", async ({ page }) => {
 
     await expect(prices[prices.length - 1], "Last product price did not match after two clicks").toContainText(lastPrice);
 
-})
+});
 
 test("Tax button tax | product page", async ({ page }) => {
 
-    await page.goto(`http://localhost:${PORT}/pages/products.html`, { waitUntil: "load" });
+    await page.goto(`localhost:${PORT}/pages/products.html`, { waitUntil: "load" });
 
     const prices = await page.locator(".prices").all();
 
@@ -104,4 +109,4 @@ test("Tax button tax | product page", async ({ page }) => {
 
     await expect(prices[prices.length - 1], "Last product price did not match after two clicks").toContainText(lastPrice);
 
-})
+});

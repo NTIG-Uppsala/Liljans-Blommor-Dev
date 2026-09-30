@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const PORT = 4321;
 
+
 test("Nav links | all pages", async ({ page }) => {
 
   const links = [
@@ -18,13 +19,13 @@ test("Nav links | all pages", async ({ page }) => {
     `localhost:${PORT}/pages/aboutus.html`,
   ];
 
-  for (let i in page_paths) {
+  for (const url of page_paths) {
 
-    await page.goto(page_paths[i], { waitUntil: 'load' });
+    await page.goto(url, { waitUntil: 'load' });
 
-    for (let j in links) {
+    for (const link of links) {
 
-      await page.getByRole('link', { name: links[j], exact: true }).click();
+      await page.getByRole('link', { name: link, exact: true }).click();
 
     }
   }

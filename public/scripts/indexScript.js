@@ -28,10 +28,7 @@ async function loadJsonAndDisplay() {
         toggleShowWithoutTaxes.checked = true;
         changePrices();
     }
-
 }
 
 
 loadJsonAndDisplay();
-
-

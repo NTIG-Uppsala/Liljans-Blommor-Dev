@@ -14,7 +14,7 @@ main(){
         printf "ENVIRONMENT:"
         printf "$ENVIORMENT"
 
-        if [[ "$ENVIRONMENT" = "DEV" ]]
+        if [[ "$ENVIRONMENT" = "DEV" ]];
         then 
             printf "In Development environment: \nTrying to replace files... \n"
 

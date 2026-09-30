@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
+
 const PORT = 4321;
-const protocol = "http://"
 
 const postalCodes = {
     "correct": [
@@ -15,12 +15,12 @@ const postalCodes = {
     "edgeCases": [
         "<p>Hello</p>",
         "~\$c}£$\@$--wd\n",
-    ]
+    ],
 }
 
 
 test('Placeholder | product page', async ({ page }) => {
-    const url = `${protocol}localhost:${PORT}/pages/products.html`
+    const url = `localhost:${PORT}/pages/products.html`;
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     await postalInput.scrollIntoViewIfNeeded();
@@ -32,7 +32,7 @@ test('Placeholder | product page', async ({ page }) => {
 
 
 test('Correct postal codes | product page', async ({ page }) => {
-    const url = `${protocol}localhost:${PORT}/pages/products.html`
+    const url = `localhost:${PORT}/pages/products.html`;
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
@@ -53,7 +53,7 @@ test('Correct postal codes | product page', async ({ page }) => {
 
 
 test('Incorrect postal codes | product page', async ({ page }) => {
-    const url = `${protocol}localhost:${PORT}/pages/products.html`
+    const url = `localhost:${PORT}/pages/products.html`;
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
@@ -74,7 +74,7 @@ test('Incorrect postal codes | product page', async ({ page }) => {
 
 
 test('Edge cases | product page', async ({ page }) => {
-    const url = `${protocol}localhost:${PORT}/pages/products.html`
+    const url = `localhost:${PORT}/pages/products.html`
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");

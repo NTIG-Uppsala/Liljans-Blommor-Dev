@@ -3,6 +3,7 @@ const toggleShowWithoutTaxes = document.getElementById("taxToggle");
 // const gallery = document.getElementById("gallery"); is called in the products or index scripts
 // const productTable = document.getElementById("productTable"); is called in the products or index scripts
 
+
 async function changePrices() {
     if (toggleShowWithoutTaxes.checked) {
         Array.from(prices).forEach(price => {
@@ -26,5 +27,6 @@ async function changePrices() {
         localStorage.setItem("taxes", "includeTaxes");
     }
 }
+
 
 toggleShowWithoutTaxes.addEventListener('change', changePrices);    

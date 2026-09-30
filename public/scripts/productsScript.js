@@ -3,7 +3,6 @@ const gallery = document.getElementById("gallery");
 const productTable = document.getElementById("productTable");
 
 
-
 function generateHtmlProducts(productCategories) {
     let productsHtml = "";
 
@@ -13,19 +12,20 @@ function generateHtmlProducts(productCategories) {
                     <th>${productCategory.categoryName}</th>
                     <th>Pris</th>
                 </tr>
-            `
+            `;
         productCategory.products.forEach(product => {
             productsHtml += `
                 <tr>
                     <td>${product.name}</td>
                     <td><u class="prices" data-productName="${product.name}">${product.price}</u>&nbsp;kr</td>
                 </tr>
-            `
-        })
-    })
+            `;
+        });
+    });
 
     productTable.innerHTML = productsHtml;
 }
+
 
 async function loadJsonAndDisplay() {
     const response = await fetch("../data/products.json");
@@ -40,8 +40,8 @@ async function loadJsonAndDisplay() {
             if (product.isShowcase && product.img !== false && product.img !== "") {
                 showcaseProducts.push(product);
             }
-        })
-    })
+        });
+    });
 
     generateHtmlForImgProducts(showcaseProducts);
     generateHtmlProducts(productCategories);
@@ -50,7 +50,7 @@ async function loadJsonAndDisplay() {
         toggleShowWithoutTaxes.checked = true;
         changePrices();
     }
-
 }
+
 
 loadJsonAndDisplay();

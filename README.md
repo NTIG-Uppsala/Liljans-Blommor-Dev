@@ -1,18 +1,16 @@
 # Liljans Blommor
-**For licenses;** please refer to [licenses](information/licenses.md)
 
 ## User
-
-**Changing data;** please refer to [modifying data](information/modifyingData.md)
+_Changing data: please refer to [modifying data](docs/modifyingData.md)_
 
 ## Developer
-_Please refer to the [deploy guide](information/deployGuide.md) to initialize the project_
+_To initialize the project: please refer to the [deploy guide](docs/deployGuide.md)_
 
 ### PlayWright tests
-_Please refer to the [deploy guide](information/deployGuide.md) before running tests_
+_Before running tests: please refer to the [deploy guide](docs/deployGuide.md)_
 
 #### _Run tests_
-To run _all_ tests, run the following command from the **playwright** directory:
+To run all tests, run the following command from the **playwright** directory:
 ```
 npx playwright test
 ```
@@ -20,7 +18,7 @@ npx playwright test
 ### Coding standard
 Always in English
 - **HTML:** https://se-education.org/guides/conventions/html.html
-    Indentation: We use a tab instead of a double space.
+    Indentation: using a single tab instead of a double space.
 - **CSS:** https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing
 - **JAVASCRIPT:** https://google.github.io/styleguide/jsguide.html
 
@@ -42,7 +40,7 @@ Always in English
      Playwright Test for VSCode
 
 **Github 3.22.0**
-  versioning / version control / version managment
+  versioning / version control / version management
   
 - **Scribens:** https://www.scribens.com/sv/
   Spelling and wording
@@ -56,3 +54,7 @@ Always in English
 - When a feature is done, make sure to double check with a teammate to confirm variable names, etc is done
 - When a bug is found; if possible and/or relevant; write a test for future debugging
 - Update relevant documentation
+
+
+## Licenses
+_For licenses: please refer to [licenses](docs/licenses.md)_
