@@ -1,8 +1,3 @@
-// DEBUGGING NEEDED:
-// Tests works locally but not on github actions
-
-/*
-
 import { test, expect } from '@playwright/test';
 
 const PORT = 4321;
@@ -45,7 +40,7 @@ test('Correct postal codes | product page', async ({ page }) => {
 
     for (const postalCode of postalCodes.correct) {
         await postalInput.fill("");
-        await postalInput.fill(postalCode);
+        await postalInput.pressSequentially(postalCode);
 
         const expectToContainText = `Leverans är tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
@@ -66,7 +61,7 @@ test('Incorrect postal codes | product page', async ({ page }) => {
 
     for (const postalCode of postalCodes.incorrect) {
         await postalInput.fill("");
-        await postalInput.fill(postalCode);
+        await postalInput.pressSequentially(postalCode);
 
         const expectToContainText = `Leverans är inte tillgängligt för: ${postalCode.replace(/\D/g, "")}`;
 
@@ -97,5 +92,3 @@ test('Edge cases | product page', async ({ page }) => {
         ).toHaveText(expectToContainText);
     }
 });
-
-*/
