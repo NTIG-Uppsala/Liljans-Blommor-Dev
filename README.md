@@ -4,7 +4,7 @@
 _Changing data: please refer to [modifying data](docs/modifyingData.md)_
 
 ## Developer
-_To initialize the project: please refer to the [deploy guide](docs/deployGuide.md)_
+_Initializing the project: please refer to the [deploy guide](docs/deployGuide.md)_
 
 ### PlayWright tests
 _Before running tests: please refer to the [deploy guide](docs/deployGuide.md)_
