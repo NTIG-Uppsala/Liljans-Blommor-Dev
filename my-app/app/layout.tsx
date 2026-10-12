@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Niconne, Roboto } from "next/font/google";
 import "./main.css";
+import Header from "./components/primary-layout/header";
 
 const niconne = Niconne({
   weight: "400",
@@ -24,6 +25,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
     // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+
+      <Header />
+
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
