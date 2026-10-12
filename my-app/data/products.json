@@ -1,0 +1,251 @@
+{
+    "cutFlowers": {
+        "categoryName": "Snitt blommor",
+        "products": [
+            {
+                "name": "Nejlika",
+                "price": 29,
+                "isBestSeller": false,
+                "isShowcase": true,
+                "img": "../assets/images/carnation.jpg"
+            },
+            {
+                "name": "Liljestjälk",
+                "price": 69,
+                "isBestSeller": false,
+                "isShowcase": true,
+                "img": "../assets/images/LilyStalk.jpg"
+            },
+            {
+                "name": "Gerbera",
+                "price": 35,
+                "isBestSeller": false,
+                "isShowcase": true,
+                "img": "../assets/images/gerbera.jpg"
+            },
+            {
+                "name": "Eukalyptusgrönt (bunt)",
+                "price": 59,
+                "isBestSeller": false,
+                "isShowcase": true,
+                "img": "../assets/images/eucalyptusGreen.jpg"
+            },
+            {
+                "name": "Röd ros",
+                "price": 39,
+                "isBestSeller": false,
+                "isShowcase": true,
+                "img": "../assets/images/redRose.jpg"
+            },
+            {
+                "name": "Tulpan (bunt om 10)",
+                "price": 89,
+                "isBestSeller": false,
+                "isShowcase": true,
+                "img": "../assets/images/tulips.jpg"
+            }
+        ]
+    },
+    "Bouquets": {
+        "categoryName": "Buketter",
+        "products": [
+            {
+                "name": "Sorgbukett",
+                "price": 450,
+                "isBestSeller": true,
+                "isShowcase": true,
+                "img": "../assets/images/funeralBouquet.jpg"
+            },
+            {
+                "name": "Brudbukett",
+                "price": 1200,
+                "isBestSeller": true,
+                "isShowcase": true,
+                "img": "../assets/images/brideBouquet.jpg"
+            },
+            {
+                "name": "Stor bukett",
+                "price": 599,
+                "isBestSeller": true,
+                "isShowcase": true,
+                "img": "../assets/images/largeBouquet.jpg"
+            },
+            {
+                "name": "Månadens säsongsbukett",
+                "price": 249,
+                "isBestSeller": true,
+                "isShowcase": true,
+                "img": "../assets/images/seasonalBouquet.jpg"
+            },
+            {
+                "name": "Mellan storbukett",
+                "price": 399,
+                "isBestSeller": true,
+                "isShowcase": true,
+                "img": "../assets/images/mediumBouquet.jpg"
+            },
+            {
+                "name": "Liten handbunden bukett",
+                "price": 249,
+                "isBestSeller": true,
+                "isShowcase": true,
+                "img": "../assets/images/smalbouquet.jpg"
+            }
+        ]
+    },
+    "pottedPlants": {
+        "categoryName": "Krukväxter",
+        "products": [
+            {
+                "name": "Orkidé i kruka",
+                "price": 199,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Fredskalla",
+                "price": 249,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Julstjärna",
+                "price": 89,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Liten kaktus",
+                "price": 79,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Kruka med örter (basilika, mynta)",
+                "price": 39,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Ytterkruka i keramik",
+                "price": 149,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            }
+        ]
+    },
+    "funeralBindings": {
+        "categoryName": "Begravningsbinderi",
+        "products": [
+            {
+                "name": "Kistdekoration",
+                "price": 2500,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Begravningskrans",
+                "price": 1800,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Sorgdekoration till urna",
+                "price": 950,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Band med tryckt hälsning",
+                "price": 150,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            }
+        ]
+    },
+    "Services": {
+        "categoryName": "Tjänster",
+        "products": [
+            {
+                "name": "Hemleverans inom Kiruna",
+                "price": 79,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Leverans utanför Kiruna (inom 3 mil)",
+                "price": 129,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Blomsterprenumeration, privat",
+                "price": 349,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Kontorsblommor, abonnemang",
+                "price": 599,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Bröllopsdekoration, helhetsuppdrag",
+                "price": 4500,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Dekoration till företagsevent",
+                "price": 1500,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Kurs i blomsterbindning (2 tim)",
+                "price": 495,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Växtvattning under semester",
+                "price": 199,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Presentinslagning",
+                "price": 25,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            },
+            {
+                "name": "Handskrivet kort",
+                "price": 15,
+                "isBestSeller": false,
+                "isShowcase": false,
+                "img": ""
+            }
+        ]
+    }
+}

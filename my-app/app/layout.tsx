@@ -4,6 +4,7 @@ import "./main.css";
 import Header from "./components/primary-layout/header";
 import Footer from "./components/primary-layout/footer";
 
+
 const niconne = Niconne({
   weight: "400",
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
 
         <main>{children}</main>
+
 
         <Footer />
 
