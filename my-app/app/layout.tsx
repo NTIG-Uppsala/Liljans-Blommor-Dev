@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Niconne, Roboto } from "next/font/google";
 import "./main.css";
 import Header from "./components/primary-layout/header";
+import Footer from "./components/primary-layout/footer";
 
 const niconne = Niconne({
   weight: "400",
@@ -30,8 +31,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <Header />
 
-        {children}
+        <main>{children}</main>
 
+        <Footer />
 
       </body>
     </html>
