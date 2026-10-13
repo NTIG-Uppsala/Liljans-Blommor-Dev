@@ -1,4 +1,5 @@
-import { tel } from "../../../data/contacts.json";
+import { tel, mail, address, postalCode, city } from "../../../data/contacts.json";
+
 
 
 function formatTelephoneNumber() {
@@ -8,7 +9,7 @@ function formatTelephoneNumber() {
     return formattedTelNumber;
 }
 
-export default function Tel() {
+export function Tel() {
 
     return (
 
@@ -16,4 +17,16 @@ export default function Tel() {
 
     )
 
+}
+
+export function Mail() {
+    return (
+        <a href={`mailto:${mail}`}>{mail}</a>
+    )
+}
+
+export function Location() {
+    return (
+        <li>{address}, {postalCode} {city}</li>
+    )
 }
