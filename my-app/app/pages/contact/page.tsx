@@ -1,4 +1,5 @@
-import Tel from "@/app/components/primary-layout/tel"
+import { Tel, Mail, Location } from "@/app/components/primary-layout/contacts"
+import { Weekdays, Saturday, Sunday } from "@/app/components/primary-layout/openingHours"
 
 export default function Temp() {
 
@@ -8,21 +9,21 @@ export default function Temp() {
             <b>Kontakt</b>
             <ul>
                 <li>Tel: <Tel /> </li>
-                <li>E-post: <span className="mail">Laddar...</span></li>
+                <li>E-post: <span className="mail"> <Mail /> </span></li>
             </ul>
 
             <b>Adress</b>
             <ul>
-                <li className="location">Laddar...</li>
+                <li className="location"> <Location /> </li>
             </ul>
 
             <b>Öppettider</b>
             <ul>
-                <li className="weekdays">Laddar...</li>
-                <li className="saturday">Laddar...</li>
-                <li className="sunday">Laddar...</li>
+                <li className="weekdays"> <Weekdays /> </li>
+                <li className="saturday"> <Saturday /> </li>
+                <li className="sunday"> <Sunday /> </li>
             </ul>
-        </div>
+        </div >
 
     );
 
