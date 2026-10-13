@@ -12,7 +12,7 @@ export default function Tel() {
 
     return (
 
-        <a href="tel:${tel}">{formatTelephoneNumber()}</a>
+        <a href={`tel:${tel}`}>{formatTelephoneNumber()}</a>
 
     )
 
