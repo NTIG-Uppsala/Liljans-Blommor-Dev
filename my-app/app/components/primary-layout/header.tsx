@@ -1,5 +1,6 @@
-import { tel } from "../../../data/contacts.json";
 import Link from "next/link.js"
+import Tel from "./tel"
+
 
 export default function Header() {
 
@@ -9,7 +10,7 @@ export default function Header() {
 
             <div className="top-header">
                 <h1>Liljans Blommor</h1>
-                <h1 id="tel">Tel: {tel}
+                <h1 id="tel">Tel: <Tel />
 
                     {/* <span className="tel">Laddar...</span> */}
 
@@ -18,7 +19,7 @@ export default function Header() {
 
             <div className="sub-header">
                 <nav>
-                    <Link className="navBarText" href={{ pathname: "pages/page.tsx" }} > Startsida</Link>
+                    <Link className="navBarText" href="pages/page.html" replace > Startsida</Link>
                     <a className="navBarText" href="pages/products.tsx">Produkter</a>
                     <a className="navBarText" href="pages/products.tsx#flowerDeliveryTitle">Blommogram</a>
                     <a className="navBarText" href="pages/contact.tsx">Kontakt</a>
