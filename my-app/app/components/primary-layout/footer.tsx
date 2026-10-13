@@ -1,3 +1,6 @@
+import { Tel, Mail, Location } from "./contacts";
+import { Weekdays, Saturday, Sunday } from "./openingHours"
+
 export default function Footer() {
 
     return (
@@ -9,24 +12,24 @@ export default function Footer() {
                 <div>
                     <b>Kontakt</b>
                     <ul>
-                        <li>Tel: <span className="tel">Laddar...</span></li>
-                        <li>E-post: <span className="mail">Laddar...</span></li>
+                        <li>Tel: <Tel /></li>
+                        <li>E-post: <Mail /></li>
                     </ul>
                 </div>
 
                 <div>
                     <b>Adress</b>
                     <ul>
-                        <li className="location">Laddar...</li>
+                        <Location />
                     </ul>
                 </div>
 
                 <div>
                     <b>Öppettider</b>
                     <ul>
-                        <li className="weekdays">Laddar...</li>
-                        <li className="saturday">Laddar...</li>
-                        <li className="sunday">Laddar...</li>
+                        <Weekdays />
+                        <Saturday />
+                        <Sunday />
                     </ul>
                 </div>
             </div>
