@@ -2,18 +2,18 @@ import { weekdays, saturday, sunday } from "../../../data/openingHours.json"
 
 export function Weekdays() {
     return (
-        <li>Vardagar: {weekdays}</li>
-    )
+        <div>Vardagar: {weekdays}</div>
+    );
 }
 
 export function Saturday() {
     return (
-        <li>Lördagar: {saturday}</li>
-    )
+        <div>Lördagar: {saturday}</div>
+    );
 }
 
 export function Sunday() {
     return (
-        <li>Söndagar: {sunday}</li>
-    )
+        <div>Söndagar: {sunday}</div>
+    );
 }

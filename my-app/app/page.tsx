@@ -1,8 +1,50 @@
+import { Tel, Mail, Location } from "@/app/components/primary-layout/contacts";
+import { Weekdays, Saturday, Sunday } from "@/app/components/primary-layout/openingHours";
+
 
 export default function Home() {
   return (
 
-    <div> HEDJ </div>
+    <main>
+
+      <h2>Välkommen till<br></br>
+        Liljans Blommor
+      </h2>
+
+      <h3>Öppettider
+        <p className="noMargin weekdays"> <Weekdays /> </p>
+        <p className="noMargin saturday"> <Saturday /> </p>
+        <p className="noMargin sunday"> <Sunday /> </p>
+      </h3>
+
+      <div className="sub-main">
+
+
+        <h1>Bästsäljare</h1>
+
+        <div id="gallery" data-page="indexPage">
+
+          <img id="loading" src="../assets/gifs/loading.gif" alt="Loading..."></img>
+
+        </div>
+        <div className="products-button">
+          <a href="products.html">Gå till produkter</a>
+        </div>
+
+
+        <div className="toggleContainer">
+          <label className="toggle">
+            <input type="checkbox" id="taxToggle"></input>
+            <span className="option incl">Inklusive moms</span>
+            <span className="option excl">Exklusive moms</span>
+            <span className="slider"></span>
+          </label>
+        </div>
+
+
+      </div>
+
+    </main>
 
   );
 }

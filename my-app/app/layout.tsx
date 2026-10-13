@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <Header />
 
-        <main>{children}</main>
+        {children}
 
 
         <Footer />

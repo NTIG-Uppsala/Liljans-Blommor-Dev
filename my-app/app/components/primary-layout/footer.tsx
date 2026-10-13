@@ -27,9 +27,9 @@ export default function Footer() {
                 <div>
                     <b>Öppettider</b>
                     <ul>
-                        <Weekdays />
-                        <Saturday />
-                        <Sunday />
+                        <li> <Weekdays /> </li>
+                        <li> <Saturday /> </li>
+                        <li> <Sunday /> </li>
                     </ul>
                 </div>
             </div>

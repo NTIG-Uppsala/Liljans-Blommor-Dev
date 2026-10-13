@@ -15,18 +15,18 @@ export function Tel() {
 
         <a href={`tel:${tel}`}>{formatTelephoneNumber()}</a>
 
-    )
+    );
 
 }
 
 export function Mail() {
     return (
         <a href={`mailto:${mail}`}>{mail}</a>
-    )
+    );
 }
 
 export function Location() {
     return (
         <li>{address}, {postalCode} {city}</li>
-    )
+    );
 }
