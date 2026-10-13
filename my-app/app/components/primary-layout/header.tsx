@@ -19,11 +19,11 @@ export default function Header() {
 
             <div className="sub-header">
                 <nav>
-                    <Link className="navBarText" href="pages/page.html" replace > Startsida</Link>
-                    <a className="navBarText" href="pages/products.tsx">Produkter</a>
-                    <a className="navBarText" href="pages/products.tsx#flowerDeliveryTitle">Blommogram</a>
-                    <a className="navBarText" href="pages/contact.tsx">Kontakt</a>
-                    <a className="navBarText" href="pages/aboutus.tsx">Om&nbsp;oss</a>
+                    <Link className="navBarText" href="/" replace > Startsida</Link>
+                    <Link className="navBarText" href="/pages/products" replace >Produkter</Link>
+                    <Link className="navBarText" href="/pages/products#flowerDeliveryTitle" replace>Blommogram</Link>
+                    <Link className="navBarText" href="/pages/contact" replace>Kontakt</Link>
+                    <Link className="navBarText" href="/pages/aboutus" replace>Om&nbsp;oss</Link>
                 </nav>
             </div>
 
