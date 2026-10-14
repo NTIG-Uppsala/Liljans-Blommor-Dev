@@ -1,19 +1,14 @@
 import { tel, mail, address, postalCode, city } from "../../../data/contacts.json";
+import formattedTelephoneNumber from "@/app/lib/format";
 
 
 
-function formatTelephoneNumber() {
-    const onlyDigits = tel.replace(/\D/g, "");
-    const withoutCountry = onlyDigits.slice(2);
-    const formattedTelNumber = withoutCountry.slice(0, 3) + " - " + withoutCountry.slice(3);
-    return formattedTelNumber;
-}
 
 export function Tel() {
 
     return (
 
-        <a href={`tel:${tel}`}>{formatTelephoneNumber()}</a>
+        <a href={`tel:${tel}`}>{formattedTelephoneNumber(tel)}</a>
 
     );
 

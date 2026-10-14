@@ -1,4 +1,4 @@
-import { weekdays, saturday, sunday } from "../../../data/openingHours.json"
+import { weekdays, saturday, sunday } from "../../../data/openingHours.json";
 
 export function Weekdays() {
     return (

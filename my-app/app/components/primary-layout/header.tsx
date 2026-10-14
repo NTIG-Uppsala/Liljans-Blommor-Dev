@@ -1,5 +1,5 @@
-import Link from "next/link.js"
-import { Tel } from "./contacts"
+import Link from "next/link.js";
+import { Tel } from "./contacts";
 
 
 export default function Header() {
