@@ -1,4 +1,6 @@
-import { Tel, Mail } from "@/app/components/primary-layout/contacts"
+import { Tel, Mail } from "@/app/components/primary-layout/contacts";
+import checkIfPostalCodeMatches from "@/app/lib/flowerDelivery"
+import Postal from "@/app/lib/flowerDelivery";
 
 export default function Temp() {
 
@@ -40,20 +42,9 @@ export default function Temp() {
 
                 <h3>Postnummer</h3>
 
-                <label className="addressInput" htmlFor="postalCode">
-                    <span className="locationIcon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path>
-                            <circle cx="12" cy="9" r="2.5"></circle>
-                        </svg>
-                    </span>
 
-                    <input type="text" id="postalCode" name="postalCode" placeholder="ex: 95959" inputMode="numeric"
-                        autoComplete="postal-code" maxLength={6} pattern="/[^0-9\s\-]/g, ''{5}"
-                        required></input>
-                </label>
+                <Postal />
 
-                <div id="flowerDeliveryAvailableBox"></div>
 
                 <p>För att beställa ett blommogram, kontakta oss via telefon eller e-post:</p>
 
