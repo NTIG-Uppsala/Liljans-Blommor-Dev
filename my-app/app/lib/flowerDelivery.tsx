@@ -25,7 +25,6 @@ export default function Postal() {
 
     function updatePostalCode() {
 
-        console.log(postalInput.value)
         setPostalCode(postalInput.value)
     }
 
@@ -47,7 +46,7 @@ export default function Postal() {
 
         try {
             if (!currentPostalCode) {
-                return <div> TOM: {PostalCode} </div>
+                return
             } else if (postalCodeMatches) {
                 return <p>Leverans är tillgängligt för: {currentPostalCode}</p>;
             } else if (!postalCodeMatches) {

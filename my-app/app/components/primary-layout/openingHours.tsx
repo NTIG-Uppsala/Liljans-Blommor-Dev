@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-import { weekdays, saturday, sunday } from "../../../data/openingHours.json";
-=======
 import { OpeningHours } from "@/app/lib/data"
->>>>>>> Stashed changes
 
 export function Weekdays() {
     return (
