@@ -6,5 +6,5 @@ import dataProducts from "@/data/products.json";
 
 export const OpeningHours = dataOpeningHours;
 export const Contacts = dataContacts;
-export const postalCodes = dataPostalCodes;
+export const PostalCodes = dataPostalCodes;
 export const Products = dataProducts;

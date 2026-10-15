@@ -1,6 +1,8 @@
 import { Tel, Mail } from "@/app/components/primary-layout/contacts";
 import checkIfPostalCodeMatches from "@/app/lib/flowerDelivery"
-import PostalInput from "@/app/lib/flowerDelivery";
+import PostalInput from "@/app/components/product-page/flowerDelivery";
+import ProductsWithImg from "@/app/components/product-page/productsWithImg"
+import ProductsWithoutImg from "@/app/components/product-page/productsWithoutImg"
 
 export default function Temp() {
 
@@ -11,9 +13,14 @@ export default function Temp() {
             <h2>Våra Produkter</h2>
             <div className="sub-main">
                 <div id="gallery" data-page="productsPage">
-                    <img id="loading" src="../assets/gifs/loading.gif" alt=""></img>
+                    {/* <img id="loading" src="../assets/gifs/loading.gif" alt=""></img> */}
+
+                    <ProductsWithImg />
+
                 </div>
+
                 <table id="productTable">
+                    <ProductsWithoutImg />
                 </table>
                 <label className="toggle">
                     <input type="checkbox" id="taxToggle"></input>
