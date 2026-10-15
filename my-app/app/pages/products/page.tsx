@@ -1,6 +1,6 @@
 import { Tel, Mail } from "@/app/components/primary-layout/contacts";
 import checkIfPostalCodeMatches from "@/app/lib/flowerDelivery"
-import Postal from "@/app/lib/flowerDelivery";
+import PostalInput from "@/app/lib/flowerDelivery";
 
 export default function Temp() {
 
@@ -43,7 +43,7 @@ export default function Temp() {
                 <h3>Postnummer</h3>
 
 
-                <Postal />
+                <PostalInput />
 
 
                 <p>För att beställa ett blommogram, kontakta oss via telefon eller e-post:</p>

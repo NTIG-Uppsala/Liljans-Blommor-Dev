@@ -8,16 +8,16 @@ import { text } from "stream/consumers";
 
 let postalInput: HTMLInputElement;
 
-export default function Postal() {
+export default function PostalInput() {
 
     let postalCodesList: number[] = postalCodes;
     const [PostalCode, setPostalCode] = React.useState("");
 
 
     useEffect(() => {
-        postalInput = (document.getElementById("postalCode") as HTMLInputElement)
+        postalInput = (document.getElementById("postalCode") as HTMLInputElement);
 
-        setPostalCode(postalInput.value)
+        setPostalCode(postalInput.value);
 
     })
 
@@ -25,6 +25,7 @@ export default function Postal() {
 
     function updatePostalCode() {
 
+        postalInput.value = postalInput.value.replace(/[^0-9\s\-]/g, '')
         setPostalCode(postalInput.value)
     }
 
@@ -37,7 +38,7 @@ export default function Postal() {
 
     function checkIfPostalCodeMatches() {
 
-        let currentPostalCode: number = -1;
+        let currentPostalCode: number;
 
         currentPostalCode = formattedPostalCode(PostalCode);
 
@@ -71,7 +72,7 @@ export default function Postal() {
                 </span>
 
                 <input type="text" id="postalCode" name="postalCode" placeholder="ex: 95959" inputMode="numeric"
-                    autoComplete="postal-code" maxLength={6} pattern="/[^0-9\s\-]/g, ''{5}"
+                    autoComplete="postal-code" maxLength={6}
                     required defaultValue={""} onChange={updatePostalCode}></input>
 
             </label>
