@@ -1,33 +1,9 @@
 import { Products } from "@/app/lib/data";
-import { ReactElement } from "react";
+import { generateHtmlProducts } from "@/app/lib/products";
 
 export default function ProductsWithoutImg() {
 
     let jsonProducts = Products
-
-
-    function generateHtmlProducts(productCategories: Object[]) {
-        let productsHtml: ReactElement<any, any>[] = [];
-
-        productCategories.forEach((productCategory: any) => {
-            productsHtml.push(
-                <tr>
-                    <th>{productCategory.categoryName}</th>
-                    <th>Pris</th>
-                </tr>);
-            productCategory.products.forEach((product: any) => {
-                productsHtml.push(
-                    <tr>
-                        <td>{product.name}</td>
-                        <td><u className="prices" data-productName="${product.name}">{product.price}</u>&nbsp;kr</td>
-                    </tr>);
-
-            });
-        });
-
-        return (productsHtml);
-    }
-
 
     async function loadJsonAndDisplay() {
 
