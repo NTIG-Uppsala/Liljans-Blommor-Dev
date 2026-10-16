@@ -1,5 +1,6 @@
 import { Tel, Mail, Location } from "@/app/components/primary-layout/contacts";
 import { Weekdays, Saturday, Sunday } from "@/app/components/primary-layout/openingHours";
+import ProductsShowcase from "@/app/components/home-page/bestSellerProducts"
 
 
 export default function Home() {
@@ -24,7 +25,9 @@ export default function Home() {
 
         <div id="gallery" data-page="indexPage">
 
-          <img id="loading" src="../assets/gifs/loading.gif" alt="Loading..."></img>
+          {/* <img id="loading" src="../assets/gifs/loading.gif" alt="Loading..."></img> */}
+
+          <ProductsShowcase />
 
         </div>
         <div className="products-button">
