@@ -19,6 +19,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Liljans Blommor",
   description: "",
+
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
