@@ -20,7 +20,6 @@ export default function HomePageMain() {
             <h2>Våra Produkter</h2>
             <div className="sub-main">
                 <div id="gallery" data-page="productsPage">
-                    {/* <img id="loading" src="../assets/gifs/loading.gif" alt=""></img> */}
 
                     <ProductsWithImg isChecked={isChecked} />
 

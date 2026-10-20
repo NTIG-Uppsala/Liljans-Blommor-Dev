@@ -5,8 +5,6 @@ import React, { useEffect, useState } from "react";
 import checkIfPostalCodeMatches from "@/app/lib/flowerDelivery";
 
 
-// const postalCodeInput = (<HTMLInputElement>document.getElementById("postalCode"));
-
 let postalInput: HTMLInputElement;
 
 export default function PostalInput() {
