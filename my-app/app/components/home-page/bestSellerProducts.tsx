@@ -2,7 +2,7 @@ import { Products } from "@/app/lib/data";
 import { generateHtmlForImgProducts } from "@/app/lib/products";
 
 
-export default function ProductsShowcase() {
+export default function ProductsShowcase(isChecked: any) {
 
     let jsonProducts = Products;
 
@@ -21,7 +21,7 @@ export default function ProductsShowcase() {
         return (
 
             <>
-                {generateHtmlForImgProducts(bestSellerProducts)};
+                {generateHtmlForImgProducts(bestSellerProducts, isChecked.isChecked)};
             </>
 
         );
