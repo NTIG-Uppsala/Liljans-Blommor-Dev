@@ -2,18 +2,18 @@ import { OpeningHours } from "@/app/lib/data"
 
 export function Weekdays() {
     return (
-        <div>Vardagar: {OpeningHours.weekdays}</div>
+        <>Vardagar: {OpeningHours.weekdays}</>
     );
 }
 
 export function Saturday() {
     return (
-        <div>Lördagar: {OpeningHours.saturday}</div>
+        <>Lördagar: {OpeningHours.saturday}</>
     );
 }
 
 export function Sunday() {
     return (
-        <div>Söndagar: {OpeningHours.sunday}</div>
+        <>Söndagar: {OpeningHours.sunday}</>
     );
 }

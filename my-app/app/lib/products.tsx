@@ -6,7 +6,6 @@ import ProductPrice from "@/app/components/button/productPrice"
 export function generateHtmlForImgProducts(imgProducts: Object[], isChecked: any) {
 
 
-
     let productsWithImgHtml: ReactElement<any, any>[] = [];
     let i = 0;
     imgProducts.forEach((imgProduct: any) => {
@@ -31,9 +30,11 @@ export function generateHtmlProducts(productCategories: Object[], isChecked: any
 
     let productsHtml: ReactElement<any, any>[] = [];
 
+    let i: number = 0;
+
     productCategories.forEach((productCategory: any) => {
         productsHtml.push(
-            <tr>
+            <tr key={i++}>
                 <th>{productCategory.categoryName}</th>
                 <th>Pris</th>
             </tr>);
@@ -45,7 +46,7 @@ export function generateHtmlProducts(productCategories: Object[], isChecked: any
 
             }
             productsHtml.push(
-                <tr>
+                <tr key={i++}>
                     <td>{product.name}</td>
                     <td><u className="prices" data-productName="${product.name}"> <ProductPrice productPriceProps={productPriceProps} /></u>&nbsp;kr</td>
                 </tr>);

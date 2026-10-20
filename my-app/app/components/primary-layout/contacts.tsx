@@ -21,6 +21,6 @@ export function Mail() {
 
 export function Location() {
     return (
-        <li>{Contacts.address}, {Contacts.postalCode} {Contacts.city}</li>
+        <>{Contacts.address}, {Contacts.postalCode} {Contacts.city}</>
     );
 }
