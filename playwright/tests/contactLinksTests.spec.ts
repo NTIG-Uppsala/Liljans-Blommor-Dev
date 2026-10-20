@@ -1,21 +1,20 @@
 import { test, expect } from '@playwright/test';
 
-const PORT = 4321;
+const PORT = 3000;
 
+const page_paths = [
+  `localhost:${PORT}`,
+  `localhost:${PORT}/pages/products`,
+  `localhost:${PORT}/pages/contact`,
+  `localhost:${PORT}/pages/aboutus`,
+];
 
 test('Validate phone link formatting standards | all pages', async ({ page }) => {
-
-  const page_paths = [
-    `localhost:${PORT}/pages/index.html`,
-    `localhost:${PORT}/pages/products.html`,
-    `localhost:${PORT}/pages/contact.html`,
-    `localhost:${PORT}/pages/aboutus.html`,
-  ];
 
   for (const url of page_paths) {
     await page.goto(url);
 
-    const phoneLinks = page.locator('.tel a');
+    const phoneLinks = page.locator('#tel a');
 
     await expect(
       phoneLinks.first(),
@@ -36,17 +35,10 @@ test('Validate phone link formatting standards | all pages', async ({ page }) =>
 
 test(`Validate email link formatting standards | all pages`, async ({ page }) => {
 
-  const page_paths = [
-    `localhost:${PORT}/pages/index.html`,
-    `localhost:${PORT}/pages/products.html`,
-    `localhost:${PORT}/pages/contact.html`,
-    `localhost:${PORT}/pages/aboutus.html`,
-  ];
-
   for (const url of page_paths) {
     await page.goto(url);
 
-    const emailLinks = page.locator('.mail a');
+    const emailLinks = page.locator('#mail a');
 
     await expect(
       emailLinks.first(),

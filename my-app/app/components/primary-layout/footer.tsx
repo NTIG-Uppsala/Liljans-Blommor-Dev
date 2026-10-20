@@ -13,7 +13,7 @@ export default function Footer() {
                     <b>Kontakt</b>
                     <ul>
                         <li>Tel: <Tel /></li>
-                        <li>E-post: <Mail /></li>
+                        <li id="mail">E-post: <Mail /></li>
                     </ul>
                 </div>
 

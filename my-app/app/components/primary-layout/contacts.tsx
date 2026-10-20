@@ -24,3 +24,4 @@ export function Location() {
         <>{Contacts.address}, {Contacts.postalCode} {Contacts.city}</>
     );
 }
+

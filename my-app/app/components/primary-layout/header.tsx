@@ -10,11 +10,7 @@ export default function Header() {
 
             <div className="top-header">
                 <h1>Liljans Blommor</h1>
-                <h1 id="tel">Tel: <Tel />
-
-                    {/* <span className="tel">Laddar...</span> */}
-
-                </h1>
+                <h1 id="tel">Tel: <Tel /></h1>
             </div>
 
             <div className="sub-header">

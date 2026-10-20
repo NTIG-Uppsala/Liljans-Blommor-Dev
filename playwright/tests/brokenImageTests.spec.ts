@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-const PORT = 4321;
+const PORT = 3000;
+
+
 
 
 test("Check broken images | homepage", async ({ page }) => {

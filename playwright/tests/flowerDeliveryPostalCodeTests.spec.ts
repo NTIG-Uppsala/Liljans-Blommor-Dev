@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const PORT = 4321;
+const PORT = 3000;
 
 const postalCodes = {
     "correct": [
@@ -18,9 +18,11 @@ const postalCodes = {
     ],
 }
 
+const url = `localhost:${PORT}/pages/products`
+
+
 
 test('Placeholder | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`;
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     await postalInput.scrollIntoViewIfNeeded();
@@ -32,7 +34,6 @@ test('Placeholder | product page', async ({ page }) => {
 
 
 test('Correct postal codes | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`;
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
@@ -53,7 +54,6 @@ test('Correct postal codes | product page', async ({ page }) => {
 
 
 test('Incorrect postal codes | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`;
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");
@@ -74,7 +74,6 @@ test('Incorrect postal codes | product page', async ({ page }) => {
 
 
 test('Edge cases | product page', async ({ page }) => {
-    const url = `localhost:${PORT}/pages/products.html`
     await page.goto(url, { waitUntil: "networkidle" });
     const postalInput = page.locator("input#postalCode");
     const flowerDeliveryAvailableBox = page.locator("div#flowerDeliveryAvailableBox");

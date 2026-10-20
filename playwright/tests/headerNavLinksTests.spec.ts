@@ -1,6 +1,13 @@
 import { test, expect } from '@playwright/test';
 
-const PORT = 4321;
+const PORT = 3000;
+
+const page_paths = [
+  `localhost:${PORT}`,
+  `localhost:${PORT}/pages/products`,
+  `localhost:${PORT}/pages/contact`,
+  `localhost:${PORT}/pages/aboutus`,
+];
 
 
 test("Nav links | all pages", async ({ page }) => {
