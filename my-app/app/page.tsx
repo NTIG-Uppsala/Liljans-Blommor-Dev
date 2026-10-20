@@ -1,6 +1,8 @@
 import { Tel, Mail, Location } from "@/app/components/primary-layout/contacts";
 import { Weekdays, Saturday, Sunday } from "@/app/components/primary-layout/openingHours";
 import ProductsShowcase from "@/app/components/home-page/bestSellerProducts"
+import Link from "next/link.js";
+
 
 
 export default function Home() {
@@ -31,7 +33,7 @@ export default function Home() {
 
         </div>
         <div className="products-button">
-          <a href="products.html">Gå till produkter</a>
+          <Link href="/pages/products">Gå till produkter</Link>
         </div>
 
 
