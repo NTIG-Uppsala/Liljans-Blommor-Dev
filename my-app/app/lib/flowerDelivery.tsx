@@ -10,7 +10,6 @@ export default function checkIfPostalCodeMatches(PostalCode: string, postalCodes
 
     currentPostalCode = formattedPostalCode(PostalCode);
 
-
     const postalCodeMatches = postalCodesList.includes(currentPostalCode);
 
     try {
@@ -22,6 +21,7 @@ export default function checkIfPostalCodeMatches(PostalCode: string, postalCodes
             return <p>Leverans är inte tillgängligt för: {currentPostalCode}</p>;
         }
     } catch (e) {
+        console.error(e);
         return <p>Något gick fel.</p>;
     }
 }

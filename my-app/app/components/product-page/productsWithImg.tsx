@@ -2,11 +2,11 @@ import { Products } from "@/app/lib/data";
 import { generateHtmlForImgProducts } from "@/app/lib/products";
 
 
-export default function ProductsWithImg() {
+export default function ProductsWithImg(isChecked: any) {
 
     let jsonProducts = Products
 
-    async function loadJsonAndDisplay() {
+    function loadJsonAndDisplay() {
 
         const showcaseProducts: Object[] = [];
         const productCategories: Object[] = [];
@@ -17,13 +17,15 @@ export default function ProductsWithImg() {
                 if (product.isShowcase && product.img !== "") {
                     showcaseProducts.push(product);
                 }
+
+                console.log("productsWithImage: " + isChecked.isChecked)
             });
         });
 
         return (
 
             <>
-                {generateHtmlForImgProducts(showcaseProducts)}
+                {generateHtmlForImgProducts(showcaseProducts, isChecked.isChecked)}
             </>
 
         );
