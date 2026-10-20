@@ -6,7 +6,7 @@ export default function ProductsShowcase() {
 
     let jsonProducts = Products;
 
-    async function loadJsonAndDisplay() {
+    function loadJsonAndDisplay() {
 
         const bestSellerProducts: object[] = [];
 

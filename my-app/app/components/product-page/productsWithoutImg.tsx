@@ -1,11 +1,11 @@
 import { Products } from "@/app/lib/data";
 import { generateHtmlProducts } from "@/app/lib/products";
 
-export default function ProductsWithoutImg() {
+export default function ProductsWithoutImg(isChecked: any) {
 
     let jsonProducts = Products
 
-    async function loadJsonAndDisplay() {
+    function loadJsonAndDisplay() {
 
         const showcaseProducts: Object[] = [];
         const productCategories: Object[] = [];
@@ -22,7 +22,7 @@ export default function ProductsWithoutImg() {
         return (
 
             <>
-                {generateHtmlProducts(productCategories)}
+                {generateHtmlProducts(productCategories, isChecked.isChecked)}
             </>
 
         );
