@@ -6,7 +6,7 @@ main(){
 
     cd my-app &&
 
-    installNode
+    installNode &&
 
     subdirs=$(ls)
 
@@ -19,8 +19,6 @@ main(){
         if [[ "$ENVIRONMENT" = "DEV" ]];
         then 
             printf "In Development environment: \nTrying to replace files... \n"
-
-            installNode
 
             changeToTestData
 
@@ -48,7 +46,7 @@ installNode(){
 
     npm -v &&
 
-    npm install
+    pnpm install
 
 }
 
@@ -61,6 +59,8 @@ changeToTestData(){
 installPlaywrightDependencies(){
 
     cd ../playwright &&
+
+    npm install &&
 
     npm ci && 
 

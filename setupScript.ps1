@@ -66,7 +66,7 @@ function Install-Node-Packages() {
 
     Write-Output("installing packages...")
 
-    npm install
+    pnpm install
 
     if (-Not ($?)) {
 
@@ -87,6 +87,8 @@ function Install-Playwright-Dependencies() {
     Write-Output("-------------------------------- `nInstalling Playwright Dependencies ")
 
     cd ../playwright
+
+    npm install
 
     npm ci
 
