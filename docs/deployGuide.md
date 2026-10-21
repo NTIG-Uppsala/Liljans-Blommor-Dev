@@ -13,9 +13,9 @@ git clone git@github.com:NTIG-Uppsala/Liljans-Blommor-Dev.git
 ## Decide what environment you are using.
 **Production environment:** Online for users to see
 
-**Development environment:** Private for testing perpecies
+**Development environment:** Private for testing purposes
 
-## Using the setup scripts on a Linux maschine
+## Using the setup scripts on a Linux machine
 
 ### 1. Prepare setup script _(if in a development environment)_
 
@@ -45,15 +45,15 @@ Running this script will
 1. Install node
 2. Install node packages for next.js
 3. Move the data from the testData folder to the Data folder
-4. Install all playwright dependecies
+4. Install all playwright dependencies
 
-If you recive no errors then the setup should be all done.
+If you receive no errors then the setup should be all done.
 
-## Using the setup scripts on a Windows maschine
+## Using the setup scripts on a Windows machine
 
 ### 1. Install node
 
-If you do not have node installed on your windows maschine install it through the link below
+If you do not have node installed on your windows machine install it through the link below
 
 https://nodejs.org/en/download
 
@@ -69,16 +69,16 @@ https://nodejs.org/en/download
   .\setupScript.ps1
   ```
 
-  When prompted type "DEV" or "PROD" to specify wich environment you are in 
+  When prompted type "DEV" or "PROD" to specify which environment you are in 
 
   Running this script will
 
   1. Install node
   2. Install node packages for next.js
   3. Move the data from the testData folder to the Data folder
-  4. Install all playwright dependecies
+  4. Install all playwright dependencies
 
-  If you do not have node installed on your windows maschine install it through the link below
+  If you do not have node installed on your windows machine install it through the link below
 
 ### Data management
 
