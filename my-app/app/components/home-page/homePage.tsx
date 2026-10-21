@@ -32,8 +32,6 @@ export default function Homepage() {
 
                 <div id="gallery" data-page="indexPage">
 
-                    {/* <img id="loading" src="../assets/gifs/loading.gif" alt="Loading..."></img> */}
-
                     <ProductsShowcase isChecked={isChecked} />
 
                 </div>
