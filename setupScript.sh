@@ -4,7 +4,9 @@ source .env
 
 main(){
 
-    cd public &&
+    cd my-app &&
+
+    installNode
 
     subdirs=$(ls)
 
@@ -44,7 +46,9 @@ installNode(){
 
     node -v &&
 
-    npm -v 
+    npm -v &&
+
+    npm install
 
 }
 
