@@ -7,7 +7,7 @@ function main {
 
     cd my-app
 
-    # Install-Node-Packages
+    Install-Node-Packages
 
     $subdirs = ls
 
