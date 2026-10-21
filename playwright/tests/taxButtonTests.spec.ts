@@ -12,14 +12,11 @@ test("Click button | Home and Product page", async ({ page }) => {
     for (const url of page_paths) {
         await page.goto(url);
 
-
-        await page.getByText("Inklusive moms").click();
-        await page.getByText("Inklusive moms").click();
-
         await page.getByText("Inklusive moms").check();
-        await page.getByText("Exklusive moms").uncheck();
+        await expect(page.getByText("Inklusive moms")).toBeChecked()
 
-        //Missing expect?
+        await page.getByText("Exklusive moms").uncheck();
+        await expect(page.getByText("Inklusive moms")).not.toBeChecked()
 
     }
 });
