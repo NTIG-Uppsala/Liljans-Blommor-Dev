@@ -2,7 +2,7 @@
 
 ## Changing the **products**:
 
-_Navigate to data/products.json_
+_Navigate to data/products.json in your IDE or [github](https://github.com/NTIG-Uppsala/Liljans-Blommor-Dev/tree/Nextjs-dev/my-app/data)_
 
 The products.json file contains 2 main parts, the categories and the products inside the category.
 
