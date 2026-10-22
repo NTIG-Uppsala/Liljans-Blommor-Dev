@@ -12,7 +12,7 @@ test('Title in browser | all pages', async ({ page }) => {
     ];
 
     for (const url of page_paths) {
-        await page.goto(url);
+        await page.goto(url, { waitUntil: "load" });
 
         await expect(
             page,

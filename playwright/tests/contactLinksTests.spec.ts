@@ -36,7 +36,7 @@ test('Validate phone link formatting standards | all pages', async ({ page }) =>
 test(`Validate email link formatting standards | all pages`, async ({ page }) => {
 
   for (const url of page_paths) {
-    await page.goto(url);
+    await page.goto(url, { waitUntil: "load" });
 
     const emailLinks = page.locator('#mail a');
 

@@ -12,7 +12,7 @@ const page_paths = [
 
 test('Screenshot | all pages', async ({ page }) => {
     for (const url of page_paths) {
-        await page.goto(url, { waitUntil: "networkidle" });
+        await page.goto(url, { waitUntil: "load" });
 
 
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-');

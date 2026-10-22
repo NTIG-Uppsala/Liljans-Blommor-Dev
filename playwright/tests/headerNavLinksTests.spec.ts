@@ -19,13 +19,6 @@ test("Nav links | all pages", async ({ page }) => {
     "Om oss",
   ];
 
-  const page_paths = [
-    `localhost:${PORT}/pages/index.html`,
-    `localhost:${PORT}/pages/products.html`,
-    `localhost:${PORT}/pages/contact.html`,
-    `localhost:${PORT}/pages/aboutus.html`,
-  ];
-
   for (const url of page_paths) {
 
     await page.goto(url, { waitUntil: 'load' });

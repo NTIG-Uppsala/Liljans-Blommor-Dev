@@ -23,7 +23,7 @@ const url = `localhost:${PORT}/pages/products`
 
 
 test('Placeholder | product page', async ({ page }) => {
-    await page.goto(url, { waitUntil: "networkidle" });
+    await page.goto(url, { waitUntil: "load" });
     const postalInput = page.locator("input#postalCode");
     await postalInput.scrollIntoViewIfNeeded();
 
