@@ -17,8 +17,6 @@ export default function ProductsWithImg(isChecked: any) {
                 if (product.isShowcase && product.img !== "") {
                     showcaseProducts.push(product);
                 }
-
-                console.log("productsWithImage: " + isChecked.isChecked)
             });
         });
 
