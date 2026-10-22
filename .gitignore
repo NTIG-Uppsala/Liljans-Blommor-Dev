@@ -42,5 +42,7 @@ playwright.env
 /firefox/
 .playwright/
 .npmrc
+/playwright/playwright/screenshots
+/playwright/screenshots
 
 playwright/screenshots/*
