@@ -48,7 +48,12 @@ export function generateHtmlProducts(productCategories: Object[], isChecked: any
             productsHtml.push(
                 <tr key={i++}>
                     <td>{product.name}</td>
-                    <td><u className="prices" data-productName="${product.name}"> <ProductPrice productPriceProps={productPriceProps} /></u>&nbsp;kr</td>
+                    <td>
+                        <u className="prices" data-productname={product.name}>
+                            <ProductPrice productPriceProps={productPriceProps} />
+                        </u>
+                        &nbsp;kr
+                    </td>
                 </tr>);
 
         });
