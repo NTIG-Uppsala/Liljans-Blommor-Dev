@@ -26,7 +26,7 @@ npx playwright install
 ### Run all tests
 __Navigate to the playwright folder (/playwright)__
 ```
-npx playwright test
+pnpm playwright test
 ```
 
 ### Run tests in headed mode
@@ -42,7 +42,7 @@ npx playwright test --headed
 To open the interactive Playwright UI:
 
 ```
-npx playwright test --ui
+pnpm playwright test --ui
 ```
 
 ### View the test report
@@ -50,5 +50,5 @@ npx playwright test --ui
 To view the HTML report after a test run:
 
 ```
-npx playwright show-report
+pnpm playwright show-report
 ```
