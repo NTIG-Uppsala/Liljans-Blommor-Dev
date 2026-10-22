@@ -66,6 +66,8 @@ function Install-Node-Packages() {
 
     Write-Output("installing packages...")
 
+    npx get-pnpm
+
     pnpm install
 
     if (-Not ($?)) {

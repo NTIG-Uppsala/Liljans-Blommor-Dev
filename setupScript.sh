@@ -46,6 +46,8 @@ installNode(){
 
     npm -v &&
 
+    npx get-pnpm &&
+
     pnpm install
 
 }
