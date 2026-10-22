@@ -26,7 +26,9 @@ export default function HomePageMain() {
                 </div>
 
                 <table id="productTable">
-                    <ProductsWithoutImg isChecked={isChecked} />
+                    <tbody>
+                        <ProductsWithoutImg isChecked={isChecked} />
+                    </tbody>
                 </table>
 
                 <TaxButton setCheck={setCheck} />
