@@ -96,6 +96,8 @@ function Install-Playwright-Dependencies() {
 
     npx playwright install --with-deps
 
+    pnpm exec playwright install
+
     Write-Output( "You can run tests with the \'npx playwright test\' command" )
 
 }
