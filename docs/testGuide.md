@@ -8,18 +8,9 @@ All commands below should be run from the **playwright** directory.
 
 ## Setup
 
-### 1. Install dependencies
+### Install dependencies
 
 For depedecies follow the instructions provided in the [depolyGuide](docs/deployGuide.md)
-
-### 2. Install Playwright browsers
-
-```
-npx playwright install
-```
-
-> On Linux or CI machines, you may also need system dependencies:
-> `npx playwright install --with-deps`
 
 ## Running tests
 
@@ -34,7 +25,7 @@ pnpm playwright test
 To run tests with the browser visible:
 
 ```
-npx playwright test --headed
+pnpm playwright test --headed
 ```
 
 ### Run tests with the Playwright UI
