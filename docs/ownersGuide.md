@@ -6,15 +6,15 @@
 You should now see this screen
 
 ## Step two, Go go the file you want to edit
-Their are 4 files containing the information displayed on the webbsite
+Their are 4 files containing the information displayed on the website
 
-**Contacts.json** contains the phone number and the email adress displayed on the webbsite.
+**Contacts.json** contains the phone number and the email address displayed on the website.
 
 **openingHours.json** contains the hours of the day where your shop is open
 
 **postalCodes.json** contains the postal codes where you can deliver flowers
 
-**products.json** contains the products you curently display on your webbsite
+**products.json** contains the products you currently display on your website
 
 To open a file press the name of the file you want to open
 
@@ -22,13 +22,13 @@ To open a file press the name of the file you want to open
 
 ### Tips
 
-Before chainging anything we recomend you to take a picture (or a screeanshot) of the contence of the file so you can remember how the information is formated.
+Before changing anything we recommend you to take a picture (or a screenshot) of the contents of the file so you can remember how the information is formatted.
 
-When making changes to the information, remmember to always keep the format the same. This means that all the special charecters like quotation marks  ""  or commas  , need to be keept the same or the webbsite might not display the information correctly.
+When making changes to the information, remember to always keep the format the same. This means that all the special characters like quotation marks  ""  or commas  , need to be kept the same or the website might not display the information correctly.
 
 ### Example: Changing contact information
 
-After pressing the **Contacts.json** file you should see somting like this
+After pressing the **Contacts.json** file you should see something like this
 ```
 {
     "tel": "+465553571114",
@@ -46,11 +46,11 @@ Press the pencil icon on the right side of the page, if you hover over it it sho
 
 You can now for example change the phone number from "+465553571114" to "+465555555555"
 
-After you are done editing the file press the **Commit changes...** button at the top right of the screean. This will open a popup window.
+After you are done editing the file press the **Commit changes...** button at the top right of the screen. This will open a popup window.
 
-At the top of the popup it shoud say "Commit message". In the text box below you can you type in a message, for example what changes you made.
+At the top of the popup it should say "Commit message". In the text box below you can you type in a message, for example what changes you made.
 
-Then you can press the **Commit changes button** and the information is now upptdated. But we are not done yet.
+Then you can press the **Commit changes button** and the information is now updated. But we are not done yet.
 
 
 ## 4. Apply changes to the website
@@ -73,6 +73,6 @@ Then Enter this second command
 ```
 git pull
 ```
-Now you shoold be all done, but to make sure everything worked go to your website and check that everyting looks as expected
+Now you should be all done, but to make sure everything worked go to your website and check that everything looks as expected
 
 
