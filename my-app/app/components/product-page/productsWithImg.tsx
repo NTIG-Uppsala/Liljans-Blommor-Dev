@@ -27,11 +27,6 @@ export default function ProductsWithImg(isChecked: any) {
             </>
 
         );
-
-        // if (localStorage.getItem("taxes") === "excludeTaxes") {
-        //     toggleShowWithoutTaxes.checked = true;
-        //     changePrices();
-        // }
     }
 
 
