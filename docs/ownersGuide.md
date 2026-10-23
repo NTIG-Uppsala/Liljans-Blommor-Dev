@@ -61,8 +61,18 @@ Now enter the command below
 ```
 ssh root@ntig.dev -p 62103
 ```
+If its your first time doing this the terminal might ask "Are you sure you want to continue connecting", if that is the case type yes and press the enter key on your keyboard.
 
+After that step the terminal is going to ask for your password, so enter the password we provided for you.
 
-
+Then enter the command below
+```
+cd .. ; cd var/www/html
+```
+Then Enter this second command
+```
+git pull
+```
+Now you shoold be all done, but to make sure everything worked go to your website and check that everyting looks as expected
 
 
