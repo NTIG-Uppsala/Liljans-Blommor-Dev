@@ -22,27 +22,6 @@ test("Click button | Home and Product page", async ({ page }) => {
 });
 
 
-
-
-// test("Tax button localstorage | Home and Product page", async ({ page }) => {
-
-//     for (const url of page_paths) {
-
-//         await page.goto(url);
-
-//         await page.getByText("Inklusive moms").check();
-
-//         await expect(page.getByText("Inklusive moms"), "Tax button did not check").toBeChecked();
-
-//         await page.reload();
-
-//         await expect(page.getByText("Inklusive moms"), "Button was not checked after reload").toBeChecked();
-
-//     }
-// });
-
-
-
 test("Tax button tax | Home and Product page", async ({ page }) => {
 
     for (const url of page_paths) {
